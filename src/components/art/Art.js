@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Art() {
+const Art = () => {
   const classes = useStyles();
 
   return (
@@ -34,19 +34,20 @@ export default function Art() {
         justifyContent="center"
         m={2}
       >
-        {artDetails
-          .filter((artItem) => artItem.visible)
-          .map((artItem) => (
-            <Box p={2} minWidth="30%">
-              <ArtItem
-                image={artItem.image}
-                title={artItem.title}
-                tagline={artItem.tagline}
-                linkPrimary={artItem.linkPrimary}
-              />
-            </Box>
-          ))}
+        {artDetails.map((artItem) => (
+          <Box p={2} minWidth="30%">
+            <ArtItem
+              image={artItem.image}
+              title={artItem.title}
+              tagline={artItem.tagline}
+              linkPrimary={artItem.linkPrimary}
+            />
+          </Box>
+        ))}
       </Box>
     </div>
   );
-}
+};
+
+export { Art };
+export default Art;

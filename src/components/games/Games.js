@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Games() {
+const Games = () => {
   const classes = useStyles();
 
   return (
@@ -43,7 +43,9 @@ export default function Games() {
                 title={gameItem.title}
                 tagline={gameItem.tagline}
                 genre={gameItem.genre}
-                description={gameItem.description}
+                description={gameItem.description.map((item) => (
+                  <div>{item}</div>
+                ))}
                 linkPrimary={gameItem.linkPrimary}
                 linkSecondary={gameItem.linkSecondary}
               />
@@ -52,4 +54,7 @@ export default function Games() {
       </Box>
     </div>
   );
-}
+};
+
+export { Games };
+export default Games;

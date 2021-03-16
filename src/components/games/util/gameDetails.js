@@ -2,19 +2,34 @@ const gameDetails = [
   {
     visible: true,
     image:
+      "https://img.itch.zone/aW1hZ2UvOTM3NTI1LzUzMTU2MjYucG5n/original/DPmYiL.png",
+    title: "subMINIMAL",
+    tagline: "A new state of unreality.",
+    genre: "Arcade",
+    description: [
+      "A psychedelic arcade action game.",
+      "Reach a new state of consciousness.",
+      "Fast-paced action.",
+      "Groovy synths.",
+      "Trippy vector graphics.",
+    ],
+    linkPrimary: "https://selfishdream.itch.io/subminimal/purchase",
+    linkSecondary: "https://selfishdream.itch.io/subminimal",
+  },
+  {
+    visible: true,
+    image:
       "https://img.itch.zone/aW1hZ2UvODQxMjg2LzQ3MTY0ODcucG5n/original/AVc%2BKj.png",
     title: "Fateless",
     tagline: "The Garden is gone forever.",
     genre: "Platformer",
-    description: (
-      <>
-        <div>Another fateless one in our midst.</div>
-        <div>There is nothing for you here.</div>
-        <div>The darkness will consume you.</div>
-        <div>Give yourself to me.</div>
-        <div>You must be cleansed.</div>
-      </>
-    ),
+    description: [
+      "Another fateless one in our midst.",
+      "There is nothing for you here.",
+      "The darkness will consume you.",
+      "Give yourself to me.",
+      "You must be cleansed.",
+    ],
     linkPrimary: "https://selfishdream.itch.io/fateless/purchase",
     linkSecondary: "https://selfishdream.itch.io/fateless",
   },
@@ -25,15 +40,13 @@ const gameDetails = [
     title: "VESSEL: Faceless Eternities",
     tagline: "Your fate is sealed.",
     genre: "Shooter",
-    description: (
-      <>
-        <div>You wake up in a cold and unfamiliar place.</div>
-        <div>They have chosen you. </div>
-        <div>You will become their next vessel.</div>
-        <div>Don't let them take you.</div>
-        <div>A faceless eternity awaits.</div>
-      </>
-    ),
+    description: [
+      "You wake up in a cold and unfamiliar place.",
+      "They have chosen you.",
+      "You will become their next vessel.",
+      "Don't let them take you.",
+      "A faceless eternity awaits.",
+    ],
     linkPrimary: "https://selfishdream.itch.io/vessel/purchase",
     linkSecondary: "https://selfishdream.itch.io/vessel",
   },
@@ -44,15 +57,13 @@ const gameDetails = [
     title: "The Flesh of Fallen Angels",
     tagline: "Nothing is sacred.",
     genre: "Role Playing",
-    description: (
-      <>
-        <div>It is time to begin anew.</div>
-        <div>Don’t despair, for there is no damnation.</div>
-        <div>But if you fear, seek refuge in me.</div>
-        <div>Voice your thoughts, don’t keep silent.</div>
-        <div>Your words are my counsel.</div>
-      </>
-    ),
+    description: [
+      "It is time to begin anew.",
+      "Don’t despair, for there is no damnation.",
+      "But if you fear, seek refuge in me.",
+      "Voice your thoughts, don’t keep silent.",
+      "Your words are my counsel.",
+    ],
     linkPrimary:
       "https://selfishdream.itch.io/the-flesh-of-fallen-angels/purchase",
     linkSecondary: "https://selfishdream.itch.io/the-flesh-of-fallen-angels",
@@ -63,16 +74,14 @@ const gameDetails = [
       "https://img.itch.zone/aW1hZ2UvNDYwNDAxLzIzODUyMzEucG5n/original/vIvwgw.png",
     title: "Isn't Life Disappointing?",
     tagline: "Immeasurable pain.",
-    genre: "Interactive Fiction",
-    description: (
-      <>
-        <div>How does it feel?</div>
-        <div>Constantly misled.</div>
-        <div> And lied to.</div>
-        <div>They will betray you.</div>
-        <div>It's only a matter of time.</div>
-      </>
-    ),
+    genre: "Adventure",
+    description: [
+      "How does it feel?",
+      "Constantly misled.",
+      "And lied to.",
+      "They will betray you.",
+      "It's only a matter of time.",
+    ],
     linkPrimary: "https://selfishdream.itch.io/isntlifedisappointing/purchase",
     linkSecondary: "https://selfishdream.itch.io/isntlifedisappointing",
   },
@@ -82,16 +91,14 @@ const gameDetails = [
       "https://img.itch.zone/aW1hZ2UvNDM4MzA0LzIyMDA2ODEucG5n/original/dbWowW.png",
     title: "S U F F E R",
     tagline: "Do you have any regrets?",
-    genre: "Interactive Fiction",
-    description: (
-      <>
-        <div>Do you enjoy pain?</div>
-        <div>Do you want others to suffer?</div>
-        <div>Do you hate yourself?</div>
-        <div>Are you doing the right thing?</div>
-        <div>Are you alive?</div>
-      </>
-    ),
+    genre: "Adventure",
+    description: [
+      "Do you enjoy pain?",
+      "Do you want others to suffer?",
+      "Do you hate yourself?",
+      "Are you doing the right thing?",
+      "Are you alive?",
+    ],
     linkPrimary: "https://selfishdream.itch.io/suffer/purchase",
     linkSecondary: "https://selfishdream.itch.io/suffer",
   },
@@ -101,16 +108,14 @@ const gameDetails = [
       "https://img.itch.zone/aW1hZ2UvNDI3ODk5LzIxMzkwNzYucG5n/original/xrADYA.png",
     title: "SOUL: A Voiceless Decay",
     tagline: "The fear of death.",
-    genre: "Interactive Fiction",
-    description: (
-      <>
-        <div>I was awake.</div>
-        <div>I could feel a presence.</div>
-        <div>I could hear the voices.</div>
-        <div>They were calling out for me.</div>
-        <div>My time has come.</div>
-      </>
-    ),
+    genre: "Adventure",
+    description: [
+      "I was awake.",
+      "I could feel a presence.",
+      "I could hear the voices.",
+      "They were calling out for me.",
+      "My time had come.",
+    ],
     linkPrimary: "https://selfishdream.itch.io/soul/purchase",
     linkSecondary: "https://selfishdream.itch.io/soul",
   },
@@ -121,15 +126,13 @@ const gameDetails = [
     title: "I Want to Blow My Brains Out",
     tagline: "Pull the trigger.",
     genre: "Experimental",
-    description: (
-      <>
-        <div>I can't do this anymore.</div>
-        <div>Things are just too hard.</div>
-        <div>Everything is so meaningless.</div>
-        <div>I have to do this.</div>
-        <div>This needs to end.</div>
-      </>
-    ),
+    description: [
+      "I can't do this anymore",
+      "Things are just too hard",
+      "Everything is so meaningless",
+      "I have to do this",
+      "This needs to end",
+    ],
     linkPrimary: "https://selfishdream.itch.io/suicide/purchase",
     linkSecondary: "https://selfishdream.itch.io/suicide",
   },
@@ -139,16 +142,14 @@ const gameDetails = [
       "https://img.itch.zone/aW1hZ2UvMzc3NTE3LzE4ODk4NTkucG5n/original/3I7gJP.png",
     title: "She Is All Yours",
     tagline: "Do what you want. Are you satisfied?",
-    genre: "Experimental",
-    description: (
-      <>
-        <div>I know what you are.</div>
-        <div>You are alone.</div>
-        <div>And you have certain needs.</div>
-        <div>So this is my gift.</div>
-        <div>From me to you.</div>
-      </>
-    ),
+    genre: "Point & Click",
+    description: [
+      "I know what you are",
+      "You are alone",
+      "And you have certain needs",
+      "So this is my gift",
+      "From me to you",
+    ],
     linkPrimary: "https://selfishdream.itch.io/she-is-all-yours/purchase",
     linkSecondary: "https://selfishdream.itch.io/she-is-all-yours",
   },
@@ -159,15 +160,13 @@ const gameDetails = [
     title: "There is a dark voice inside my mind.",
     tagline: "Something personal.",
     genre: "Experimental",
-    description: (
-      <>
-        <div>Noone can tell you how to feel.</div>
-        <div>Noone knows what you are.</div>
-        <div>Self reflection is your only hope.</div>
-        <div>It is time to face the facts.</div>
-        <div>It's all in your head.</div>
-      </>
-    ),
+    description: [
+      "Noone can tell you how to feel",
+      "Noone knows what you are",
+      "Self reflection is your only hope",
+      "It is time to face the facts",
+      "It's all in your head",
+    ],
     linkPrimary: "https://selfishdream.itch.io/personal/purchase",
     linkSecondary: "https://selfishdream.itch.io/personal",
   },
@@ -177,19 +176,18 @@ const gameDetails = [
       "https://img.itch.zone/aW1hZ2UvMzI0NjI1LzE2MTk0NTYucG5n/original/8BAujD.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    genre: "Interactive Fiction",
-    description: (
-      <>
-        <div>Impurity must be cleansed.</div>
-        <div>Always so alone.</div>
-        <div>How I long for a warm embrace.</div>
-        <div>She is always beautiful.</div>
-        <div>Forever entwined.</div>
-      </>
-    ),
+    genre: "Adventure",
+    description: [
+      "Impurity must be cleansed",
+      "Always so alone",
+      "How I long for a warm embrace",
+      "She is always beautiful",
+      "Forever entwined",
+    ],
     linkPrimary: "https://selfishdream.itch.io/skin/purchase",
     linkSecondary: "https://selfishdream.itch.io/skin",
   },
 ];
 
+export { gameDetails };
 export default gameDetails;

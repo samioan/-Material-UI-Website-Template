@@ -47,7 +47,6 @@ export default function Videos() {
       >
         {videoDetails
           .filter((videoItem) => videoItem.genre === "My Games")
-          .filter((videoItem) => videoItem.visible)
           .map((videoItem) => (
             <Box p={2} minWidth="30%">
               <VideoItem
@@ -79,14 +78,9 @@ export default function Videos() {
       >
         {videoDetails
           .filter((videoItem) => videoItem.genre === "My Music")
-          .filter((videoItem) => videoItem.visible)
           .map((videoItem) => (
             <Box p={2} minWidth="30%">
-              <VideoItem
-                link={videoItem.link}
-                title={videoItem.title}
-                tagline={videoItem.tagline}
-              />
+              <VideoItem link={videoItem.link} title={videoItem.title} />
             </Box>
           ))}
       </Box>
@@ -112,7 +106,6 @@ export default function Videos() {
       >
         {videoDetails
           .filter((videoItem) => videoItem.genre === "Obscure Games")
-          .filter((videoItem) => videoItem.visible)
           .map((videoItem) => (
             <Box p={2} minWidth="30%">
               <VideoItem

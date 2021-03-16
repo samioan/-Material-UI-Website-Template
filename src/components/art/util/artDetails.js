@@ -1,255 +1,291 @@
 const artDetails = [
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjAucG5n/original/1xgO6z.png",
     title: "Fateless",
     tagline: "The Garden is gone forever.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjAucG5n/original/1xgO6z.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjEucG5n/original/6Quw%2B9.png",
     title: "VESSEL: Faceless Eternities",
     tagline: "Your fate is sealed.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjEucG5n/original/6Quw%2B9.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjQucG5n/original/zPDV%2Bu.png",
     title: "The Flesh of Fallen Angels",
     tagline: "Nothing is sacred.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjQucG5n/original/zPDV%2Bu.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjUucG5n/original/MrT0HD.png",
     title: "Isn't Life Disappointing?",
     tagline: "Immeasurable pain.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjUucG5n/original/MrT0HD.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjYucG5n/original/P2Brqs.png",
     title: "S U F F E R",
     tagline: "Do you have any regrets?",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjYucG5n/original/P2Brqs.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjgucG5n/original/oi73TR.png",
     title: "SOUL: A Voiceless Decay",
     tagline: "The fear of death.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjgucG5n/original/oi73TR.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjcucG5n/original/HteWfm.png",
     title: "I Want to Blow My Brains Out",
     tagline: "Pull the trigger.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjcucG5n/original/HteWfm.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzAucG5n/original/NWlseB.png",
     title: "She Is All Yours",
     tagline: "Do what you want. Are you satisfied?",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzAucG5n/original/NWlseB.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjkucG5n/original/ho2Qhb.png",
     title: "There is a dark voice inside my mind.",
     tagline: "Something personal.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjkucG5n/original/ho2Qhb.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjMucG5n/original/fwNyEj.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MjMucG5n/original/fwNyEj.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzQucG5n/original/e6th9X.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzQucG5n/original/e6th9X.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzEucG5n/original/YR%2BY7C.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzEucG5n/original/YR%2BY7C.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzcucG5n/original/oOFtFA.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzcucG5n/original/oOFtFA.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzUucG5n/original/Qdfgx8.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzUucG5n/original/Qdfgx8.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDIucG5n/original/a1ebEN.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDIucG5n/original/a1ebEN.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDAucG5n/original/AD3y10.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDAucG5n/original/AD3y10.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzMucG5n/original/SiSDcJ.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzMucG5n/original/SiSDcJ.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzkucG5n/original/QLWdU5.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzkucG5n/original/QLWdU5.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDEucG5n/original/qTiykO.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDEucG5n/original/qTiykO.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDUucG5n/original/aT24i%2F.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDUucG5n/original/aT24i%2F.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDgucG5n/original/rRXyVP.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDgucG5n/original/rRXyVP.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzIucG5n/original/NFSilA.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzIucG5n/original/NFSilA.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDYucG5n/original/gXcO1Z.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDYucG5n/original/gXcO1Z.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzYucG5n/original/p5%2FQKZ.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzYucG5n/original/p5%2FQKZ.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTAucG5n/original/O40hRL.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTAucG5n/original/O40hRL.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDQucG5n/original/4NUm%2Bz.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDQucG5n/original/4NUm%2Bz.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTMucG5n/original/91iBOS.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTMucG5n/original/91iBOS.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDMucG5n/original/hr8UbT.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDMucG5n/original/hr8UbT.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzgucG5n/original/tJCWmH.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1MzgucG5n/original/tJCWmH.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTQucG5n/original/G%2BlIhZ.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTQucG5n/original/G%2BlIhZ.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTEucG5n/original/lBCWFX.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTEucG5n/original/lBCWFX.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTIucG5n/original/OpOlhT.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTIucG5n/original/OpOlhT.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDcucG5n/original/b7Subc.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDcucG5n/original/b7Subc.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTUucG5n/original/o8YUQ7.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTUucG5n/original/o8YUQ7.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTYucG5n/original/l%2FMLR%2F.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NTYucG5n/original/l%2FMLR%2F.png",
   },
   {
-    visible: true,
-    image: "https://f4.bcbits.com/img/a3796973789_10.jpg",
+    image:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDkucG5n/original/IHflQw.png",
     title: "SKIN",
     tagline: "You will create the perfect female.",
-    linkPrimary: "",
+    linkPrimary:
+      "https://img.itch.zone/aW1hZ2UvOTU3MzUzLzU0Mjg1NDkucG5n/original/IHflQw.png",
   },
 ];
 
