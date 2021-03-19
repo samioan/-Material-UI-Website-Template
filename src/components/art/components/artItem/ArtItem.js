@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -29,40 +28,31 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ArtItem({
-  image,
-  title,
-  tagline,
-  genre,
-  description,
-  linkPrimary,
-  linkSecondary,
-}) {
+export default function ArtItem({ image, title, linkPrimary }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia className={classes.media} image={image} title={title} />
-        <CardContent>
-          <Typography
-            className={classes.heading1}
-            gutterBottom
-            variant="h5"
-            component="h2"
-          >
-            {title}
-          </Typography>
-          <Typography
-            className={classes.heading2}
-            gutterBottom
-            variant="h6"
-            component="p"
-          >
-            {tagline}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia className={classes.media} image={image} title={title} />
+      <CardContent>
+        <Typography
+          className={classes.heading1}
+          gutterBottom
+          variant="h5"
+          component="h2"
+        >
+          {title}
+        </Typography>
+        <Typography
+          className={classes.heading2}
+          gutterBottom
+          variant="h6"
+          component="p"
+        >
+          ________________________
+        </Typography>
+      </CardContent>
+
       <CardActions>
         <Button target="_blank" href={linkPrimary} size="small" color="primary">
           Full Image

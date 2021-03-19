@@ -38,10 +38,6 @@ const headersData = [
     label: "Archive",
     href: "/archive",
   },
-  {
-    label: "About",
-    href: "/about",
-  },
 ];
 
 const useStyles = makeStyles(() => ({

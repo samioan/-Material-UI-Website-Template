@@ -4,7 +4,7 @@ const gameDetails = [
     image:
       "https://img.itch.zone/aW1hZ2UvOTM3NTI1LzUzMTU2MjYucG5n/original/DPmYiL.png",
     title: "subMINIMAL",
-    tagline: "A new state of unreality.",
+    tagline: "A new state of subconscious unreality.",
     genre: "Arcade",
     description: [
       "A psychedelic arcade action game.",
@@ -21,7 +21,7 @@ const gameDetails = [
     image:
       "https://img.itch.zone/aW1hZ2UvODQxMjg2LzQ3MTY0ODcucG5n/original/AVc%2BKj.png",
     title: "Fateless",
-    tagline: "The Garden is gone forever.",
+    tagline: "The Garden is gone for all eternity.",
     genre: "Platformer",
     description: [
       "Another fateless one in our midst.",
@@ -73,7 +73,7 @@ const gameDetails = [
     image:
       "https://img.itch.zone/aW1hZ2UvNDYwNDAxLzIzODUyMzEucG5n/original/vIvwgw.png",
     title: "Isn't Life Disappointing?",
-    tagline: "Immeasurable pain.",
+    tagline: "The immeasurable burden of pain.",
     genre: "Adventure",
     description: [
       "How does it feel?",
@@ -90,7 +90,7 @@ const gameDetails = [
     image:
       "https://img.itch.zone/aW1hZ2UvNDM4MzA0LzIyMDA2ODEucG5n/original/dbWowW.png",
     title: "S U F F E R",
-    tagline: "Do you have any regrets?",
+    tagline: "Have you ever had any regrets?",
     genre: "Adventure",
     description: [
       "Do you enjoy pain?",

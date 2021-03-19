@@ -301,25 +301,29 @@ const archiveDetails = [
     kind: "Music",
     img: "https://f4.bcbits.com/img/a2379053253_10.jpg",
     title: "A Journey Through the Reverberations of the Empty Soul",
-    link: "",
+    link:
+      "https://drive.google.com/file/d/1Xdp62TMYEH3CbxHO2flXVTh1yIZdPgGk/view?usp=sharing",
   },
   {
     kind: "Music",
     img: "https://f4.bcbits.com/img/a0412958747_10.jpg",
     title: "Humble Beginnings and Early Experiments",
-    link: "",
+    link:
+      "https://drive.google.com/file/d/1nWKr3kz6Wsm1HN3ZfiqYKLZtPr0RvYTb/view?usp=sharing",
   },
   {
     kind: "Music",
     img: "https://f4.bcbits.com/img/a3834024671_10.jpg",
     title: "Observatory",
-    link: "",
+    link:
+      "https://drive.google.com/file/d/1Cj8Ys5FBbvBRwN9KD2hPAGqiXDdPdhH4/view?usp=sharing",
   },
   {
     kind: "Music",
     img: "https://f4.bcbits.com/img/a0615373377_10.jpg",
     title: "The Harshness of Individuality",
-    link: "",
+    link:
+      "https://drive.google.com/file/d/1cC094DT1IYPEMRziH3Xw1tz4CDVyfcjA/view?usp=sharing",
   },
   {
     kind: "Music",
@@ -331,7 +335,8 @@ const archiveDetails = [
     kind: "Music",
     img: "https://f4.bcbits.com/img/a0488171478_10.jpg",
     title: "Unsorted Hellscapes",
-    link: "",
+    link:
+      "https://drive.google.com/file/d/10ias_95s5vp0oxzqs0Uk-O7uPksICoBT/view?usp=sharing",
   },
   //Art
   {

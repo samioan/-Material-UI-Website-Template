@@ -62,7 +62,6 @@ const Archive = () => {
               <img src={tile.img} alt={tile.title} />
               <GridListTileBar
                 title={tile.title}
-                subtitle={tile.tagline}
                 actionIcon={
                   <IconButton
                     aria-label={`info about ${tile.title}`}
@@ -90,7 +89,7 @@ const Archive = () => {
         </Typography>
       </Box>
 
-      <GridList cellHeight={360} col={4} className={classes.gridList}>
+      <GridList col={4} className={classes.gridList}>
         {archiveDetails
           .filter((tile) => tile.kind === "Music")
           .map((tile) => (
@@ -98,7 +97,6 @@ const Archive = () => {
               <img src={tile.img} alt={tile.title} />
               <GridListTileBar
                 title={tile.title}
-                subtitle={tile.tagline}
                 actionIcon={
                   <IconButton
                     aria-label={`info about ${tile.title}`}
@@ -126,7 +124,7 @@ const Archive = () => {
         </Typography>
       </Box>
 
-      <GridList cellHeight={360} col={4} className={classes.gridList}>
+      <GridList col={4} className={classes.gridList}>
         {archiveDetails
           .filter((tile) => tile.kind === "Art")
           .map((tile) => (
@@ -134,7 +132,6 @@ const Archive = () => {
               <img src={tile.img} alt={tile.title} />
               <GridListTileBar
                 title={tile.title}
-                subtitle={tile.tagline}
                 actionIcon={
                   <IconButton
                     aria-label={`info about ${tile.title}`}

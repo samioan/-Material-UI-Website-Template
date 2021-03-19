@@ -34,21 +34,20 @@ export default function Music() {
         p={1}
         m={1}
       >
-        {albumDetails
-          .filter((musicItem) => musicItem.visible)
-          .map((musicItem) => (
-            <Box p={1} m={1} minWidth="30%">
-              <MusicItem
-                image={musicItem.image}
-                title={musicItem.title}
-                tagline={musicItem.tagline}
-                genre={musicItem.genre}
-                description={musicItem.description}
-                linkPrimary={musicItem.linkPrimary}
-                linkSecondary={musicItem.linkSecondary}
-              />
-            </Box>
-          ))}
+        {albumDetails.map((musicItem) => (
+          <Box p={1} m={1} minWidth="30%">
+            <MusicItem
+              image={musicItem.image}
+              title={musicItem.title}
+              tagline={musicItem.tagline}
+              genre={musicItem.genre}
+              description={musicItem.description.map((item) => (
+                <div>{item}</div>
+              ))}
+              linkPrimary={musicItem.linkPrimary}
+            />
+          </Box>
+        ))}
       </Box>
     </div>
   );
