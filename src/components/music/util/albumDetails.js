@@ -1,5 +1,16 @@
 const albumDetails = [
   {
+    image: "https://f4.bcbits.com/img/a0488432249_10.jpg",
+    title: "Udjat",
+    tagline: "The flesh is temporary. But the soul is eternal.",
+    genre: "Electronic",
+    description: [
+      "All-seeing eyes and unfulfilled prophecies.",
+      "Everything is within your grasp.",
+    ],
+    linkPrimary: "https://selfishdream.bandcamp.com/album/udjat",
+  },
+  {
     image: "https://f4.bcbits.com/img/a2249617177_10.jpg",
     title: "Interfector",
     tagline: "Is violence the only way out of this?",
