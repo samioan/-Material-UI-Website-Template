@@ -53,6 +53,7 @@ const albumDetails = [
   },
   {
     image: path,
+    title: "The Left Hand Path",
     tagline: "Don't lose hope. Arise, my child!",
     genre: "Orchestral",
     description: [
