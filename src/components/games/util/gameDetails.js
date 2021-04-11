@@ -1,8 +1,19 @@
+import subminimal from "../images/subminimal.jpg";
+import fateless from "../images/fateless.jpg";
+import vessel from "../images/vessel.jpg";
+import angels from "../images/angels.jpg";
+import disappointing from "../images/disappointing.jpg";
+import suffer from "../images/suffer.jpg";
+import soul from "../images/soul.jpg";
+import suicide from "../images/suicide.jpg";
+import yours from "../images/yours.jpg";
+import personal from "../images/personal.jpg";
+import skin from "../images/skin.jpg";
+
 const gameDetails = [
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvOTM3NTI1LzUzMTU2MjYucG5n/original/DPmYiL.png",
+    image: subminimal,
     title: "subMINIMAL",
     tagline: "A new state of subconscious unreality.",
     genre: "Arcade",
@@ -18,8 +29,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvODQxMjg2LzQ3MTY0ODcucG5n/original/AVc%2BKj.png",
+    image: fateless,
     title: "Fateless",
     tagline: "The Garden is gone for all eternity.",
     genre: "Platformer",
@@ -35,8 +45,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvNzU5MDkwLzQyNDU3NjMucG5n/original/mMnBK4.png",
+    image: vessel,
     title: "VESSEL: Faceless Eternities",
     tagline: "Your fate is sealed.",
     genre: "Shooter",
@@ -52,8 +61,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvNDgxNjQwLzI0ODIwNTkucG5n/original/KMj67n.png",
+    image: angels,
     title: "The Flesh of Fallen Angels",
     tagline: "Nothing is sacred.",
     genre: "Role Playing",
@@ -70,8 +78,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvNDYwNDAxLzIzODUyMzEucG5n/original/vIvwgw.png",
+    image: disappointing,
     title: "Isn't Life Disappointing?",
     tagline: "The immeasurable burden of pain.",
     genre: "Adventure",
@@ -87,8 +94,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvNDM4MzA0LzIyMDA2ODEucG5n/original/dbWowW.png",
+    image: suffer,
     title: "S U F F E R",
     tagline: "Have you ever had any regrets?",
     genre: "Adventure",
@@ -104,8 +110,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvNDI3ODk5LzIxMzkwNzYucG5n/original/xrADYA.png",
+    image: soul,
     title: "SOUL: A Voiceless Decay",
     tagline: "The fear of death.",
     genre: "Adventure",
@@ -121,8 +126,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvMzkxMjc2LzI1NDgwMjAucG5n/original/r%2FrJkS.png",
+    image: suicide,
     title: "I Want to Blow My Brains Out",
     tagline: "Pull the trigger.",
     genre: "Experimental",
@@ -138,8 +142,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvMzc3NTE3LzE4ODk4NTkucG5n/original/3I7gJP.png",
+    image: yours,
     title: "She Is All Yours",
     tagline: "Do what you want. Are you satisfied?",
     genre: "Point & Click",
@@ -155,8 +158,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvMzYxMTYwLzE4MjI1NTkucG5n/original/i6JXKy.png",
+    image: personal,
     title: "There is a dark voice inside my mind.",
     tagline: "Something personal.",
     genre: "Experimental",
@@ -172,8 +174,7 @@ const gameDetails = [
   },
   {
     visible: true,
-    image:
-      "https://img.itch.zone/aW1hZ2UvMzI0NjI1LzE2MTk0NTYucG5n/original/8BAujD.png",
+    image: skin,
     title: "SKIN",
     tagline: "You will create the perfect female.",
     genre: "Adventure",

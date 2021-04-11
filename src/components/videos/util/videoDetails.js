@@ -85,6 +85,11 @@ const videoDetails = [
     title: "Flesh Eater",
     genre: "My Games",
   },
+  {
+    link: "jeysnwumbS4",
+    title: "Hollow",
+    genre: "My Games",
+  },
   // My Music
   {
     link: "fA86HcW-RZo",
@@ -120,32 +125,6 @@ const videoDetails = [
     link: "-MKHVQ9D4AY",
     title: "Eternally",
     genre: "My Music",
-  },
-  // Obscure Games
-  {
-    link: "9v9ocf1-EyQ",
-    title: "Kill Dad",
-    genre: "Obscure Games",
-  },
-  {
-    link: "ImpLjxrrN4E",
-    title: "Bullet Soul Hacker",
-    genre: "Obscure Games",
-  },
-  {
-    link: "pnFBBSvciIc",
-    title: "Oto Scillator",
-    genre: "Obscure Games",
-  },
-  {
-    link: "dVKeOKLFOeQ",
-    title: "Experiment 12",
-    genre: "Obscure Games",
-  },
-  {
-    link: "WaP6-xA77rY",
-    title: "Wrong Browser",
-    genre: "Obscure Games",
   },
 ];
 

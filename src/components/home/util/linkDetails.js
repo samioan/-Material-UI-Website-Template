@@ -5,48 +5,49 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import AlbumIcon from "@material-ui/icons/Album";
 
+import bandcamp from "../images/bandcamp.jpg";
+import instagram from "../images/instagram.jpg";
+import itchio from "../images/itchio.jpg";
+import soundcloud from "../images/soundcloud.jpg";
+import twitter from "../images/twitter.jpg";
+import youtube from "../images/youtube.jpg";
+
 const linkDetails = [
   {
     title: "Itch.io",
     site: "https://selfishdream.itch.io/",
     icon: <SportsEsportsIcon />,
-    img:
-      "https://img.itch.zone/aW1hZ2UvOTU4NjQ2LzU0NDE3NjUuanBn/original/M0k%2Bmr.jpg",
+    img: itchio,
   },
   {
     title: "SoundCloud",
     site: "https://soundcloud.com/selfishdream",
     icon: <MusicNoteIcon />,
-    img:
-      "https://img.itch.zone/aW1hZ2UvOTU4NjQ2LzU0NDE3NjQuanBn/original/BxoxQq.jpg",
+    img: soundcloud,
   },
   {
     title: "Bandcamp",
     site: "https://selfishdream.bandcamp.com/",
     icon: <AlbumIcon />,
-    img:
-      "https://img.itch.zone/aW1hZ2UvOTU4NjQ2LzU0NDE3NjcuanBn/original/mUZ7h0.jpg",
+    img: bandcamp,
   },
   {
     title: "Instagram",
     site: "https://www.instagram.com/theselfishdream/",
     icon: <InstagramIcon />,
-    img:
-      "https://img.itch.zone/aW1hZ2UvOTU4NjQ2LzU0NDE3NjguanBn/original/GvMMK1.jpg",
+    img: instagram,
   },
   {
     title: "YouTube",
     site: "https://www.youtube.com/channel/UCPvWrxJnZXkp4F8MXAo0gUQ",
     icon: <YouTubeIcon />,
-    img:
-      "https://img.itch.zone/aW1hZ2UvOTU4NjQ2LzU0NDE3NjkuanBn/original/IYg%2BxG.jpg",
+    img: youtube,
   },
   {
     title: "Twitter",
     site: "https://twitter.com/theselfishdream",
     icon: <TwitterIcon />,
-    img:
-      "https://img.itch.zone/aW1hZ2UvOTU4NjQ2LzU0NDE3NjYuanBn/original/RzgrsW.jpg",
+    img: twitter,
   },
 ];
 

@@ -84,38 +84,6 @@ export default function Videos() {
             </Box>
           ))}
       </Box>
-
-      <Box mt={5} mb={5}>
-        <Typography
-          className={classes.root}
-          variant="h4"
-          align="center"
-          color="#fff"
-          component="h4"
-        >
-          Obscure Games
-        </Typography>
-      </Box>
-
-      <Box
-        display="flex"
-        flexWrap="wrap"
-        alignItems="stretch"
-        justifyContent="center"
-        m={2}
-      >
-        {videoDetails
-          .filter((videoItem) => videoItem.genre === "Obscure Games")
-          .map((videoItem) => (
-            <Box p={2} minWidth="30%">
-              <VideoItem
-                link={videoItem.link}
-                title={videoItem.title}
-                tagline={videoItem.tagline}
-              />
-            </Box>
-          ))}
-      </Box>
     </div>
   );
 }
