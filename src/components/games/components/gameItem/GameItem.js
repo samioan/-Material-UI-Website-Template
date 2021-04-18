@@ -24,6 +24,10 @@ const useStyles = makeStyles({
   root: {
     backgroundColor: "#111",
   },
+  cardContent: {
+    maxWidth: 400,
+    minHeight: 200,
+  },
   media: {
     height: 300,
   },
@@ -50,7 +54,7 @@ export default function GameItem({
     >
       <Card className={classes.root}>
         <CardMedia className={classes.media} image={image} title={title} />
-        <CardContent>
+        <CardContent className={classes.cardContent}>
           <Typography
             className={classes.heading1}
             gutterBottom

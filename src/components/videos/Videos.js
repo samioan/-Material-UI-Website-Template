@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { VideoItem } from "./components";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
@@ -13,6 +13,10 @@ const useStyles = makeStyles({
 
 export default function Videos() {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div style={{ width: "100%" }}>

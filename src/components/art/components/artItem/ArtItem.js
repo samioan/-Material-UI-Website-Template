@@ -24,6 +24,9 @@ const useStyles = makeStyles({
   root: {
     backgroundColor: "#111",
   },
+  cardContent: {
+    minWidth: 300,
+  },
   media: {
     height: 400,
   },
@@ -42,7 +45,7 @@ export default function ArtItem({ image, title, link }) {
     >
       <Card className={classes.root}>
         <CardMedia className={classes.media} image={image} title={title} />
-        <CardContent>
+        <CardContent className={classes.cardContent}>
           <Typography
             className={classes.heading1}
             gutterBottom
@@ -50,14 +53,6 @@ export default function ArtItem({ image, title, link }) {
             component="h2"
           >
             {title}
-          </Typography>
-          <Typography
-            className={classes.heading2}
-            gutterBottom
-            variant="h6"
-            component="p"
-          >
-            ________________________
           </Typography>
         </CardContent>
 

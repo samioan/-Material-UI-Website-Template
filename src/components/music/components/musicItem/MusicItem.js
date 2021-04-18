@@ -21,8 +21,12 @@ const useStyles = makeStyles({
   text: {
     color: "#c3c3c3",
   },
-  root: {
+  card: {
     backgroundColor: "#111",
+  },
+  cardContent: {
+    maxWidth: 300,
+    minHeight: 200,
   },
   media: {
     height: 300,
@@ -47,9 +51,9 @@ export default function MusicItem({
       target="_blank"
       style={{ textDecoration: "none" }}
     >
-      <Card className={classes.root}>
+      <Card className={classes.card}>
         <CardMedia className={classes.media} image={image} title={title} />
-        <CardContent>
+        <CardContent className={classes.cardContent}>
           <Typography
             className={classes.heading1}
             gutterBottom

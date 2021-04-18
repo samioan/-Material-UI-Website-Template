@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
@@ -8,6 +8,7 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 import archiveDetails from "./util/archiveDetails";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -28,6 +29,10 @@ const useStyles = makeStyles({
 
 const Archive = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={classes.root}>
@@ -58,14 +63,18 @@ const Archive = () => {
         {archiveDetails
           .filter((tile) => tile.kind === "Games")
           .map((tile) => (
-            <GridListTile key={tile.img} style={{ width: "50%", height: 200 }}>
-              <a href={tile.link} target="_blank" rel="noreferrer">
-                <img
-                  src={tile.img}
-                  alt={tile.title}
-                  className="MuiGridListTile-imgFullWidth"
-                />
-              </a>
+            <GridListTile
+              key={tile.img}
+              style={{ width: "50%", height: 200 }}
+              component={Link}
+              to={{
+                pathname: tile.link,
+              }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={tile.img} alt={tile.title} />
+
               <GridListTileBar
                 title={tile.title}
                 actionIcon={
@@ -99,14 +108,18 @@ const Archive = () => {
         {archiveDetails
           .filter((tile) => tile.kind === "Music")
           .map((tile) => (
-            <GridListTile key={tile.img} style={{ width: "50%", height: 200 }}>
-              <a href={tile.link} target="_blank" rel="noreferrer">
-                <img
-                  src={tile.img}
-                  alt={tile.title}
-                  className="MuiGridListTile-imgFullWidth"
-                />
-              </a>
+            <GridListTile
+              key={tile.img}
+              style={{ width: "50%", height: 200 }}
+              component={Link}
+              to={{
+                pathname: tile.link,
+              }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={tile.img} alt={tile.title} />
+
               <GridListTileBar
                 title={tile.title}
                 actionIcon={
@@ -140,14 +153,18 @@ const Archive = () => {
         {archiveDetails
           .filter((tile) => tile.kind === "Art")
           .map((tile) => (
-            <GridListTile key={tile.img} style={{ width: "50%", height: 200 }}>
-              <a href={tile.link} target="_blank" rel="noreferrer">
-                <img
-                  src={tile.img}
-                  alt={tile.title}
-                  className="MuiGridListTile-imgFullWidth"
-                />
-              </a>
+            <GridListTile
+              key={tile.img}
+              style={{ width: "50%", height: 200 }}
+              component={Link}
+              to={{
+                pathname: tile.link,
+              }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={tile.img} alt={tile.title} />
+
               <GridListTileBar
                 title={tile.title}
                 actionIcon={

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -6,6 +6,7 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import linkDetails from "./util/linkDetails";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   title: {
@@ -29,6 +30,10 @@ const useStyles = makeStyles({
 const Home = () => {
   const classes = useStyles();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div style={{ width: "100%" }}>
       <Box mt={10} mb={5}>
@@ -45,14 +50,17 @@ const Home = () => {
 
       <GridList col={4} className={classes.gridList}>
         {linkDetails.map((item) => (
-          <GridListTile key={item.img} style={{ width: "50%", height: 230 }}>
-            <a href={item.site} target="_blank" rel="noreferrer">
-              <img
-                src={item.img}
-                alt={item.title}
-                className="MuiGridListTile-imgFullWidth"
-              />
-            </a>
+          <GridListTile
+            key={item.img}
+            style={{ width: "50%", height: 230 }}
+            component={Link}
+            to={{
+              pathname: item.site,
+            }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={item.img} alt={item.title} />
             <GridListTileBar
               title={item.title}
               subtitle={item.tagline}
