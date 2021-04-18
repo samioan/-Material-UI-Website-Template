@@ -12,15 +12,6 @@ const useStyles = makeStyles({
   heading1: {
     color: "#fff",
   },
-  heading2: {
-    color: "#606060",
-  },
-  heading3: {
-    color: "#858585",
-  },
-  text: {
-    color: "#c3c3c3",
-  },
   root: {
     backgroundColor: "#111",
   },

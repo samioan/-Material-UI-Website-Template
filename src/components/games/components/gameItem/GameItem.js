@@ -21,11 +21,11 @@ const useStyles = makeStyles({
   text: {
     color: "#c3c3c3",
   },
-  root: {
+  card: {
     backgroundColor: "#111",
   },
   cardContent: {
-    maxWidth: 400,
+    maxWidth: 300,
     minHeight: 200,
   },
   media: {
@@ -52,7 +52,7 @@ export default function GameItem({
       target="_blank"
       style={{ textDecoration: "none" }}
     >
-      <Card className={classes.root}>
+      <Card className={classes.card}>
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent className={classes.cardContent}>
           <Typography

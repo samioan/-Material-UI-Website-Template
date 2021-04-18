@@ -40,7 +40,7 @@ export default function Music() {
         m={1}
       >
         {albumDetails.map((musicItem) => (
-          <Box key={musicItem.title} p={1} m={1} minWidth="30%">
+          <Box key={musicItem.title} p={1} m={1}>
             <MusicItem
               image={musicItem.image}
               title={musicItem.title}

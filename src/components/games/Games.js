@@ -39,7 +39,7 @@ const Games = () => {
         m={2}
       >
         {gameDetails.map((gameItem) => (
-          <Box key={gameItem.title} p={2} minWidth="30%">
+          <Box key={gameItem.title} p={2}>
             <GameItem
               image={gameItem.image}
               title={gameItem.title}

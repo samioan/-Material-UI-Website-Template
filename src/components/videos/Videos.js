@@ -52,7 +52,7 @@ export default function Videos() {
         {videoDetails
           .filter((videoItem) => videoItem.genre === "My Games")
           .map((videoItem) => (
-            <Box key={videoItem.title} p={2} minWidth="30%">
+            <Box key={videoItem.title} p={2}>
               <VideoItem link={videoItem.link} title={videoItem.title} />
             </Box>
           ))}
@@ -79,7 +79,7 @@ export default function Videos() {
         {videoDetails
           .filter((videoItem) => videoItem.genre === "My Music")
           .map((videoItem) => (
-            <Box key={videoItem.title} p={2} minWidth="30%">
+            <Box key={videoItem.title} p={2}>
               <VideoItem link={videoItem.link} title={videoItem.title} />
             </Box>
           ))}

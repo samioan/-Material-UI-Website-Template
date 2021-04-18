@@ -10,32 +10,25 @@ const useStyles = makeStyles({
   heading1: {
     color: "#fff",
   },
-  heading2: {
-    color: "#606060",
-  },
-  heading3: {
-    color: "#858585",
-  },
-  text: {
-    color: "#c3c3c3",
-  },
   root: {
     backgroundColor: "#111",
   },
+  cardContent: {
+    maxWidth: 300,
+  },
   media: {
     height: 300,
-    width: "100%",
   },
 });
 
-export default function VideoItem({ link, title, tagline, genre }) {
+export default function VideoItem({ link, title }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={{ maxWidth: 300 }}>
       <CardActionArea>
         <YouTube className={classes.media} video={link} />
-        <CardContent>
+        <CardContent className={classes.cardContent}>
           <Typography
             className={classes.heading1}
             gutterBottom
@@ -43,22 +36,6 @@ export default function VideoItem({ link, title, tagline, genre }) {
             component="h2"
           >
             {title}
-          </Typography>
-          <Typography
-            className={classes.heading2}
-            gutterBottom
-            variant="h6"
-            component="p"
-          >
-            {tagline}
-          </Typography>
-          <Typography
-            className={classes.heading3}
-            gutterBottom
-            variant="body1"
-            component="p"
-          >
-            {genre}
           </Typography>
         </CardContent>
       </CardActionArea>
