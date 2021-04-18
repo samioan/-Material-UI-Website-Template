@@ -35,12 +35,11 @@ const Art = () => {
         m={2}
       >
         {artDetails.map((artItem) => (
-          <Box p={2} minWidth="30%">
+          <Box key={artItem.title} p={2} minWidth="30%">
             <ArtItem
               image={artItem.image}
               title={artItem.title}
-              tagline={artItem.tagline}
-              linkPrimary={artItem.linkPrimary}
+              link={artItem.link}
             />
           </Box>
         ))}

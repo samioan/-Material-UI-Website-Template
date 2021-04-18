@@ -12,7 +12,6 @@ import skin from "../images/skin.jpg";
 
 const gameDetails = [
   {
-    visible: true,
     image: subminimal,
     title: "subMINIMAL",
     tagline: "A new state of subconscious unreality.",
@@ -28,7 +27,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/subminimal",
   },
   {
-    visible: true,
     image: fateless,
     title: "Fateless",
     tagline: "The Garden is gone for all eternity.",
@@ -44,7 +42,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/fateless",
   },
   {
-    visible: true,
     image: vessel,
     title: "VESSEL: Faceless Eternities",
     tagline: "Your fate is sealed.",
@@ -60,7 +57,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/vessel",
   },
   {
-    visible: true,
     image: angels,
     title: "The Flesh of Fallen Angels",
     tagline: "Nothing is sacred.",
@@ -77,7 +73,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/the-flesh-of-fallen-angels",
   },
   {
-    visible: true,
     image: disappointing,
     title: "Isn't Life Disappointing?",
     tagline: "The immeasurable burden of pain.",
@@ -93,7 +88,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/isntlifedisappointing",
   },
   {
-    visible: true,
     image: suffer,
     title: "S U F F E R",
     tagline: "Have you ever had any regrets?",
@@ -109,7 +103,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/suffer",
   },
   {
-    visible: true,
     image: soul,
     title: "SOUL: A Voiceless Decay",
     tagline: "The fear of death.",
@@ -125,7 +118,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/soul",
   },
   {
-    visible: true,
     image: suicide,
     title: "I Want to Blow My Brains Out",
     tagline: "Pull the trigger.",
@@ -141,7 +133,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/suicide",
   },
   {
-    visible: true,
     image: yours,
     title: "She Is All Yours",
     tagline: "Do what you want. Are you satisfied?",
@@ -157,7 +148,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/she-is-all-yours",
   },
   {
-    visible: true,
     image: personal,
     title: "There is a dark voice inside my mind.",
     tagline: "Something personal.",
@@ -173,7 +163,6 @@ const gameDetails = [
     linkSecondary: "https://selfishdream.itch.io/personal",
   },
   {
-    visible: true,
     image: skin,
     title: "SKIN",
     tagline: "You will create the perfect female.",

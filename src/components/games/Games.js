@@ -34,23 +34,21 @@ const Games = () => {
         justifyContent="center"
         m={2}
       >
-        {gameDetails
-          .filter((gameItem) => gameItem.visible)
-          .map((gameItem) => (
-            <Box p={2} minWidth="30%">
-              <GameItem
-                image={gameItem.image}
-                title={gameItem.title}
-                tagline={gameItem.tagline}
-                genre={gameItem.genre}
-                description={gameItem.description.map((item) => (
-                  <div>{item}</div>
-                ))}
-                linkPrimary={gameItem.linkPrimary}
-                linkSecondary={gameItem.linkSecondary}
-              />
-            </Box>
-          ))}
+        {gameDetails.map((gameItem) => (
+          <Box key={gameItem.title} p={2} minWidth="30%">
+            <GameItem
+              image={gameItem.image}
+              title={gameItem.title}
+              tagline={gameItem.tagline}
+              genre={gameItem.genre}
+              description={gameItem.description.map((item) => (
+                <div key={item}>{item}</div>
+              ))}
+              linkPrimary={gameItem.linkPrimary}
+              linkSecondary={gameItem.linkSecondary}
+            />
+          </Box>
+        ))}
       </Box>
     </div>
   );

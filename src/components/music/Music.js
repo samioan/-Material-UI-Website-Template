@@ -35,14 +35,14 @@ export default function Music() {
         m={1}
       >
         {albumDetails.map((musicItem) => (
-          <Box p={1} m={1} minWidth="30%">
+          <Box key={musicItem.title} p={1} m={1} minWidth="30%">
             <MusicItem
               image={musicItem.image}
               title={musicItem.title}
               tagline={musicItem.tagline}
               genre={musicItem.genre}
               description={musicItem.description.map((item) => (
-                <div>{item}</div>
+                <div key={item}>{item}</div>
               ))}
               linkPrimary={musicItem.linkPrimary}
             />

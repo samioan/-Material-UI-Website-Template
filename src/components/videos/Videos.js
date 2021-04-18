@@ -48,12 +48,8 @@ export default function Videos() {
         {videoDetails
           .filter((videoItem) => videoItem.genre === "My Games")
           .map((videoItem) => (
-            <Box p={2} minWidth="30%">
-              <VideoItem
-                link={videoItem.link}
-                title={videoItem.title}
-                tagline={videoItem.tagline}
-              />
+            <Box key={videoItem.title} p={2} minWidth="30%">
+              <VideoItem link={videoItem.link} title={videoItem.title} />
             </Box>
           ))}
       </Box>
@@ -79,7 +75,7 @@ export default function Videos() {
         {videoDetails
           .filter((videoItem) => videoItem.genre === "My Music")
           .map((videoItem) => (
-            <Box p={2} minWidth="30%">
+            <Box key={videoItem.title} p={2} minWidth="30%">
               <VideoItem link={videoItem.link} title={videoItem.title} />
             </Box>
           ))}

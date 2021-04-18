@@ -46,7 +46,13 @@ const Home = () => {
       <GridList col={4} className={classes.gridList}>
         {linkDetails.map((item) => (
           <GridListTile key={item.img} style={{ width: "50%", height: 230 }}>
-            <img src={item.img} alt={item.title} />
+            <a href={item.site} target="_blank" rel="noreferrer">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="MuiGridListTile-imgFullWidth"
+              />
+            </a>
             <GridListTileBar
               title={item.title}
               subtitle={item.tagline}

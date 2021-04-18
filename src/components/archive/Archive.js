@@ -59,7 +59,13 @@ const Archive = () => {
           .filter((tile) => tile.kind === "Games")
           .map((tile) => (
             <GridListTile key={tile.img} style={{ width: "50%", height: 200 }}>
-              <img src={tile.img} alt={tile.title} />
+              <a href={tile.link} target="_blank" rel="noreferrer">
+                <img
+                  src={tile.img}
+                  alt={tile.title}
+                  className="MuiGridListTile-imgFullWidth"
+                />
+              </a>
               <GridListTileBar
                 title={tile.title}
                 actionIcon={
@@ -94,7 +100,13 @@ const Archive = () => {
           .filter((tile) => tile.kind === "Music")
           .map((tile) => (
             <GridListTile key={tile.img} style={{ width: "50%", height: 200 }}>
-              <img src={tile.img} alt={tile.title} />
+              <a href={tile.link} target="_blank" rel="noreferrer">
+                <img
+                  src={tile.img}
+                  alt={tile.title}
+                  className="MuiGridListTile-imgFullWidth"
+                />
+              </a>
               <GridListTileBar
                 title={tile.title}
                 actionIcon={
@@ -129,7 +141,13 @@ const Archive = () => {
           .filter((tile) => tile.kind === "Art")
           .map((tile) => (
             <GridListTile key={tile.img} style={{ width: "50%", height: 200 }}>
-              <img src={tile.img} alt={tile.title} />
+              <a href={tile.link} target="_blank" rel="noreferrer">
+                <img
+                  src={tile.img}
+                  alt={tile.title}
+                  className="MuiGridListTile-imgFullWidth"
+                />
+              </a>
               <GridListTileBar
                 title={tile.title}
                 actionIcon={

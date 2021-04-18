@@ -6,6 +6,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   heading1: {
@@ -39,43 +40,56 @@ export default function MusicItem({
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardMedia className={classes.media} image={image} title={title} />
-      <CardContent>
-        <Typography
-          className={classes.heading1}
-          gutterBottom
-          variant="h5"
-          component="h2"
-        >
-          {title}
-        </Typography>
-        <Typography
-          className={classes.heading2}
-          gutterBottom
-          variant="h6"
-          component="p"
-        >
-          {tagline}
-        </Typography>
-        <Typography
-          className={classes.heading3}
-          gutterBottom
-          variant="body1"
-          component="p"
-        >
-          {genre}
-        </Typography>
-        <Typography className={classes.text} variant="body2" component="p">
-          {description}
-        </Typography>
-      </CardContent>
+    <Link
+      to={{
+        pathname: linkPrimary,
+      }}
+      target="_blank"
+      style={{ textDecoration: "none" }}
+    >
+      <Card className={classes.root}>
+        <CardMedia className={classes.media} image={image} title={title} />
+        <CardContent>
+          <Typography
+            className={classes.heading1}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
+            {title}
+          </Typography>
+          <Typography
+            className={classes.heading2}
+            gutterBottom
+            variant="h6"
+            component="p"
+          >
+            {tagline}
+          </Typography>
+          <Typography
+            className={classes.heading3}
+            gutterBottom
+            variant="body1"
+            component="p"
+          >
+            {genre}
+          </Typography>
+          <Typography className={classes.text} variant="body2" component="p">
+            {description}
+          </Typography>
+        </CardContent>
 
-      <CardActions>
-        <Button target="_blank" href={linkPrimary} size="small" color="primary">
-          Album Page
-        </Button>
-      </CardActions>
-    </Card>
+        <CardActions>
+          <Button
+            target="_blank"
+            href={linkPrimary}
+            size="small"
+            color="primary"
+          >
+            Album Page
+          </Button>
+        </CardActions>
+      </Card>
+    </Link>
   );
 }
