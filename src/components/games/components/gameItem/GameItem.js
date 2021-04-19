@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
   cardContent: {
     maxWidth: 300,
-    minHeight: 200,
+    minHeight: 300,
   },
   media: {
     height: 300,
