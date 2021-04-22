@@ -20,14 +20,8 @@ const Games = () => {
 
   return (
     <div style={{ width: "100%" }}>
-      <Box mt={10}>
-        <Typography
-          className={classes.root}
-          variant="h1"
-          align="center"
-          color="#fff"
-          component="h1"
-        >
+      <Box pt={10}>
+        <Typography className={classes.root} variant="h1" align="center">
           Games
         </Typography>
       </Box>
@@ -36,7 +30,7 @@ const Games = () => {
         flexWrap="wrap"
         alignItems="stretch"
         justifyContent="center"
-        m={2}
+        p={2}
       >
         {gameDetails.map((gameItem) => (
           <Box key={gameItem.title} p={2}>
@@ -45,11 +39,9 @@ const Games = () => {
               title={gameItem.title}
               tagline={gameItem.tagline}
               genre={gameItem.genre}
-              description={gameItem.description.map((item) => (
-                <div key={item}>{item}</div>
-              ))}
               linkPrimary={gameItem.linkPrimary}
               linkSecondary={gameItem.linkSecondary}
+              pageLink={gameItem.pageLink}
             />
           </Box>
         ))}

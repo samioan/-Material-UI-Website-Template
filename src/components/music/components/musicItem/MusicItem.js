@@ -54,31 +54,16 @@ export default function MusicItem({
       <Card className={classes.card}>
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent className={classes.cardContent}>
-          <Typography
-            className={classes.heading1}
-            gutterBottom
-            variant="h5"
-            component="h2"
-          >
+          <Typography className={classes.heading1} gutterBottom variant="h5">
             {title}
           </Typography>
-          <Typography
-            className={classes.heading2}
-            gutterBottom
-            variant="h6"
-            component="p"
-          >
+          <Typography className={classes.heading2} gutterBottom variant="h6">
             {tagline}
           </Typography>
-          <Typography
-            className={classes.heading3}
-            gutterBottom
-            variant="body1"
-            component="p"
-          >
+          <Typography className={classes.heading3} gutterBottom variant="body1">
             {genre}
           </Typography>
-          <Typography className={classes.text} variant="body2" component="p">
+          <Typography className={classes.text} variant="body2">
             {description}
           </Typography>
         </CardContent>

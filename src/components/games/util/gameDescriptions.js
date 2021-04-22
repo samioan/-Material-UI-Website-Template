@@ -1,0 +1,88 @@
+const gameDescriptions = {
+  subminimal: [
+    "A psychedelic arcade action game.",
+    "Reach a new state of consciousness.",
+    "Fast-paced arcade action.",
+    "Groovy music.",
+    "5 different stages of consciousness.",
+    "Trippy vector graphics.",
+  ],
+  fateless: [
+    "Another fateless one in our midst.",
+    "Return from whence you came.",
+    "There is nothing for you here.",
+    "It is inevitable.",
+    "The darkness will consume you.",
+    "Give yourself to me.",
+    "Only I can save you.",
+    "You must be cleansed.",
+    "Do not persist in your folly.",
+    "Your fate is already sealed.",
+  ],
+  vessel: [
+    "You wake up in a cold and unfamiliar place.",
+    "They have chosen you.",
+    "You will become their next vessel.",
+    "Don't let them take you.",
+    "A faceless eternity awaits.",
+  ],
+  theFleshOfFallenAngels: [
+    "It is time to begin anew.",
+    "Don’t despair, for there is no damnation.",
+    "But if you fear, seek refuge in me.",
+    "Voice your thoughts, don’t keep silent.",
+    "Your words are my counsel.",
+  ],
+  isntLifeDisappointing: [
+    "How does it feel?",
+    "Constantly misled.",
+    "And lied to.",
+    "They will betray you.",
+    "It's only a matter of time.",
+  ],
+  suffer: [
+    "Do you enjoy pain?",
+    "Do you want others to suffer?",
+    "Do you hate yourself?",
+    "Are you doing the right thing?",
+    "Are you alive?",
+  ],
+  soul: [
+    "I was awake.",
+    "I could feel a presence.",
+    "I could hear the voices.",
+    "They were calling out for me.",
+    "My time had come.",
+  ],
+  suicide: [
+    "I can't do this anymore.",
+    "Things are just too hard.",
+    "Everything is so meaningless.",
+    "I have to do this.",
+    "This needs to end.",
+  ],
+  sheIsAllYours: [
+    "I know what you are.",
+    "You are alone.",
+    "And you have certain needs.",
+    "So this is my gift.",
+    "From me to you.",
+  ],
+  personal: [
+    "Noone can tell you how to feel.",
+    "Noone knows what you are.",
+    "Self reflection is your only hope.",
+    "It is time to face the facts.",
+    "It's all in your head.",
+  ],
+  skin: [
+    "Impurity must be cleansed.",
+    "Always so alone.",
+    "How I long for a warm embrace.",
+    "She is always beautiful.",
+    "Forever entwined.",
+  ],
+};
+
+export { gameDescriptions };
+export default gameDescriptions;
