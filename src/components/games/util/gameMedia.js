@@ -6,7 +6,8 @@ import subminimal2 from "../images/screenshots/subminimal/subminimal2.jpg";
 import subminimal3 from "../images/screenshots/subminimal/subminimal3.jpg";
 import subminimal4 from "../images/screenshots/subminimal/subminimal4.jpg";
 import subminimal5 from "../images/screenshots/subminimal/subminimal5.jpg";
-
+//subminimal background
+import subminimalBg from "../images/backgrounds/subminimalBg.jpg";
 //fateless splash
 import fatelessSplash from "../images/splash/fatelessSplash.jpg";
 //fateless screenshots
@@ -19,6 +20,8 @@ import fateless6 from "../images/screenshots/fateless/fateless6.jpg";
 import fateless7 from "../images/screenshots/fateless/fateless7.jpg";
 import fateless8 from "../images/screenshots/fateless/fateless8.jpg";
 import fateless9 from "../images/screenshots/fateless/fateless9.jpg";
+//fateless background
+import fatelessBg from "../images/backgrounds/fatelessBg.jpg";
 
 //vessel splash
 import vesselSplash from "../images/splash/vesselSplash.jpg";
@@ -28,6 +31,8 @@ import vessel2 from "../images/screenshots/vessel/vessel2.jpg";
 import vessel3 from "../images/screenshots/vessel/vessel3.jpg";
 import vessel4 from "../images/screenshots/vessel/vessel4.jpg";
 import vessel5 from "../images/screenshots/vessel/vessel5.jpg";
+//vessel background
+import vesselBg from "../images/backgrounds/vesselBg.jpg";
 
 //the flesh of fallen angels splash
 import theFleshOfFallenAngelsSplash from "../images/splash/theFleshOfFallenAngelsSplash.jpg";
@@ -39,6 +44,8 @@ import theFleshOfFallenAngels4 from "../images/screenshots/theFleshOfFallenAngel
 import theFleshOfFallenAngels5 from "../images/screenshots/theFleshOfFallenAngels/theFleshOfFallenAngels5.jpg";
 import theFleshOfFallenAngels6 from "../images/screenshots/theFleshOfFallenAngels/theFleshOfFallenAngels6.jpg";
 import theFleshOfFallenAngels7 from "../images/screenshots/theFleshOfFallenAngels/theFleshOfFallenAngels7.jpg";
+//the flesh of fallen angels background
+import theFleshOfFallenAngelsBg from "../images/backgrounds/theFleshOfFallenAngelsBg.jpg";
 
 //isnt life disappointing splash
 import isntLifeDisappointingSplash from "../images/splash/isntLifeDisappointingSplash.jpg";
@@ -53,6 +60,8 @@ import isntLifeDisappointing7 from "../images/screenshots/isntLifeDisappointing/
 import isntLifeDisappointing8 from "../images/screenshots/isntLifeDisappointing/isntLifeDisappointing8.jpg";
 import isntLifeDisappointing9 from "../images/screenshots/isntLifeDisappointing/isntLifeDisappointing9.jpg";
 import isntLifeDisappointing10 from "../images/screenshots/isntLifeDisappointing/isntLifeDisappointing10.jpg";
+//isnt life disappointing background
+import isntLifeDisappointingBg from "../images/backgrounds/isntLifeDisappointingBg.jpg";
 
 //suffer splash
 import sufferSplash from "../images/splash/sufferSplash.jpg";
@@ -90,6 +99,8 @@ import sheIsAllYours3 from "../images/screenshots/sheIsAllYours/sheIsAllYours3.j
 import sheIsAllYours4 from "../images/screenshots/sheIsAllYours/sheIsAllYours4.jpg";
 import sheIsAllYours5 from "../images/screenshots/sheIsAllYours/sheIsAllYours5.jpg";
 import sheIsAllYours6 from "../images/screenshots/sheIsAllYours/sheIsAllYours6.jpg";
+//she is all yours background
+import sheIsAllYoursBg from "../images/backgrounds/sheIsAllYoursBg.jpg";
 
 //personal splash
 import personalSplash from "../images/splash/personalSplash.jpg";
@@ -110,7 +121,7 @@ import skin4 from "../images/screenshots/skin/skin4.jpg";
 import skin5 from "../images/screenshots/skin/skin5.jpg";
 import skin6 from "../images/screenshots/skin/skin6.jpg";
 
-const gameImages = {
+const gameMedia = {
   subminimal: {
     splashImage: subminimalSplash,
     screenshots: [
@@ -120,6 +131,8 @@ const gameImages = {
       subminimal4,
       subminimal5,
     ],
+    background: subminimalBg,
+    video: "",
   },
   fateless: {
     splashImage: fatelessSplash,
@@ -134,10 +147,14 @@ const gameImages = {
       fateless8,
       fateless9,
     ],
+    background: fatelessBg,
+    video: "2oZRH_pU9MU",
   },
   vessel: {
     splashImage: vesselSplash,
     screenshots: [vessel1, vessel2, vessel3, vessel4, vessel5],
+    background: vesselBg,
+    video: "",
   },
   theFleshOfFallenAngels: {
     splashImage: theFleshOfFallenAngelsSplash,
@@ -150,6 +167,8 @@ const gameImages = {
       theFleshOfFallenAngels6,
       theFleshOfFallenAngels7,
     ],
+    background: theFleshOfFallenAngelsBg,
+    video: "",
   },
   isntLifeDisappointing: {
     splashImage: isntLifeDisappointingSplash,
@@ -165,18 +184,26 @@ const gameImages = {
       isntLifeDisappointing9,
       isntLifeDisappointing10,
     ],
+    background: isntLifeDisappointingBg,
+    video: "",
   },
   suffer: {
     splashImage: sufferSplash,
     screenshots: [suffer1, suffer2, suffer3, suffer4, suffer5, suffer6],
+    background: "",
+    video: "G6Cw5B98wmg",
   },
   soul: {
     splashImage: soulSplash,
     screenshots: [soul1, soul2, soul3, soul4, soul5],
+    background: "",
+    video: "3uRcoBTnSHA",
   },
   suicide: {
     splashImage: suicideSplash,
     screenshots: [suicide1, suicide2, suicide3, suicide4],
+    background: "",
+    video: "7T3X2mq_xPQ",
   },
   sheIsAllYours: {
     splashImage: sheIsAllYoursSplash,
@@ -188,16 +215,22 @@ const gameImages = {
       sheIsAllYours5,
       sheIsAllYours6,
     ],
+    background: sheIsAllYoursBg,
+    video: "",
   },
   personal: {
     splashImage: personalSplash,
     screenshots: [personal1, personal2, personal3, personal4, personal5],
+    background: "",
+    video: "i0taLJFEg6M",
   },
   skin: {
     splashImage: skinSplash,
     screenshots: [skin1, skin2, skin3, skin4, skin5, skin6],
+    background: "",
+    video: "Awl2TKZtIkA",
   },
 };
 
-export { gameImages };
-export default gameImages;
+export { gameMedia };
+export default gameMedia;

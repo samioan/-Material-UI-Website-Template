@@ -4,9 +4,17 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import gameDetails from "./util/gameDetails";
+import background from "../../background.jpg";
 
 const useStyles = makeStyles({
-  root: {
+  page: {
+    backgroundColor: "#000",
+    maxWidth: 800,
+    minWidth: "60%",
+    margin: "auto",
+    minHeight: "100vh",
+  },
+  title: {
     color: "#fff",
   },
 });
@@ -19,32 +27,42 @@ const Games = () => {
   }, []);
 
   return (
-    <div style={{ width: "100%" }}>
-      <Box pt={10}>
-        <Typography className={classes.root} variant="h1" align="center">
-          Games
-        </Typography>
-      </Box>
-      <Box
-        display="flex"
-        flexWrap="wrap"
-        alignItems="stretch"
-        justifyContent="center"
-        p={2}
-      >
-        {gameDetails.map((gameItem) => (
-          <Box key={gameItem.title} p={2}>
-            <GameItem
-              image={gameItem.image}
-              title={gameItem.title}
-              tagline={gameItem.tagline}
-              genre={gameItem.genre}
-              linkPrimary={gameItem.linkPrimary}
-              linkSecondary={gameItem.linkSecondary}
-              pageLink={gameItem.pageLink}
-            />
-          </Box>
-        ))}
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+      }}
+    >
+      <Box className={classes.page}>
+        <Box pt={10}>
+          <Typography className={classes.title} variant="h1" align="center">
+            Games
+          </Typography>
+        </Box>
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          alignItems="stretch"
+          justifyContent="center"
+          p={2}
+        >
+          {gameDetails.map((gameItem) => (
+            <Box key={gameItem.title} p={2}>
+              <GameItem
+                image={gameItem.image}
+                title={gameItem.title}
+                tagline={gameItem.tagline}
+                genre={gameItem.genre}
+                linkPrimary={gameItem.linkPrimary}
+                linkSecondary={gameItem.linkSecondary}
+                pageLink={gameItem.pageLink}
+              />
+            </Box>
+          ))}
+        </Box>
       </Box>
     </div>
   );

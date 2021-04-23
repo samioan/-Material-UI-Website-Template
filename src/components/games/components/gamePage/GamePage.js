@@ -9,19 +9,28 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
   page: {
-    maxWidth: "60%",
-    minWidth: 360,
+    backgroundColor: "#000",
+    maxWidth: 800,
+    minWidth: "20%",
     margin: "auto",
+    minHeight: "100vh",
   },
   textPage: {
     maxWidth: 347,
     minWidth: 347,
   },
-  media: {
+  video: {
     minWidth: 347,
     minHeight: "100%",
     maxWidth: 347,
     maxHeight: "100%",
+  },
+  images: {
+    minWidth: 347,
+    minHeight: "100%",
+    maxWidth: 347,
+    maxHeight: "100%",
+    margin: "auto",
   },
   title: {
     color: "#fff",
@@ -54,7 +63,15 @@ const GamePage = () => {
   }, []);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${websiteLink.background})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+      }}
+    >
       <Box className={classes.page}>
         <Box pt={10} align="center">
           <Typography className={classes.title} gutterBottom variant="h5">
@@ -87,7 +104,7 @@ const GamePage = () => {
             ))}
           </Box>
           <Box p={1}>
-            <YouTube className={classes.media} video={websiteLink.video} />
+            <YouTube className={classes.video} video={websiteLink.video} />
           </Box>
         </Box>
 
@@ -101,7 +118,7 @@ const GamePage = () => {
           {websiteLink.screenshots.map((item) => (
             <Box p={1} key={item.toString()}>
               <img
-                className={classes.media}
+                className={classes.images}
                 src={item}
                 alt={item.toString()}
               ></img>
