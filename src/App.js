@@ -1,9 +1,9 @@
-import "./App.css";
 import React from "react";
 import { Home, Header, Games, Music, Art, Videos, Archive } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GamePage } from "./components/games/components";
 import gameDetails from "./components/games/util/gameDetails";
+import background from "./background.jpg";
 
 const App = () => {
   const pages = [
@@ -25,7 +25,17 @@ const App = () => {
       {pages.map((page) => (
         <Switch key={page.link}>
           <Route exact path={page.link}>
-            {page.component}
+            <div
+              style={{
+                backgroundImage: `url(${background})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
+                backgroundSize: "cover",
+              }}
+            >
+              {page.component}
+            </div>
           </Route>
         </Switch>
       ))}

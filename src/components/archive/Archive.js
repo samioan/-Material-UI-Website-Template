@@ -11,6 +11,13 @@ import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
+  page: {
+    backgroundColor: "#000",
+    maxWidth: 800,
+    minWidth: "60%",
+    margin: "auto",
+    minHeight: "100vh",
+  },
   root: {
     color: "#fff",
     display: "flex",
@@ -35,153 +42,151 @@ const Archive = () => {
   }, []);
 
   return (
-    <div className={classes.root}>
-      <Box mt={10} mb={5} width="100%">
-        <Typography
-          className={classes.root}
-          variant="h1"
-          align="center"
-          color="#fff"
-          component="h1"
-        >
-          Archive
-        </Typography>
-      </Box>
-      <Box mb={5} width="100%">
-        <Typography
-          className={classes.root}
-          variant="h4"
-          align="center"
-          color="#fff"
-          component="h4"
-        >
-          Games
-        </Typography>
-      </Box>
+    <Box className={classes.page}>
+      <div className={classes.root}>
+        <Box pt={10} pb={5} width="100%">
+          <Typography
+            className={classes.root}
+            variant="h1"
+            align="center"
+            color="#fff"
+          >
+            Archive
+          </Typography>
+        </Box>
+        <Box pb={5} width="100%">
+          <Typography
+            className={classes.root}
+            variant="h4"
+            align="center"
+            color="#fff"
+          >
+            Games
+          </Typography>
+        </Box>
 
-      <GridList col={4} className={classes.gridList}>
-        {archiveDetails
-          .filter((tile) => tile.kind === "Games")
-          .map((tile) => (
-            <GridListTile
-              key={tile.img}
-              style={{ width: "50%", height: 200 }}
-              component={Link}
-              to={{
-                pathname: tile.link,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={tile.img} alt={tile.title} />
+        <GridList col={4} className={classes.gridList}>
+          {archiveDetails
+            .filter((tile) => tile.kind === "Games")
+            .map((tile) => (
+              <GridListTile
+                key={tile.img}
+                style={{ width: "50%", height: 200 }}
+                component={Link}
+                to={{
+                  pathname: tile.link,
+                }}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={tile.img} alt={tile.title} />
 
-              <GridListTileBar
-                title={tile.title}
-                actionIcon={
-                  <IconButton
-                    aria-label={`info about ${tile.title}`}
-                    className={classes.icon}
-                    target="_blank"
-                    href={tile.link}
-                  >
-                    <GetAppIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-      </GridList>
+                <GridListTileBar
+                  title={tile.title}
+                  actionIcon={
+                    <IconButton
+                      aria-label={`info about ${tile.title}`}
+                      className={classes.icon}
+                      target="_blank"
+                      href={tile.link}
+                    >
+                      <GetAppIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+        </GridList>
 
-      <Box mt={5} mb={5} width="100%">
-        <Typography
-          className={classes.root}
-          variant="h4"
-          align="center"
-          color="#fff"
-          component="h4"
-        >
-          Music
-        </Typography>
-      </Box>
+        <Box pt={5} pb={5} width="100%">
+          <Typography
+            className={classes.root}
+            variant="h4"
+            align="center"
+            color="#fff"
+          >
+            Music
+          </Typography>
+        </Box>
 
-      <GridList col={4} className={classes.gridList}>
-        {archiveDetails
-          .filter((tile) => tile.kind === "Music")
-          .map((tile) => (
-            <GridListTile
-              key={tile.img}
-              style={{ width: "50%", height: 200 }}
-              component={Link}
-              to={{
-                pathname: tile.link,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={tile.img} alt={tile.title} />
+        <GridList col={4} className={classes.gridList}>
+          {archiveDetails
+            .filter((tile) => tile.kind === "Music")
+            .map((tile) => (
+              <GridListTile
+                key={tile.img}
+                style={{ width: "50%", height: 200 }}
+                component={Link}
+                to={{
+                  pathname: tile.link,
+                }}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={tile.img} alt={tile.title} />
 
-              <GridListTileBar
-                title={tile.title}
-                actionIcon={
-                  <IconButton
-                    aria-label={`info about ${tile.title}`}
-                    className={classes.icon}
-                    target="_blank"
-                    href={tile.link}
-                  >
-                    <GetAppIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-      </GridList>
+                <GridListTileBar
+                  title={tile.title}
+                  actionIcon={
+                    <IconButton
+                      aria-label={`info about ${tile.title}`}
+                      className={classes.icon}
+                      target="_blank"
+                      href={tile.link}
+                    >
+                      <GetAppIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+        </GridList>
 
-      <Box mt={5} mb={5} width="100%">
-        <Typography
-          className={classes.root}
-          variant="h4"
-          align="center"
-          color="#fff"
-          component="h4"
-        >
-          Art
-        </Typography>
-      </Box>
+        <Box pt={5} pb={5} width="100%">
+          <Typography
+            className={classes.root}
+            variant="h4"
+            align="center"
+            color="#fff"
+          >
+            Art
+          </Typography>
+        </Box>
 
-      <GridList col={4} className={classes.gridList}>
-        {archiveDetails
-          .filter((tile) => tile.kind === "Art")
-          .map((tile) => (
-            <GridListTile
-              key={tile.img}
-              style={{ width: "50%", height: 200 }}
-              component={Link}
-              to={{
-                pathname: tile.link,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={tile.img} alt={tile.title} />
+        <GridList col={4} className={classes.gridList}>
+          {archiveDetails
+            .filter((tile) => tile.kind === "Art")
+            .map((tile) => (
+              <GridListTile
+                key={tile.img}
+                style={{ width: "50%", height: 200 }}
+                component={Link}
+                to={{
+                  pathname: tile.link,
+                }}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={tile.img} alt={tile.title} />
 
-              <GridListTileBar
-                title={tile.title}
-                actionIcon={
-                  <IconButton
-                    aria-label={`info about ${tile.title}`}
-                    className={classes.icon}
-                    target="_blank"
-                    href={tile.link}
-                  >
-                    <GetAppIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-      </GridList>
-    </div>
+                <GridListTileBar
+                  title={tile.title}
+                  actionIcon={
+                    <IconButton
+                      aria-label={`info about ${tile.title}`}
+                      className={classes.icon}
+                      target="_blank"
+                      href={tile.link}
+                    >
+                      <GetAppIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+        </GridList>
+      </div>
+    </Box>
   );
 };
 export { Archive };

@@ -4,7 +4,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import gameDetails from "./util/gameDetails";
-import background from "../../background.jpg";
 
 const useStyles = makeStyles({
   page: {
@@ -27,15 +26,7 @@ const Games = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
       <Box className={classes.page}>
         <Box pt={10}>
           <Typography className={classes.title} variant="h1" align="center">

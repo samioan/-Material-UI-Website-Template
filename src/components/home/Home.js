@@ -9,6 +9,13 @@ import linkDetails from "./util/linkDetails";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
+  page: {
+    backgroundColor: "#000",
+    maxWidth: 800,
+    minWidth: "60%",
+    margin: "auto",
+    minHeight: "100vh",
+  },
   title: {
     color: "#fff",
   },
@@ -16,8 +23,7 @@ const useStyles = makeStyles({
     color: "#f00",
   },
   gridList: {
-    width: "100%",
-    height: "100%",
+    height: "100vh",
   },
   clickableIcon: {
     color: "rgba(255, 255, 255, 0.54)",
@@ -35,52 +41,54 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ width: "100%" }}>
-      <Box mt={10} mb={5}>
-        <Typography
-          className={classes.title}
-          variant="h1"
-          align="center"
-          color="#fff"
-          component="h1"
-        >
-          Selfish Dream
-        </Typography>
-      </Box>
-
-      <GridList col={4} className={classes.gridList}>
-        {linkDetails.map((item) => (
-          <GridListTile
-            key={item.img}
-            style={{ width: "50%", height: 230 }}
-            component={Link}
-            to={{
-              pathname: item.site,
-            }}
-            target="_blank"
-            rel="noreferrer"
+    <div>
+      <Box className={classes.page}>
+        <Box pt={10} pb={5}>
+          <Typography
+            className={classes.title}
+            variant="h1"
+            align="center"
+            color="#fff"
+            component="h1"
           >
-            <img src={item.img} alt={item.title} />
-            <GridListTileBar
-              title={item.title}
-              subtitle={item.tagline}
-              actionIcon={
-                <a
-                  style={{
-                    cursor: "pointer",
-                  }}
-                  className={classes.clickableIcon}
-                  target="_blank"
-                  rel="noreferrer"
-                  href={item.site}
-                >
-                  {item.icon}
-                </a>
-              }
-            />
-          </GridListTile>
-        ))}
-      </GridList>
+            Selfish Dream
+          </Typography>
+        </Box>
+
+        <GridList className={classes.gridList}>
+          {linkDetails.map((item) => (
+            <GridListTile
+              key={item.img}
+              style={{ width: "50%", height: `calc(100% / 3)` }}
+              component={Link}
+              to={{
+                pathname: item.site,
+              }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={item.img} alt={item.title} />
+              <GridListTileBar
+                title={item.title}
+                subtitle={item.tagline}
+                actionIcon={
+                  <a
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    className={classes.clickableIcon}
+                    target="_blank"
+                    rel="noreferrer"
+                    href={item.site}
+                  >
+                    {item.icon}
+                  </a>
+                }
+              />
+            </GridListTile>
+          ))}
+        </GridList>
+      </Box>
     </div>
   );
 };
