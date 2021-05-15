@@ -1,40 +1,15 @@
 import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import linkDetails from "./util/linkDetails";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
-  page: {
-    backgroundColor: "#000",
-    maxWidth: 800,
-    minWidth: "60%",
-    margin: "auto",
-    minHeight: "100vh",
-  },
-  title: {
-    color: "#fff",
-  },
-  subtitle: {
-    color: "#f00",
-  },
-  gridList: {
-    height: "100vh",
-  },
-  clickableIcon: {
-    color: "rgba(255, 255, 255, 0.54)",
-    "&:hover": {
-      color: "rgba(255, 255, 255, 1)",
-    },
-  },
-});
-
 const Home = () => {
-  const classes = useStyles();
+  const classes = styles();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,13 +19,7 @@ const Home = () => {
     <div>
       <Box className={classes.page}>
         <Box pt={10} pb={5}>
-          <Typography
-            className={classes.title}
-            variant="h1"
-            align="center"
-            color="#fff"
-            component="h1"
-          >
+          <Typography className={classes.title} variant="h2" align="center">
             Selfish Dream
           </Typography>
         </Box>

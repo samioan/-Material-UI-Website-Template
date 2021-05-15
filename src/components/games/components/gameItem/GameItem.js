@@ -1,40 +1,13 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Link, useRouteMatch } from "react-router-dom";
 
-const useStyles = makeStyles({
-  title: {
-    color: "#fff",
-    variant: "h5",
-  },
-  tagline: {
-    color: "#606060",
-    variant: "h6",
-  },
-  genre: {
-    color: "#858585",
-    variant: "body1",
-  },
-  card: {
-    backgroundColor: "#111",
-  },
-  cardContent: {
-    minWidth: 300,
-    maxWidth: 300,
-    minHeight: 140,
-  },
-  media: {
-    height: 300,
-  },
-});
-
 export default function GameItem({ image, title, tagline, genre, pageLink }) {
-  const classes = useStyles();
-
+  const classes = styles();
   let match = useRouteMatch();
 
   return (

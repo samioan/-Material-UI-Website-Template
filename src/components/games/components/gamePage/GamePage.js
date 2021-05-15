@@ -1,47 +1,11 @@
 import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 import gameDetails from "../../util/gameDetails";
 import { useRouteMatch } from "react-router-dom";
 import YouTube from "@u-wave/react-youtube";
 import Button from "@material-ui/core/Button";
-
-const useStyles = makeStyles({
-  page: {
-    backgroundColor: "#000",
-    maxWidth: 800,
-    minWidth: "20%",
-    margin: "auto",
-    minHeight: "100vh",
-  },
-  textPage: {
-    maxWidth: 347,
-    minWidth: 347,
-  },
-  video: {
-    minWidth: 347,
-    minHeight: "100%",
-    maxWidth: 347,
-    maxHeight: "100%",
-  },
-  images: {
-    minWidth: 347,
-    minHeight: "100%",
-    maxWidth: 347,
-    maxHeight: "100%",
-    margin: "auto",
-  },
-  title: {
-    color: "#fff",
-  },
-  tagline: {
-    color: "#606060",
-  },
-  description: {
-    color: "#c3c3c3",
-  },
-});
 
 const gamePageDetails = (game) => {
   const link = game.split("/")[2];
@@ -54,7 +18,7 @@ const gamePageDetails = (game) => {
 };
 
 const GamePage = () => {
-  const classes = useStyles();
+  const classes = styles();
   let match = useRouteMatch();
   const websiteLink = gamePageDetails(match.url);
 
@@ -98,6 +62,7 @@ const GamePage = () => {
                 variant="body2"
                 gutterBottom
                 key={item}
+                align="center"
               >
                 {item}
               </Typography>

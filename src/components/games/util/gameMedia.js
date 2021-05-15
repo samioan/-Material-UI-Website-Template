@@ -154,7 +154,7 @@ const gameMedia = {
     splashImage: vesselSplash,
     screenshots: [vessel1, vessel2, vessel3, vessel4, vessel5],
     background: vesselBg,
-    video: "",
+    video: "IRNyZAu5Fj4",
   },
   theFleshOfFallenAngels: {
     splashImage: theFleshOfFallenAngelsSplash,
@@ -168,7 +168,7 @@ const gameMedia = {
       theFleshOfFallenAngels7,
     ],
     background: theFleshOfFallenAngelsBg,
-    video: "",
+    video: "InN0L1UC4zM",
   },
   isntLifeDisappointing: {
     splashImage: isntLifeDisappointingSplash,
@@ -185,7 +185,7 @@ const gameMedia = {
       isntLifeDisappointing10,
     ],
     background: isntLifeDisappointingBg,
-    video: "",
+    video: "3Q_amiMGRsw",
   },
   suffer: {
     splashImage: sufferSplash,
@@ -216,7 +216,7 @@ const gameMedia = {
       sheIsAllYours6,
     ],
     background: sheIsAllYoursBg,
-    video: "",
+    video: "JrTJU1yqVPs",
   },
   personal: {
     splashImage: personalSplash,

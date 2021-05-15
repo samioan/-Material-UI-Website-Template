@@ -10,16 +10,20 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(({ breakpoints, palette }) => ({
   page: {
-    backgroundColor: "#000",
-    maxWidth: 800,
-    minWidth: "60%",
+    [breakpoints.down("sm")]: {
+      width: "100vw",
+    },
+    [breakpoints.up("sm")]: {
+      width: "60vw",
+    },
+    backgroundColor: palette.text.primary,
     margin: "auto",
     minHeight: "100vh",
   },
   root: {
-    color: "#fff",
+    color: palette.grey[50],
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
@@ -32,7 +36,7 @@ const useStyles = makeStyles({
   icon: {
     color: "rgba(255, 255, 255, 0.54)",
   },
-});
+}));
 
 const Archive = () => {
   const classes = useStyles();
@@ -45,22 +49,12 @@ const Archive = () => {
     <Box className={classes.page}>
       <div className={classes.root}>
         <Box pt={10} pb={5} width="100%">
-          <Typography
-            className={classes.root}
-            variant="h1"
-            align="center"
-            color="#fff"
-          >
+          <Typography className={classes.root} variant="h2" align="center">
             Archive
           </Typography>
         </Box>
         <Box pb={5} width="100%">
-          <Typography
-            className={classes.root}
-            variant="h4"
-            align="center"
-            color="#fff"
-          >
+          <Typography className={classes.root} variant="h5" align="center">
             Games
           </Typography>
         </Box>
@@ -99,12 +93,7 @@ const Archive = () => {
         </GridList>
 
         <Box pt={5} pb={5} width="100%">
-          <Typography
-            className={classes.root}
-            variant="h4"
-            align="center"
-            color="#fff"
-          >
+          <Typography className={classes.root} variant="h5" align="center">
             Music
           </Typography>
         </Box>
@@ -143,12 +132,7 @@ const Archive = () => {
         </GridList>
 
         <Box pt={5} pb={5} width="100%">
-          <Typography
-            className={classes.root}
-            variant="h4"
-            align="center"
-            color="#fff"
-          >
+          <Typography className={classes.root} variant="h5" align="center">
             Art
           </Typography>
         </Box>

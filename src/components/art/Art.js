@@ -2,24 +2,11 @@ import React, { useEffect } from "react";
 import { ArtItem } from "./components";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import Theme from "../theme";
 import artDetails from "./util/artDetails";
 
-const useStyles = makeStyles({
-  page: {
-    backgroundColor: "#000",
-    maxWidth: 800,
-    minWidth: "60%",
-    margin: "auto",
-    minHeight: "100vh",
-  },
-  title: {
-    color: "#fff",
-  },
-});
-
 const Art = () => {
-  const classes = useStyles();
+  const classes = Theme();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,13 +16,7 @@ const Art = () => {
     <div>
       <Box className={classes.page}>
         <Box pt={10}>
-          <Typography
-            className={classes.title}
-            variant="h1"
-            align="center"
-            color="#fff"
-            component="h1"
-          >
+          <Typography className={classes.title} variant="h2" align="center">
             Art
           </Typography>
         </Box>
