@@ -5,7 +5,6 @@ import styles from "./styles";
 import Grid from "@material-ui/core/Grid";
 import linkDetails from "./util/linkDetails";
 import Button from "@material-ui/core/Button";
-import icon from "./images/icon.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import imageCarousel from "./util/imageCarousel";
