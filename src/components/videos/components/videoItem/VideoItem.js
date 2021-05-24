@@ -1,34 +1,45 @@
 import React from "react";
-import styles from "./styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import YouTube from "@u-wave/react-youtube";
 
-const VideoItem = ({ link, title }) => {
-  const classes = styles();
+const useStyles = makeStyles({
+  heading1: {
+    color: "#fff",
+  },
+  root: {
+    backgroundColor: "#111",
+  },
+  cardContent: {
+    maxWidth: 300,
+    minHeight: 100,
+  },
+  media: {
+    height: 300,
+  },
+});
+
+export default function VideoItem({ link, title }) {
+  const classes = useStyles();
 
   return (
-    <Card className={classes.card}>
-      <CardContent className={classes.cardContent}>
-        <LiteYouTubeEmbed
-          activeClass="lyt-activated"
-          iframeClass=""
-          playerClass="lty-playbtn"
-          wrapperClass="yt-lite"
-          poster="hqdefault"
-          noCookie={true}
-          id={link}
-          title={title}
-        />
-        <Typography className={classes.title} gutterBottom variant="h5">
-          {title}
-        </Typography>
-      </CardContent>
+    <Card className={classes.root} style={{ maxWidth: 300 }}>
+      <CardActionArea>
+        <YouTube className={classes.media} video={link} />
+        <CardContent className={classes.cardContent}>
+          <Typography
+            className={classes.heading1}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
+            {title}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
-};
-
-export { VideoItem };
-export default VideoItem;
+}
