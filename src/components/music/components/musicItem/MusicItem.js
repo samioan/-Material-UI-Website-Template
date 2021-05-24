@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -7,6 +7,31 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
+
+const useStyles = makeStyles({
+  heading1: {
+    color: "#fff",
+  },
+  heading2: {
+    color: "#606060",
+  },
+  heading3: {
+    color: "#858585",
+  },
+  text: {
+    color: "#c3c3c3",
+  },
+  card: {
+    backgroundColor: "#111",
+  },
+  cardContent: {
+    maxWidth: 300,
+    minHeight: 200,
+  },
+  media: {
+    height: 300,
+  },
+});
 
 export default function MusicItem({
   image,
@@ -16,7 +41,7 @@ export default function MusicItem({
   description,
   linkPrimary,
 }) {
-  const classes = styles();
+  const classes = useStyles();
 
   return (
     <Link
@@ -29,16 +54,31 @@ export default function MusicItem({
       <Card className={classes.card}>
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent className={classes.cardContent}>
-          <Typography className={classes.heading1} gutterBottom variant="h5">
+          <Typography
+            className={classes.heading1}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
             {title}
           </Typography>
-          <Typography className={classes.heading2} gutterBottom variant="h6">
+          <Typography
+            className={classes.heading2}
+            gutterBottom
+            variant="h6"
+            component="p"
+          >
             {tagline}
           </Typography>
-          <Typography className={classes.heading3} gutterBottom variant="body1">
+          <Typography
+            className={classes.heading3}
+            gutterBottom
+            variant="body1"
+            component="p"
+          >
             {genre}
           </Typography>
-          <Typography className={classes.text} variant="body2">
+          <Typography className={classes.text} variant="body2" component="p">
             {description}
           </Typography>
         </CardContent>
