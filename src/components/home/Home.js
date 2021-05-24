@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import styles from "./styles";
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar";
+import Grid from "@material-ui/core/Grid";
 import linkDetails from "./util/linkDetails";
-import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+import icon from "./images/icon.jpg";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import imageCarousel from "./util/imageCarousel";
 
 const Home = () => {
   const classes = styles();
@@ -16,48 +18,49 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <Box className={classes.page}>
-        <Box pt={10} pb={5}>
-          <Typography className={classes.title} variant="h2" align="center">
-            Selfish Dream
-          </Typography>
-        </Box>
-
-        <GridList className={classes.gridList}>
-          {linkDetails.map((item) => (
-            <GridListTile
-              key={item.img}
-              style={{ width: "50%", height: `calc(100% / 3)` }}
-              component={Link}
-              to={{
-                pathname: item.site,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={item.img} alt={item.title} />
-              <GridListTileBar
-                title={item.title}
-                subtitle={item.tagline}
-                actionIcon={
-                  <a
-                    style={{
-                      cursor: "pointer",
-                    }}
-                    className={classes.clickableIcon}
-                    target="_blank"
-                    rel="noreferrer"
-                    href={item.site}
-                  >
-                    {item.icon}
-                  </a>
-                }
-              />
-            </GridListTile>
-          ))}
-        </GridList>
+    <div className={classes.page}>
+      <Box pt={10} pb={5}>
+        <Typography className={classes.title} variant="h2" align="center">
+          Selfish Dream
+        </Typography>
       </Box>
+      <Box pb={5}>
+        <Typography className={classes.title} variant="h5" align="center">
+          Someone. Anyone.
+        </Typography>
+      </Box>
+      <Grid className={classes.gridList}>
+        <Carousel
+          className={classes.carousel}
+          autoPlay="true"
+          infiniteLoop="true"
+          interval={5000}
+        >
+          {imageCarousel.map((item) => (
+            <div key={item.name}>
+              <img src={item.img} alt={item.name} />
+              <p className="legend">{item.name}</p>
+            </div>
+          ))}
+        </Carousel>
+      </Grid>
+      <Grid className={classes.gridList}>
+        {linkDetails.map((item) => (
+          <Box p={1}>
+            <Button
+              className={classes.button}
+              key={item.title}
+              href={item.site}
+              target="_blank"
+              variant="outlined"
+              size="large"
+              color="primary"
+            >
+              {item.title}
+            </Button>
+          </Box>
+        ))}
+      </Grid>
     </div>
   );
 };

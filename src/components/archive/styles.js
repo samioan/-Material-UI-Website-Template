@@ -12,31 +12,16 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     margin: "auto",
     minHeight: "100vh",
   },
-  title: {
+  root: {
     color: palette.grey[50],
-  },
-  gridList: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    overflow: "hidden",
   },
-  carousel: {
-    margin: "auto",
-    paddingBottom: 40,
-    [breakpoints.down("sm")]: {
-      width: "calc(100vw - 32px)",
-    },
-    [breakpoints.up("sm")]: {
-      width: "30vw",
-    },
-  },
-  button: {
-    [breakpoints.down("sm")]: {
-      width: "calc(100vw - 32px)",
-    },
-    [breakpoints.up("sm")]: {
-      width: 300,
-    },
+  gridList: {
+    width: "90%",
+    height: "100%",
   },
 }));
 

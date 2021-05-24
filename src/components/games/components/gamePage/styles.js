@@ -1,40 +1,33 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles({
+const styles = makeStyles(({ breakpoints, palette }) => ({
   page: {
-    backgroundColor: "#000",
-    maxWidth: 800,
-    minWidth: "20%",
-    margin: "auto",
+    [breakpoints.down("sm")]: { width: "100vw" },
+    [breakpoints.up("sm")]: { width: 800 },
     minHeight: "100vh",
+    margin: "auto",
+    backgroundColor: palette.text.primary,
   },
-  textPage: {
-    maxWidth: 347,
-    minWidth: 347,
-  },
-  video: {
-    minWidth: 347,
-    minHeight: "100%",
-    maxWidth: 347,
-    maxHeight: "100%",
+  content: {
+    [breakpoints.down("sm")]: { width: "calc(100vw - 32px)" },
+    [breakpoints.up("sm")]: { width: 347 },
+    height: "100%",
   },
   images: {
-    minWidth: 347,
-    minHeight: "100%",
-    maxWidth: 347,
-    maxHeight: "100%",
+    [breakpoints.down("sm")]: { width: "calc(100vw - 32px)" },
+    [breakpoints.up("sm")]: { width: 347 },
     margin: "auto",
   },
   title: {
-    color: "#fff",
+    color: palette.grey[50],
   },
   tagline: {
-    color: "#606060",
+    color: palette.grey[500],
   },
   description: {
-    color: "#c3c3c3",
+    color: palette.grey[50],
   },
-});
+}));
 
 export { styles };
 export default styles;

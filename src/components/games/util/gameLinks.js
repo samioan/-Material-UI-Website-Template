@@ -1,4 +1,9 @@
 const gameLinks = {
+  within: [
+    "https://selfishdream.itch.io/within/purchase",
+    "https://selfishdream.itch.io/within",
+    "within",
+  ],
   subminimal: [
     "https://selfishdream.itch.io/subminimal/purchase",
     "https://selfishdream.itch.io/subminimal",
