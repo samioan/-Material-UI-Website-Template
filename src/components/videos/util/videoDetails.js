@@ -21,6 +21,11 @@ const videoDetails = [
     genre: "My Games",
   },
   {
+    link: "ZEQKm92IPfw",
+    title: "Ιsn't Life Disappointing?",
+    genre: "My Games",
+  },
+  {
     link: "XCjrrLIjC7M",
     title: "Autoerotic Coagulation",
     genre: "My Games",
@@ -43,6 +48,11 @@ const videoDetails = [
   {
     link: "7T3X2mq_xPQ",
     title: "I Want to Blow My Brains Out",
+    genre: "My Games",
+  },
+  {
+    link: "JrTJU1yqVPs",
+    title: "She Is All Yours",
     genre: "My Games",
   },
   {
