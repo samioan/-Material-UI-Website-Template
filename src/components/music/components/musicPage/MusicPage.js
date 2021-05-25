@@ -2,25 +2,25 @@ import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import styles from "./styles";
-import gameDetails from "../../util/gameDetails";
+import albumDetails from "../../util/albumDetails";
 import { useRouteMatch } from "react-router-dom";
 import YouTube from "@u-wave/react-youtube";
 import Button from "@material-ui/core/Button";
 
-const gamePageDetails = (game) => {
-  const link = game.split("/")[2];
+const musicPageDetails = (album) => {
+  const link = album.split("/")[2];
 
-  for (var i = 0; i < gameDetails.length; i++) {
-    if (gameDetails[i].pageLink === link) {
-      return gameDetails[i];
+  for (var i = 0; i < albumDetails.length; i++) {
+    if (albumDetails[i].pageLink === link) {
+      return albumDetails[i];
     }
   }
 };
 
-const GamePage = () => {
+const MusicPage = () => {
   const classes = styles();
   let match = useRouteMatch();
-  const websiteLink = gamePageDetails(match.url);
+  const websiteLink = musicPageDetails(match.url);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -62,25 +62,23 @@ const GamePage = () => {
           <YouTube className={classes.video} video={websiteLink.video} />
         </Box>
       </Box>
-
       <Box
-        pt={1}
+        pt={3}
+        pb={3}
         display="flex"
         flexWrap="wrap"
         alignItems="stretch"
         justifyContent="center"
       >
-        {websiteLink.screenshots.map((item) => (
-          <Box p={1} key={item.toString()}>
-            <img
-              className={classes.images}
-              src={item}
-              alt={item.toString()}
-            ></img>
-          </Box>
+        {websiteLink.albumCodes.trackCodes.map((item) => (
+          <iframe
+            className={classes.song}
+            title={item}
+            src={`https://bandcamp.com/EmbeddedPlayer/album=${websiteLink.albumCodes.albumCode}/size=small/bgcol=333333/linkcol=0f91ff/artwork=none/track=${item}/transparent=true/`}
+            seamless
+          ></iframe>
         ))}
       </Box>
-
       <Box
         pt={2}
         pb={3}
@@ -104,19 +102,7 @@ const GamePage = () => {
         <Box p={1}>
           <Button
             className={classes.button}
-            target="_blank"
-            href={websiteLink.linkSecondary}
-            variant="outlined"
-            size="large"
-            color="primary"
-          >
-            Itch.io Page
-          </Button>
-        </Box>
-        <Box p={1}>
-          <Button
-            className={classes.button}
-            href="/games"
+            href="/music"
             variant="outlined"
             size="large"
             color="primary"
@@ -129,5 +115,5 @@ const GamePage = () => {
   );
 };
 
-export { GamePage };
-export default GamePage;
+export { MusicPage };
+export default MusicPage;

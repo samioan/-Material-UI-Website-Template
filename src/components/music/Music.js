@@ -34,10 +34,7 @@ export default function Music() {
                 title={musicItem.title}
                 tagline={musicItem.tagline}
                 genre={musicItem.genre}
-                description={musicItem.description.map((item) => (
-                  <div key={item}>{item}</div>
-                ))}
-                linkPrimary={musicItem.linkPrimary}
+                pageLink={musicItem.pageLink}
               />
             </Box>
           ))}

@@ -1,6 +1,6 @@
 const gameDescriptions = {
   within: [
-    " You have arrived at the Sepulchre of the Ancients.",
+    "You have arrived at the Sepulchre of the Ancients.",
     "Without fear, you enter the forbidden crypt.",
     "The doors close behind you and your goal is clear.",
     "You must escape from this forsaken tomb alive.",

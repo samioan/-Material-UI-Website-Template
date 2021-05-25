@@ -101,9 +101,10 @@ const videoDetails = [
     genre: "My Games",
   },
   // My Music
+  { link: "-tOoTl8Hr9U", title: "Udjat", genre: "My Music" },
   {
     link: "fA86HcW-RZo",
-    title: "Fateless",
+    title: "Interfector",
     genre: "My Music",
   },
   {
