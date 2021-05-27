@@ -34,8 +34,6 @@ const Games = () => {
                 title={gameItem.title}
                 tagline={gameItem.tagline}
                 genre={gameItem.genre}
-                linkPrimary={gameItem.linkPrimary}
-                linkSecondary={gameItem.linkSecondary}
                 pageLink={gameItem.pageLink}
               />
             </Box>

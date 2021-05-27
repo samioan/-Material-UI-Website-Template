@@ -27,7 +27,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
       width: "calc(100vw - 32px)",
     },
     [breakpoints.up("sm")]: {
-      width: "30vw",
+      width: "45vw",
     },
   },
   button: {

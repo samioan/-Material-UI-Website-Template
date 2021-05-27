@@ -26,7 +26,6 @@ const gameDetails = [
   pageLink: gameLinks[game][2],
   image: gameMedia[game].splashImage,
   screenshots: gameMedia[game].screenshots,
-  background: gameMedia[game].background,
   video: gameMedia[game].video,
 }));
 

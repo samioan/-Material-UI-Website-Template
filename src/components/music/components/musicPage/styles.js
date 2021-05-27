@@ -21,10 +21,11 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     [breakpoints.up("sm")]: { width: 347 },
     height: 196,
   },
-  images: {
+  song: {
+    border: "none",
     [breakpoints.down("sm")]: { width: "calc(100vw - 32px)" },
-    [breakpoints.up("sm")]: { width: 347 },
-    margin: "auto",
+    [breakpoints.up("sm")]: { width: 500 },
+    height: 42,
   },
   button: {
     width: 150,

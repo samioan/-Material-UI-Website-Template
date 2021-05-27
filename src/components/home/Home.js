@@ -33,12 +33,12 @@ const Home = () => {
           className={classes.carousel}
           autoPlay="true"
           infiniteLoop="true"
+          showThumbs={false}
           interval={5000}
         >
           {imageCarousel.map((item) => (
             <div key={item.name}>
               <img src={item.img} alt={item.name} />
-              <p className="legend">{item.name}</p>
             </div>
           ))}
         </Carousel>
