@@ -1,4 +1,16 @@
 const albumCodes = {
+  earthlyVariationsOfHeaven: {
+    albumCode: "105760441",
+    trackCodes: [
+      "737555398",
+      "3699696461",
+      "1946163376",
+      "4220861640",
+      "2138264829",
+      "3496039915",
+      "1810995616",
+    ],
+  },
   udjat: {
     albumCode: "1505587575",
     trackCodes: [

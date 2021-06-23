@@ -1,4 +1,9 @@
 const albumCardItems = {
+  earthlyVariationsOfHeaven: [
+    "Earthly Variations of Heaven",
+    "Their words, divine light.",
+    "Ambient",
+  ],
   udjat: ["Udjat", "The soul is eternal.", "Electronic"],
   interfector: ["Interfector", "Is violence the only way out?", "Ambient"],
   anotherDemon: ["Another Demon", "I am getting sick of this.", "Ambient"],

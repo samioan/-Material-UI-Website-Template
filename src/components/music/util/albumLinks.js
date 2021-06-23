@@ -1,4 +1,8 @@
 const albumLinks = {
+  earthlyVariationsOfHeaven: [
+    "https://selfishdream.bandcamp.com/album/earthly-variations-of-heaven",
+    "earthly-variations",
+  ],
   udjat: ["https://selfishdream.bandcamp.com/album/udjat", "udjat"],
   interfector: [
     "https://selfishdream.bandcamp.com/album/interfector",

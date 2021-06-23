@@ -1,17 +1,21 @@
-import within6 from "../../games/images/screenshots/within/within6.jpg";
-import subminimal2 from "../../games/images/screenshots/subminimal/subminimal2.jpg";
-import fateless8 from "../../games/images/screenshots/fateless/fateless8.jpg";
-import vessel3 from "../../games/images/screenshots/vessel/vessel3.jpg";
-import theFleshOfFallenAngels1 from "../../games/images/screenshots/theFleshOfFallenAngels/theFleshOfFallenAngels1.jpg";
-import isntLifeDisappointing10 from "../../games/images/screenshots/isntLifeDisappointing/isntLifeDisappointing10.jpg";
-import suffer6 from "../../games/images/screenshots/suffer/suffer6.jpg";
-import soul1 from "../../games/images/screenshots/soul/soul1.jpg";
-import suicide1 from "../../games/images/screenshots/suicide/suicide1.jpg";
-import sheIsAllYours2 from "../../games/images/screenshots/sheIsAllYours/sheIsAllYours2.jpg";
-import personal1 from "../../games/images/screenshots/personal/personal1.jpg";
-import skin1 from "../../games/images/screenshots/skin/skin1.jpg";
+import {
+  tenebris6,
+  within6,
+  subminimal2,
+  fateless8,
+  vessel3,
+  theFleshOfFallenAngels1,
+  isntLifeDisappointing10,
+  suffer6,
+  soul1,
+  suicide1,
+  sheIsAllYours2,
+  personal1,
+  skin1,
+} from "../../games/images";
 
 const imagesCarousel = [
+  { name: "Tenebris", img: tenebris6 },
   { name: "Within", img: within6 },
   { name: "subMINIMAL", img: subminimal2 },
   { name: "Fateless", img: fateless8 },

@@ -5,6 +5,7 @@ import albumCardItems from "./albumCardItems";
 import albumCodes from "./albumCodes";
 
 const albumDetails = [
+  "earthlyVariationsOfHeaven",
   "udjat",
   "interfector",
   "anotherDemon",

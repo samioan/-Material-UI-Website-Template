@@ -4,6 +4,7 @@ import gameLinks from "./gameLinks";
 import gameCardItems from "./gameCardItems";
 
 const gameDetails = [
+  "tenebris",
   "within",
   "subminimal",
   "fateless",

@@ -1,4 +1,10 @@
 const albumDescriptions = {
+  earthlyVariationsOfHeaven: [
+    "Do not be afraid.",
+    "They have many faces.",
+    "But there is only one Truth.",
+    "Their words, divine light.",
+  ],
   udjat: ["The flesh is temporary.", "But the soul is eternal."],
   interfector: [
     "Just following orders after all.",

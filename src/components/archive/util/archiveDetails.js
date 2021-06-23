@@ -1,54 +1,53 @@
-//Games
-import abstractions from "../images/games/abstractions.jpg";
-import autoerotic from "../images/games/autoerotic.jpg";
-import carefully from "../images/games/carefully.jpg";
-import clay from "../images/games/clay.jpg";
-import days from "../images/games/days.jpg";
-import dont from "../images/games/dont.jpg";
-import entropy from "../images/games/entropy.jpg";
-import faraway from "../images/games/faraway.jpg";
-import first from "../images/games/first.jpg";
-import flesh from "../images/games/flesh.jpg";
-import follow from "../images/games/follow.jpg";
-import fragments from "../images/games/fragments.jpg";
-import futile from "../images/games/futile.jpg";
-import hell from "../images/games/hell.jpg";
-import hollow from "../images/games/hollow.jpg";
-import hunter from "../images/games/hunter.jpg";
-import imperfections from "../images/games/imperfections.jpg";
-import incandescence from "../images/games/incandescence.jpg";
-import layers from "../images/games/layers.jpg";
-import cant from "../images/games/cant.jpg";
-import litany from "../images/games/litany.jpg";
-import looking from "../images/games/looking.jpg";
-import neurosynthesis from "../images/games/neurosynthesis.jpg";
-import one from "../images/games/one.jpg";
-import perfidious from "../images/games/perfidious.jpg";
-import prism from "../images/games/prism.jpg";
-import radiance from "../images/games/radiance.jpg";
-import screams from "../images/games/screams.jpg";
-import sequence from "../images/games/sequence.jpg";
-import sincerity from "../images/games/sincerity.jpg";
-import tired from "../images/games/tired.jpg";
-import transcendence from "../images/games/transcendence.jpg";
-import unkindled from "../images/games/unkindled.jpg";
-import womb from "../images/games/womb.jpg";
-import recluse from "../images/games/recluse.jpg";
-import among from "../images/games/among.jpg";
-import prosopagnosia from "../images/games/prosopagnosia.jpg";
-//Music
-import answers from "../images/music/answers.jpg";
-import beginnings from "../images/music/beginnings.jpg";
-import hellscapes from "../images/music/hellscapes.jpg";
-import individuality from "../images/music/individuality.jpg";
-import observatory from "../images/music/observatory.jpg";
-import reverberations from "../images/music/reverberations.jpg";
-//Art
-import backgrounds from "../images/art/backgrounds.jpg";
-import gifs from "../images/art/gifs.jpg";
-import photography from "../images/art/photography.jpg";
-import screenshots from "../images/art/screenshots.jpg";
-import desires from "../images/art/desires.jpg";
+import {
+  abstractions,
+  autoerotic,
+  carefully,
+  clay,
+  days,
+  dont,
+  entropy,
+  faraway,
+  first,
+  flesh,
+  follow,
+  fragments,
+  futile,
+  hell,
+  hollow,
+  hunter,
+  imperfections,
+  incandescence,
+  layers,
+  cant,
+  litany,
+  looking,
+  neurosynthesis,
+  one,
+  perfidious,
+  prism,
+  radiance,
+  screams,
+  sequence,
+  sincerity,
+  tired,
+  transcendence,
+  unkindled,
+  womb,
+  recluse,
+  among,
+  prosopagnosia,
+  answers,
+  beginnings,
+  hellscapes,
+  individuality,
+  observatory,
+  reverberations,
+  backgrounds,
+  gifs,
+  photography,
+  screenshots,
+  desires,
+} from "../images";
 
 const archiveDetails = [
   // Games

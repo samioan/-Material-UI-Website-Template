@@ -1,4 +1,8 @@
 const gameDescriptions = {
+  tenebris: [
+    "A distress signal from the planet Tenebris forces Jack and Cooper, members of Earth's Task Force, to investigate.",
+    "However, when Cooper delves deeper into the planet's human colony, he finds out things are not what they seem...",
+  ],
   within: [
     "You have arrived at the Sepulchre of the Ancients.",
     "Without fear, you enter the forbidden crypt.",
