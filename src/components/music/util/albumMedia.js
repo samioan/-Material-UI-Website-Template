@@ -1,55 +1,44 @@
-import {
-  heaven,
-  udjat,
-  interfector,
-  demon,
-  grunts,
-  path,
-  thoughts,
-  emotions,
-  indulgence,
-  eternally,
-} from "../images";
+import images from "../images";
 
 const albumMedia = {
   earthlyVariationsOfHeaven: {
-    splashImage: heaven,
+    splashImage: images.heaven,
     video: "DEBSYcnzOhc",
   },
   udjat: {
-    splashImage: udjat,
+    splashImage: images.udjat,
     video: "-tOoTl8Hr9U",
   },
   interfector: {
-    splashImage: interfector,
+    splashImage: images.interfector,
     video: "fA86HcW-RZo",
   },
   anotherDemon: {
-    splashImage: demon,
+    splashImage: images.demon,
     video: "E5GFRDQ0BVo",
   },
   facelessGruntsTortureTheInnermostPretenses: {
-    splashImage: grunts,
+    splashImage: images.grunts,
     video: "HwjIoX2_Pp0",
   },
   theLeftHandPath: {
-    splashImage: path,
+    splashImage: images.path,
     video: "s6XuSl3ovng",
   },
   aThousandThoughtsAndTheirPeacefulDecay: {
-    splashImage: thoughts,
+    splashImage: images.thoughts,
     video: "bYJ5tHw2sQ8",
   },
   emotionsForHire: {
-    splashImage: emotions,
+    splashImage: images.emotions,
     video: "mKAiz4n6PLE",
   },
   indulgence: {
-    splashImage: indulgence,
+    splashImage: images.indulgence,
     video: "",
   },
   eternally: {
-    splashImage: eternally,
+    splashImage: images.eternally,
     video: "-MKHVQ9D4AY",
   },
 };

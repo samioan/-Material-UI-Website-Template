@@ -11,7 +11,7 @@ import wavesJpg from "../jpg/waves.jpg";
 import coupleJpg from "../jpg/couple.jpg";
 import entangledJpg from "../jpg/entangled.jpg";
 
-export {
+const imagesJpg = {
   lustfulJpg,
   pondJpg,
   cagedJpg,
@@ -25,3 +25,6 @@ export {
   coupleJpg,
   entangledJpg,
 };
+
+export { imagesJpg };
+export default imagesJpg;

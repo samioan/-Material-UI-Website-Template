@@ -9,7 +9,7 @@ import emotions from "../images/emotions.jpg";
 import indulgence from "../images/indulgence.jpg";
 import eternally from "../images/eternally.jpg";
 
-export {
+const images = {
   heaven,
   udjat,
   interfector,
@@ -21,3 +21,6 @@ export {
   indulgence,
   eternally,
 };
+
+export { images };
+export default images;

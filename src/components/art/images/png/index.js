@@ -11,7 +11,7 @@ import wavesPng from "../png/waves.png";
 import couplePng from "../png/couple.png";
 import entangledPng from "../png/entangled.png";
 
-export {
+const imagesPng = {
   lustfulPng,
   pondPng,
   cagedPng,
@@ -25,3 +25,6 @@ export {
   couplePng,
   entangledPng,
 };
+
+export { imagesPng };
+export default imagesPng;

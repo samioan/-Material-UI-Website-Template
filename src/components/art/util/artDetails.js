@@ -1,94 +1,68 @@
-import {
-  lustfulJpg,
-  pondJpg,
-  cagedJpg,
-  masksJpg,
-  prometheusJpg,
-  porcelainJpg,
-  vesselJpg,
-  brokenJpg,
-  horizonJpg,
-  wavesJpg,
-  coupleJpg,
-  entangledJpg,
-} from "../images/jpg";
+import imagesJpg from "../images/jpg";
 
-import {
-  lustfulPng,
-  pondPng,
-  cagedPng,
-  masksPng,
-  prometheusPng,
-  porcelainPng,
-  vesselPng,
-  brokenPng,
-  horizonPng,
-  wavesPng,
-  couplePng,
-  entangledPng,
-} from "../images/png";
+import imagesPng from "../images/png";
 
 const artDetails = [
   {
-    image: lustfulJpg,
+    image: imagesJpg.lustfulJpg,
     title: "Lustful",
-    link: lustfulPng,
+    link: imagesPng.lustfulPng,
   },
   {
-    image: pondJpg,
+    image: imagesJpg.pondJpg,
     title: "Pond",
-    link: pondPng,
+    link: imagesPng.pondPng,
   },
   {
-    image: cagedJpg,
+    image: imagesJpg.cagedJpg,
     title: "Caged",
-    link: cagedPng,
+    link: imagesPng.cagedPng,
   },
   {
-    image: masksJpg,
+    image: imagesJpg.masksJpg,
     title: "Masks",
-    link: masksPng,
+    link: imagesPng.masksPng,
   },
   {
-    image: prometheusJpg,
+    image: imagesJpg.prometheusJpg,
     title: "Prometheus",
-    link: prometheusPng,
+    link: imagesPng.prometheusPng,
   },
   {
-    image: porcelainJpg,
+    image: imagesJpg.porcelainJpg,
     title: "Porcelain",
-    link: porcelainPng,
+    link: imagesPng.porcelainPng,
   },
   {
-    image: vesselJpg,
+    image: imagesJpg.vesselJpg,
     title: "Vessel",
-    link: vesselPng,
+    link: imagesPng.vesselPng,
   },
   {
-    image: brokenJpg,
+    image: imagesJpg.brokenJpg,
     title: "Broken",
-    link: brokenPng,
+    link: imagesPng.brokenPng,
   },
   {
-    image: horizonJpg,
+    image: imagesJpg.horizonJpg,
     title: "Horizon",
-    link: horizonPng,
+    link: imagesPng.horizonPng,
   },
   {
-    image: wavesJpg,
+    image: imagesJpg.wavesJpg,
     title: "Waves",
-    link: wavesPng,
+    link: imagesPng.wavesPng,
   },
   {
-    image: coupleJpg,
+    image: imagesJpg.coupleJpg,
     title: "Couple",
-    link: couplePng,
+    link: imagesPng.couplePng,
   },
 
   {
-    image: entangledJpg,
+    image: imagesJpg.entangledJpg,
     title: "Entangled",
-    link: entangledPng,
+    link: imagesPng.entangledPng,
   },
 ];
 
