@@ -1,48 +1,44 @@
-import udjat from "../images/udjat.jpg";
-import interfector from "../images/interfector.jpg";
-import demon from "../images/demon.jpg";
-import grunts from "../images/grunts.jpg";
-import path from "../images/path.jpg";
-import thoughts from "../images/thoughts.jpg";
-import emotions from "../images/emotions.jpg";
-import indulgence from "../images/indulgence.jpg";
-import eternally from "../images/eternally.jpg";
+import images from "../images";
 
 const albumMedia = {
+  earthlyVariationsOfHeaven: {
+    splashImage: images.heaven,
+    video: "DEBSYcnzOhc",
+  },
   udjat: {
-    splashImage: udjat,
+    splashImage: images.udjat,
     video: "-tOoTl8Hr9U",
   },
   interfector: {
-    splashImage: interfector,
+    splashImage: images.interfector,
     video: "fA86HcW-RZo",
   },
   anotherDemon: {
-    splashImage: demon,
+    splashImage: images.demon,
     video: "E5GFRDQ0BVo",
   },
   facelessGruntsTortureTheInnermostPretenses: {
-    splashImage: grunts,
+    splashImage: images.grunts,
     video: "HwjIoX2_Pp0",
   },
   theLeftHandPath: {
-    splashImage: path,
+    splashImage: images.path,
     video: "s6XuSl3ovng",
   },
   aThousandThoughtsAndTheirPeacefulDecay: {
-    splashImage: thoughts,
+    splashImage: images.thoughts,
     video: "bYJ5tHw2sQ8",
   },
   emotionsForHire: {
-    splashImage: emotions,
+    splashImage: images.emotions,
     video: "mKAiz4n6PLE",
   },
   indulgence: {
-    splashImage: indulgence,
+    splashImage: images.indulgence,
     video: "",
   },
   eternally: {
-    splashImage: eternally,
+    splashImage: images.eternally,
     video: "-MKHVQ9D4AY",
   },
 };

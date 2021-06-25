@@ -1,4 +1,9 @@
 const gameLinks = {
+  tenebris: [
+    "https://selfishdream.itch.io/tenebris/purchase",
+    "https://selfishdream.itch.io/tenebris",
+    "tenebris",
+  ],
   within: [
     "https://selfishdream.itch.io/within/purchase",
     "https://selfishdream.itch.io/within",

@@ -8,7 +8,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     backgroundColor: "#111",
   },
   cardContent: {
-    [breakpoints.down("sm")]: { width: "calc(100vw - 96px)" },
+    width: "calc(100vw - 96px)",
     [breakpoints.up("sm")]: { width: 300 },
     height: 250,
   },

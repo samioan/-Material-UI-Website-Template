@@ -1,17 +1,19 @@
-import within6 from "../../games/images/screenshots/within/within6.jpg";
-import subminimal2 from "../../games/images/screenshots/subminimal/subminimal2.jpg";
-import fateless8 from "../../games/images/screenshots/fateless/fateless8.jpg";
-import vessel3 from "../../games/images/screenshots/vessel/vessel3.jpg";
-import theFleshOfFallenAngels1 from "../../games/images/screenshots/theFleshOfFallenAngels/theFleshOfFallenAngels1.jpg";
-import isntLifeDisappointing10 from "../../games/images/screenshots/isntLifeDisappointing/isntLifeDisappointing10.jpg";
-import suffer6 from "../../games/images/screenshots/suffer/suffer6.jpg";
-import soul1 from "../../games/images/screenshots/soul/soul1.jpg";
-import suicide1 from "../../games/images/screenshots/suicide/suicide1.jpg";
-import sheIsAllYours2 from "../../games/images/screenshots/sheIsAllYours/sheIsAllYours2.jpg";
-import personal1 from "../../games/images/screenshots/personal/personal1.jpg";
-import skin1 from "../../games/images/screenshots/skin/skin1.jpg";
+import tenebris2 from "../../games/images/tenebris/tenebris2.jpg";
+import within6 from "../../games/images/within/within6.jpg";
+import subminimal2 from "../../games/images/subminimal/subminimal2.jpg";
+import fateless8 from "../../games/images/fateless/fateless8.jpg";
+import vessel3 from "../../games/images/vessel/vessel3.jpg";
+import theFleshOfFallenAngels1 from "../../games/images/theFleshOfFallenAngels/theFleshOfFallenAngels1.jpg";
+import isntLifeDisappointing10 from "../../games/images/isntLifeDisappointing/isntLifeDisappointing10.jpg";
+import suffer6 from "../../games/images/suffer/suffer6.jpg";
+import soul1 from "../../games/images/soul/soul1.jpg";
+import suicide1 from "../../games/images/suicide/suicide1.jpg";
+import sheIsAllYours2 from "../../games/images/sheIsAllYours/sheIsAllYours2.jpg";
+import personal1 from "../../games/images/personal/personal1.jpg";
+import skin1 from "../../games/images/skin/skin1.jpg";
 
 const imagesCarousel = [
+  { name: "Tenebris", img: tenebris2 },
   { name: "Within", img: within6 },
   { name: "subMINIMAL", img: subminimal2 },
   { name: "Fateless", img: fateless8 },

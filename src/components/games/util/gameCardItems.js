@@ -1,4 +1,5 @@
 const gameCardItems = {
+  tenebris: ["Tenebris", "Venturing into the unknown.", "Platformer"],
   within: ["Within", "Discover the secrets of the Ancients.", "Shooter"],
   subminimal: ["subMINIMAL", "A new state of unreality.", "Arcade"],
   fateless: ["Fateless", "The Garden is gone forever.", "Platformer"],

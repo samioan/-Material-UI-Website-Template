@@ -61,6 +61,11 @@ const videoDetails = [
     genre: "My Games",
   },
   {
+    link: "GnBSQg1YUHc",
+    title: "Cybernetic Neurosynthesis",
+    genre: "My Games",
+  },
+  {
     link: "CrFktyevP-I",
     title: "You Don't Know What You're Looking For",
     genre: "My Games",
@@ -91,6 +96,11 @@ const videoDetails = [
     genre: "My Games",
   },
   {
+    link: "nuSA63w0Z7Q",
+    title: "Perfidious",
+    genre: "My Games",
+  },
+  {
     link: "U423p2g-R7Q",
     title: "Flesh Eater",
     genre: "My Games",
@@ -101,6 +111,11 @@ const videoDetails = [
     genre: "My Games",
   },
   // My Music
+  {
+    link: "DEBSYcnzOhc",
+    title: "Earthly Variations of Heaven",
+    genre: "My Music",
+  },
   { link: "-tOoTl8Hr9U", title: "Udjat", genre: "My Music" },
   {
     link: "fA86HcW-RZo",

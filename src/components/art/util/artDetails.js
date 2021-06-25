@@ -1,90 +1,68 @@
-import lustfulJpg from "../images/jpg/lustful.jpg";
-import pondJpg from "../images/jpg/pond.jpg";
-import cagedJpg from "../images/jpg/caged.jpg";
-import masksJpg from "../images/jpg/masks.jpg";
-import prometheusJpg from "../images/jpg/prometheus.jpg";
-import porcelainJpg from "../images/jpg/porcelain.jpg";
-import vesselJpg from "../images/jpg/vessel.jpg";
-import brokenJpg from "../images/jpg/broken.jpg";
-import horizonJpg from "../images/jpg/horizon.jpg";
-import wavesJpg from "../images/jpg/waves.jpg";
-import coupleJpg from "../images/jpg/couple.jpg";
-import entangledJpg from "../images/jpg/entangled.jpg";
+import imagesJpg from "../images/jpg";
 
-import lustfulPng from "../images/png/lustful.png";
-import pondPng from "../images/png/pond.png";
-import cagedPng from "../images/png/caged.png";
-import masksPng from "../images/png/masks.png";
-import prometheusPng from "../images/png/prometheus.png";
-import porcelainPng from "../images/png/porcelain.png";
-import vesselPng from "../images/png/vessel.png";
-import brokenPng from "../images/png/broken.png";
-import horizonPng from "../images/png/horizon.png";
-import wavesPng from "../images/png/waves.png";
-import couplePng from "../images/png/couple.png";
-import entangledPng from "../images/png/entangled.png";
+import imagesPng from "../images/png";
 
 const artDetails = [
   {
-    image: lustfulJpg,
+    image: imagesJpg.lustfulJpg,
     title: "Lustful",
-    link: lustfulPng,
+    link: imagesPng.lustfulPng,
   },
   {
-    image: pondJpg,
+    image: imagesJpg.pondJpg,
     title: "Pond",
-    link: pondPng,
+    link: imagesPng.pondPng,
   },
   {
-    image: cagedJpg,
+    image: imagesJpg.cagedJpg,
     title: "Caged",
-    link: cagedPng,
+    link: imagesPng.cagedPng,
   },
   {
-    image: masksJpg,
+    image: imagesJpg.masksJpg,
     title: "Masks",
-    link: masksPng,
+    link: imagesPng.masksPng,
   },
   {
-    image: prometheusJpg,
+    image: imagesJpg.prometheusJpg,
     title: "Prometheus",
-    link: prometheusPng,
+    link: imagesPng.prometheusPng,
   },
   {
-    image: porcelainJpg,
+    image: imagesJpg.porcelainJpg,
     title: "Porcelain",
-    link: porcelainPng,
+    link: imagesPng.porcelainPng,
   },
   {
-    image: vesselJpg,
+    image: imagesJpg.vesselJpg,
     title: "Vessel",
-    link: vesselPng,
+    link: imagesPng.vesselPng,
   },
   {
-    image: brokenJpg,
+    image: imagesJpg.brokenJpg,
     title: "Broken",
-    link: brokenPng,
+    link: imagesPng.brokenPng,
   },
   {
-    image: horizonJpg,
+    image: imagesJpg.horizonJpg,
     title: "Horizon",
-    link: horizonPng,
+    link: imagesPng.horizonPng,
   },
   {
-    image: wavesJpg,
+    image: imagesJpg.wavesJpg,
     title: "Waves",
-    link: wavesPng,
+    link: imagesPng.wavesPng,
   },
   {
-    image: coupleJpg,
+    image: imagesJpg.coupleJpg,
     title: "Couple",
-    link: couplePng,
+    link: imagesPng.couplePng,
   },
 
   {
-    image: entangledJpg,
+    image: imagesJpg.entangledJpg,
     title: "Entangled",
-    link: entangledPng,
+    link: imagesPng.entangledPng,
   },
 ];
 
