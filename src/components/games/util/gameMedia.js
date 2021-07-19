@@ -4,7 +4,7 @@ const gameMedia = {
   tenebris: {
     splashImage: images.tenebris.tenebris2,
     screenshots: Object.values(images.tenebris),
-    video: "",
+    video: "AWD_dkW1zMI",
   },
   within: {
     splashImage: images.within.within6,
@@ -24,7 +24,7 @@ const gameMedia = {
   vessel: {
     splashImage: images.vessel.vessel3,
     screenshots: Object.values(images.vessel),
-    video: "IRNyZAu5Fj4",
+    video: "98qL4Bf9ufU",
   },
   theFleshOfFallenAngels: {
     splashImage: images.theFleshOfFallenAngels.theFleshOfFallenAngels1,

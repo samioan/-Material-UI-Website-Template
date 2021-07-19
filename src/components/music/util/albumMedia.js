@@ -35,7 +35,7 @@ const albumMedia = {
   },
   indulgence: {
     splashImage: images.indulgence,
-    video: "",
+    video: "slKgtjVm4MY",
   },
   eternally: {
     splashImage: images.eternally,
