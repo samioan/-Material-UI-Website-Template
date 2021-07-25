@@ -6,6 +6,11 @@ const videoDetails = [
     genre: "My Games",
   },
   {
+    link: "98qL4Bf9ufU",
+    title: "VESSEL: Faceless Eternities",
+    genre: "My Games",
+  },
+  {
     link: "KcS_muUt4Ug",
     title: "One Among Many",
     genre: "My Games",
@@ -145,6 +150,11 @@ const videoDetails = [
   {
     link: "mKAiz4n6PLE",
     title: "Emotions for Hire",
+    genre: "My Music",
+  },
+  {
+    link: "slKgtjVm4MY",
+    title: "Indulgence",
     genre: "My Music",
   },
   {

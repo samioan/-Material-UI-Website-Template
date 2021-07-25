@@ -4,6 +4,7 @@ import gameLinks from "./gameLinks";
 import gameCardItems from "./gameCardItems";
 
 const gameDetails = [
+  "oneOfUs",
   "tenebris",
   "within",
   "subminimal",
@@ -13,6 +14,7 @@ const gameDetails = [
   "isntLifeDisappointing",
   "suffer",
   "soul",
+  "recluse",
   "suicide",
   "sheIsAllYours",
   "personal",

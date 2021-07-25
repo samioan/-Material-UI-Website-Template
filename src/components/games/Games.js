@@ -3,7 +3,7 @@ import { GameItem } from "./components";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Theme from "../theme";
-import gameDetails from "./util/gameDetails";
+import gameDetails from "./constants/gameDetails";
 
 const Games = () => {
   const classes = Theme();

@@ -3,7 +3,7 @@ import { VideoItem } from "./components";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Theme from "../theme";
-import videoDetails from "./util/videoDetails";
+import videoDetails from "./constants/videoDetails";
 
 export default function Videos() {
   const classes = Theme();

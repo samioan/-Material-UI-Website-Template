@@ -21,7 +21,6 @@ import cant from "./cant.jpg";
 import litany from "./litany.jpg";
 import looking from "./looking.jpg";
 import neurosynthesis from "./neurosynthesis.jpg";
-import one from "./one.jpg";
 import perfidious from "./perfidious.jpg";
 import prism from "./prism.jpg";
 import radiance from "./radiance.jpg";
@@ -32,7 +31,7 @@ import tired from "./tired.jpg";
 import transcendence from "./transcendence.jpg";
 import unkindled from "./unkindled.jpg";
 import womb from "./womb.jpg";
-import recluse from "./recluse.jpg";
+
 import among from "./among.jpg";
 import prosopagnosia from "./prosopagnosia.jpg";
 
@@ -60,7 +59,6 @@ const games = {
   litany,
   looking,
   neurosynthesis,
-  one,
   perfidious,
   prism,
   radiance,
@@ -71,7 +69,6 @@ const games = {
   transcendence,
   unkindled,
   womb,
-  recluse,
   among,
   prosopagnosia,
 };

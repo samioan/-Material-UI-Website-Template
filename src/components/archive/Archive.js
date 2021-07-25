@@ -3,10 +3,12 @@ import styles from "./styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
-import archiveDetails from "./util/archiveDetails";
+import archiveDetails from "./constants/archiveDetails";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
+import ProgressiveImage from "react-progressive-graceful-image";
+import placeholderGif from "./images/placeholder";
 
 const Archive = () => {
   const classes = styles();
@@ -34,7 +36,7 @@ const Archive = () => {
             .filter((tile) => tile.kind === "Games")
             .map((tile) => (
               <GridListTile
-                key={tile.img}
+                key={tile.title}
                 style={{ width: "50%", height: 200 }}
                 component={Link}
                 to={{
@@ -43,7 +45,15 @@ const Archive = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={tile.img} alt={tile.title} />
+                <ProgressiveImage src={tile.img} placeholder={placeholderGif}>
+                  {(src) => (
+                    <img
+                      className={classes.images}
+                      src={src}
+                      alt={tile.title}
+                    />
+                  )}
+                </ProgressiveImage>
 
                 <GridListTileBar title={tile.title} />
               </GridListTile>
@@ -70,7 +80,15 @@ const Archive = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={tile.img} alt={tile.title} />
+                <ProgressiveImage src={tile.img} placeholder={placeholderGif}>
+                  {(src) => (
+                    <img
+                      className={classes.images}
+                      src={src}
+                      alt={tile.title}
+                    />
+                  )}
+                </ProgressiveImage>
 
                 <GridListTileBar title={tile.title} />
               </GridListTile>
@@ -97,7 +115,15 @@ const Archive = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={tile.img} alt={tile.title} />
+                <ProgressiveImage src={tile.img} placeholder={placeholderGif}>
+                  {(src) => (
+                    <img
+                      className={classes.images}
+                      src={src}
+                      alt={tile.title}
+                    />
+                  )}
+                </ProgressiveImage>
 
                 <GridListTileBar title={tile.title} />
               </GridListTile>

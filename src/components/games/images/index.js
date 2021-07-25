@@ -11,8 +11,12 @@ import tenebris from "./tenebris";
 import theFleshOfFallenAngels from "./theFleshOfFallenAngels";
 import vessel from "./vessel";
 import within from "./within";
+import oneOfUs from "./oneOfUs";
+import recluse from "./recluse";
 
 const images = {
+  recluse: recluse,
+  oneOfUs: oneOfUs,
   fateless: fateless,
   isntLifeDisappointing: isntLifeDisappointing,
   personal: personal,

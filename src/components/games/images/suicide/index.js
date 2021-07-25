@@ -1,4 +1,3 @@
-//suicide screenshots
 import suicide1 from "./suicide1.jpg";
 import suicide2 from "./suicide2.jpg";
 import suicide3 from "./suicide3.jpg";

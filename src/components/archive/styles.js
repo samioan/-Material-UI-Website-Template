@@ -23,6 +23,19 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     width: "90%",
     height: "100%",
   },
+  images: {
+    position: "relative",
+    left: "50%",
+    height: "100%",
+    transform: "translateX(-50%)",
+    [breakpoints.up("md")]: {
+      left: 0,
+      top: "50%",
+      width: "100%",
+      height: "auto",
+      transform: "translateY(-50%)",
+    },
+  },
 }));
 
 export { styles };

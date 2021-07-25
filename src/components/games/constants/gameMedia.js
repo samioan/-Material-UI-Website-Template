@@ -1,6 +1,11 @@
 import images from "../images";
 
 const gameMedia = {
+  oneOfUs: {
+    splashImage: images.oneOfUs.oneOfUs3,
+    screenshots: Object.values(images.oneOfUs),
+    video: "",
+  },
   tenebris: {
     splashImage: images.tenebris.tenebris2,
     screenshots: Object.values(images.tenebris),
@@ -45,6 +50,11 @@ const gameMedia = {
     splashImage: images.soul.soul1,
     screenshots: Object.values(images.soul),
     video: "3uRcoBTnSHA",
+  },
+  recluse: {
+    splashImage: images.recluse.recluse3,
+    screenshots: Object.values(images.recluse),
+    video: "AOchJrfe-VI",
   },
   suicide: {
     splashImage: images.suicide.suicide1,

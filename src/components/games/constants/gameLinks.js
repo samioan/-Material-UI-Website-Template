@@ -1,4 +1,9 @@
 const gameLinks = {
+  oneOfUs: [
+    "https://selfishdream.itch.io/one-of-us/purchase",
+    "https://selfishdream.itch.io/one-of-us",
+    "one-of-us",
+  ],
   tenebris: [
     "https://selfishdream.itch.io/tenebris/purchase",
     "https://selfishdream.itch.io/tenebris",
@@ -43,6 +48,11 @@ const gameLinks = {
     "https://selfishdream.itch.io/soul/purchase",
     "https://selfishdream.itch.io/soul",
     "soul",
+  ],
+  recluse: [
+    "https://selfishdream.itch.io/recluse/purchase",
+    "https://selfishdream.itch.io/recluse",
+    "recluse",
   ],
   suicide: [
     "https://selfishdream.itch.io/suicide/purchase",

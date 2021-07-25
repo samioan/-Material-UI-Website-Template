@@ -1,4 +1,3 @@
-//personal screenshots
 import personal1 from "./personal1.jpg";
 import personal2 from "./personal2.jpg";
 import personal3 from "./personal3.jpg";
