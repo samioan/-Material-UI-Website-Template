@@ -1,4 +1,11 @@
 const gameDescriptions = {
+  oneOfUs: [
+    "The world is beautiful but lonely.",
+    "Filled with suffering and pain.",
+    "Delve into a nightmarish dimension and escape with your humanity intact.",
+    "Lost within, you will uncover fragments of the truth.",
+    "But in the end, your denial will prove to be just another dream.",
+  ],
   tenebris: [
     "A distress signal from the planet Tenebris forces Jack and Cooper, members of Earth's Task Force, to investigate.",
     "However, when Cooper delves deeper into the planet's human colony, he finds out things are not what they seem...",
@@ -65,6 +72,16 @@ const gameDescriptions = {
     "I could hear the voices.",
     "They were calling out for me.",
     "My time had come.",
+  ],
+  recluse: [
+    "Recluse.",
+    " All alone.",
+    "Four walls surround me.",
+    "Trapped within.",
+    "My house is a prison.",
+    "I am a slave.",
+    " Cannot escape.",
+    "No way out.",
   ],
   suicide: [
     "I can't do this anymore.",

@@ -1,4 +1,5 @@
 const gameCardItems = {
+  oneOfUs: ["One of Us", "You are not enough.", "Platformer"],
   tenebris: ["Tenebris", "Venturing into the unknown.", "Platformer"],
   within: ["Within", "Discover the secrets of the Ancients.", "Shooter"],
   subminimal: ["subMINIMAL", "A new state of unreality.", "Arcade"],
@@ -16,6 +17,7 @@ const gameCardItems = {
   ],
   suffer: ["S U F F E R", "Do you have any regrets?", "Adventure"],
   soul: ["SOUL: A Voiceless Decay", "The fear of death.", "Adventure"],
+  recluse: ["Recluse", "There is no way out.", "Experimental"],
   suicide: [
     "I Want to Blow My Brains Out",
     "Pull the trigger.",

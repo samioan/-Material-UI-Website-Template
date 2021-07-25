@@ -1,4 +1,3 @@
-//isnt life disappointing screenshots
 import isntLifeDisappointing1 from "./isntLifeDisappointing1.jpg";
 import isntLifeDisappointing2 from "./isntLifeDisappointing2.jpg";
 import isntLifeDisappointing3 from "./isntLifeDisappointing3.jpg";

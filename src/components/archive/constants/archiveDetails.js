@@ -52,12 +52,6 @@ const archiveDetails = [
   },
   {
     kind: "Games",
-    img: images.games.recluse,
-    title: "Recluse",
-    link: "https://drive.google.com/file/d/1MWmM5Lwau3qzoZLXkcYZ1ULFlXI6RA4U/view?usp=sharing",
-  },
-  {
-    kind: "Games",
     img: images.games.layers,
     title: "Layers Upon Layers",
     link: "https://drive.google.com/file/d/1TMmfAkvsSpq6nCBuOfKGOemiAR9SwyiX/view?usp=sharing",
@@ -218,12 +212,7 @@ const archiveDetails = [
     title: "Radiance",
     link: "https://drive.google.com/file/d/1LZ8xwfe7hWMNbe8Dbl9uW03TuyJ6ogZM/view?usp=sharing",
   },
-  {
-    kind: "Games",
-    img: images.games.one,
-    title: "One of Us",
-    link: "https://drive.google.com/file/d/1pRKplaU7QuuoKSph-c4t76g1w8ApBPJy/view?usp=sharing",
-  },
+
   // Music
   {
     kind: "Music",

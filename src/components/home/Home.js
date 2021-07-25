@@ -3,11 +3,14 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import styles from "./styles";
 import Grid from "@material-ui/core/Grid";
-import linkDetails from "./util/linkDetails";
+import linkDetails from "./constants/linkDetails";
 import Button from "@material-ui/core/Button";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import imageCarousel from "./util/imageCarousel";
+import imageCarousel from "./constants/imageCarousel";
+import ProgressiveImage from "react-progressive-graceful-image";
+
+import placeholderGif from "./images";
 
 const Home = () => {
   const classes = styles();
@@ -35,20 +38,22 @@ const Home = () => {
           infiniteLoop="true"
           showThumbs={false}
           interval={5000}
+          showStatus={false}
         >
           {imageCarousel.map((item) => (
             <div key={item.name}>
-              <img src={item.img} alt={item.name} />
+              <ProgressiveImage src={item.img} placeholder={placeholderGif}>
+                {(src) => <img src={src} alt={item.name} />}
+              </ProgressiveImage>
             </div>
           ))}
         </Carousel>
       </Grid>
       <Grid className={classes.gridList}>
         {linkDetails.map((item) => (
-          <Box p={1}>
+          <Box key={item.title} p={1}>
             <Button
               className={classes.button}
-              key={item.title}
               href={item.site}
               target="_blank"
               variant="outlined"
