@@ -1,4 +1,10 @@
 const gameDescriptions = {
+  cosmos: [
+    "In the beginning, there was a formless fog of matter.",
+    "From this primordial essence, glimmers of light started appearing.",
+    "Countless seeds of creation, pulsating inside the Cosmos.",
+    "And from within them, a new reality will emerge...",
+  ],
   oneOfUs: [
     "The world is beautiful but lonely.",
     "Filled with suffering and pain.",

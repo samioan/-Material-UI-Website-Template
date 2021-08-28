@@ -1,4 +1,9 @@
 const albumCardItems = {
+  iFoundAUniverseWithinYourHeart: [
+    "I Found a Universe Within Your Heart",
+    "Dedicated to her.",
+    "Ambient",
+  ],
   earthlyVariationsOfHeaven: [
     "Earthly Variations of Heaven",
     "Their words, divine light.",

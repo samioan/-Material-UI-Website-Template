@@ -13,8 +13,10 @@ import vessel from "./vessel";
 import within from "./within";
 import oneOfUs from "./oneOfUs";
 import recluse from "./recluse";
+import cosmos from "./cosmos";
 
 const images = {
+  cosmos: cosmos,
   recluse: recluse,
   oneOfUs: oneOfUs,
   fateless: fateless,
@@ -31,5 +33,6 @@ const images = {
   vessel: vessel,
   within: within,
 };
+
 export { images };
 export default images;

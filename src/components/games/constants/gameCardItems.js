@@ -1,4 +1,5 @@
 const gameCardItems = {
+  cosmos: ["Cosmos", "A new reality emerges.", "Experimental"],
   oneOfUs: ["One of Us", "You are not enough.", "Platformer"],
   tenebris: ["Tenebris", "Venturing into the unknown.", "Platformer"],
   within: ["Within", "Discover the secrets of the Ancients.", "Shooter"],

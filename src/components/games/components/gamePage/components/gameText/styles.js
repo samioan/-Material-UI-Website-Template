@@ -13,6 +13,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     height: 196,
   },
   title: {
+    paddingTop: 80,
     color: palette.grey[50],
   },
   tagline: {

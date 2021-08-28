@@ -1,4 +1,16 @@
 const albumCodes = {
+  iFoundAUniverseWithinYourHeart: {
+    albumCode: "3084960555",
+    trackCodes: [
+      "144170140",
+      "991669406",
+      "4101136109",
+      "2264983078",
+      "538273392",
+      "4072375986",
+      "3667358337",
+    ],
+  },
   earthlyVariationsOfHeaven: {
     albumCode: "105760441",
     trackCodes: [

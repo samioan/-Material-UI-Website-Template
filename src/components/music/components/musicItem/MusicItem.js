@@ -6,7 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Link, useRouteMatch } from "react-router-dom";
 
-export default function MusicItem({ image, title, tagline, genre, pageLink }) {
+const MusicItem = ({ image, title, tagline, genre, pageLink }) => {
   const classes = styles();
   let match = useRouteMatch();
   return (
@@ -32,4 +32,6 @@ export default function MusicItem({ image, title, tagline, genre, pageLink }) {
       </Card>
     </Link>
   );
-}
+};
+export { MusicItem };
+export default MusicItem;

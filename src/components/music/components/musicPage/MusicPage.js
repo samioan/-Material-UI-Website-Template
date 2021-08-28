@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 
 import styles from "./styles";
-import albumDetails from "../../util/albumDetails";
+import albumDetails from "../../constants/albumDetails";
 import { useRouteMatch } from "react-router-dom";
 
 import { MusicText, MusicSongs, MusicButtons } from "./components";
+
 const musicPageDetails = (album) => {
   const link = album.split("/")[2];
 

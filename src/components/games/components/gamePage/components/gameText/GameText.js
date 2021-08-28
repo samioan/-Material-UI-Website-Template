@@ -9,16 +9,23 @@ const GameText = ({ link }) => {
 
   return (
     <div>
-      <Box pt={10} align="center">
-        <Typography className={classes.title} gutterBottom variant="h5">
-          {link.title}
-        </Typography>
-      </Box>
-      <Box align="center">
-        <Typography className={classes.tagline} gutterBottom variant="h6">
-          {link.tagline}
-        </Typography>
-      </Box>
+      <Typography
+        className={classes.title}
+        gutterBottom
+        variant="h5"
+        align="center"
+      >
+        {link.title}
+      </Typography>
+
+      <Typography
+        className={classes.tagline}
+        gutterBottom
+        variant="h6"
+        align="center"
+      >
+        {link.tagline}
+      </Typography>
 
       <Box
         pt={1}

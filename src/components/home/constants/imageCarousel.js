@@ -1,3 +1,4 @@
+import cosmos5 from "../../games/images/cosmos/cosmos5.jpg";
 import oneOfUs3 from "../../games/images/oneOfUs/oneOfUs3.jpg";
 import tenebris2 from "../../games/images/tenebris/tenebris2.jpg";
 import within6 from "../../games/images/within/within6.jpg";
@@ -15,21 +16,34 @@ import personal1 from "../../games/images/personal/personal1.jpg";
 import skin1 from "../../games/images/skin/skin1.jpg";
 
 const imagesCarousel = [
-  { name: "One Of Us", img: oneOfUs3 },
-  { name: "Tenebris", img: tenebris2 },
-  { name: "Within", img: within6 },
-  { name: "subMINIMAL", img: subminimal2 },
-  { name: "Fateless", img: fateless8 },
-  { name: "Vessel: Fateless Eternities", img: vessel3 },
-  { name: "The Flesh of Fallen Angels", img: theFleshOfFallenAngels1 },
-  { name: "Isn't Life Disappointing?", img: isntLifeDisappointing10 },
-  { name: "S U F F E R", img: suffer6 },
-  { name: "SOUL: A Voiceless Decay", img: soul1 },
-  { name: "Recluse", img: recluse3 },
-  { name: "I Want to Blow My Brains Out", img: suicide1 },
-  { name: "She Is All Yours", img: sheIsAllYours2 },
-  { name: "There is a dark voice inside my mind.", img: personal1 },
-  { name: "SKIN", img: skin1 },
+  { key: "cosmos", name: "Cosmos", img: cosmos5 },
+  { key: "oneOfUs", name: "One Of Us", img: oneOfUs3 },
+  { key: "tenebris", name: "Tenebris", img: tenebris2 },
+  { key: "within", name: "Within", img: within6 },
+  { key: "subminimal", name: "subMINIMAL", img: subminimal2 },
+  { key: "fateless", name: "Fateless", img: fateless8 },
+  { key: "vessel", name: "Vessel: Fateless Eternities", img: vessel3 },
+  {
+    key: "theFleshOfFallenangels",
+    name: "The Flesh of Fallen Angels",
+    img: theFleshOfFallenAngels1,
+  },
+  {
+    key: "isntLifeDisappointing",
+    name: "Isn't Life Disappointing?",
+    img: isntLifeDisappointing10,
+  },
+  { key: "suffer", name: "S U F F E R", img: suffer6 },
+  { key: "soul", name: "SOUL: A Voiceless Decay", img: soul1 },
+  { key: "recluse", name: "Recluse", img: recluse3 },
+  { key: "suicide", name: "I Want to Blow My Brains Out", img: suicide1 },
+  { key: "sheIsAllYours", name: "She Is All Yours", img: sheIsAllYours2 },
+  {
+    key: "personal",
+    name: "There is a dark voice inside my mind.",
+    img: personal1,
+  },
+  { key: "skin", name: "SKIN", img: skin1 },
 ];
 
 export { imagesCarousel };
