@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ArtItem } from "./components";
-import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Theme from "../theme";
 import artDetails from "./util/artDetails";
@@ -13,31 +13,29 @@ const Art = () => {
   }, []);
 
   return (
-    <div>
-      <Box className={classes.page}>
-        <Box pt={10}>
-          <Typography className={classes.title} variant="h2" align="center">
-            Art
-          </Typography>
-        </Box>
-        <Box
-          display="flex"
-          flexWrap="wrap"
-          alignItems="stretch"
-          justifyContent="center"
-          p={2}
-        >
-          {artDetails.map((artItem) => (
-            <Box key={artItem.title} p={2}>
-              <ArtItem
-                image={artItem.image}
-                title={artItem.title}
-                link={artItem.link}
-              />
-            </Box>
-          ))}
-        </Box>
-      </Box>
+    <div className={classes.page}>
+      <Typography className={classes.title} variant="h2" align="center">
+        Art
+      </Typography>
+
+      <Grid className={classes.content} container justify="center">
+        {artDetails.map((artItem) => (
+          <Grid
+            key={artItem.title}
+            className={classes.content}
+            item
+            xs={12}
+            lg={6}
+            xl={4}
+          >
+            <ArtItem
+              image={artItem.image}
+              title={artItem.title}
+              link={artItem.link}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import heart from "../images/heart.jpg";
 import heaven from "../images/heaven.jpg";
 import udjat from "../images/udjat.jpg";
 import interfector from "../images/interfector.jpg";
@@ -10,6 +11,7 @@ import indulgence from "../images/indulgence.jpg";
 import eternally from "../images/eternally.jpg";
 
 const images = {
+  heart,
   heaven,
   udjat,
   interfector,

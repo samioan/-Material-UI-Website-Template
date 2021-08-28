@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GamePage } from "./components/games/components/";
 import { MusicPage } from "./components/music/components";
 import gameDetails from "./components/games/constants/gameDetails";
-import albumDetails from "./components/music/util/albumDetails";
+import albumDetails from "./components/music/constants/albumDetails";
 import styles from "./styles";
 
 const App = () => {

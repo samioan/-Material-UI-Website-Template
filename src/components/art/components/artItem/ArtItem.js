@@ -19,7 +19,7 @@ const ArtItem = ({ image, title, link }) => {
     >
       <Card className={classes.card}>
         <CardMedia className={classes.media} image={image} title={title} />
-        <CardContent className={classes.cardContent}>
+        <CardContent>
           <Typography
             className={classes.title}
             gutterBottom

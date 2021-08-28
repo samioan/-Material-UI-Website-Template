@@ -12,11 +12,12 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
   },
   title: {
     color: palette.grey[50],
+    paddingTop: 80,
+    paddingBottom: 40,
   },
-  gridList: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
+  subtitle: {
+    color: palette.grey[50],
+    paddingBottom: 40,
   },
   carousel: {
     margin: "auto",
@@ -27,6 +28,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     },
   },
   button: {
+    margin: 8,
     width: "calc(100vw - 32px)",
     [breakpoints.up("sm")]: {
       width: 300,

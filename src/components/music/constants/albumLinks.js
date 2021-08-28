@@ -1,4 +1,8 @@
 const albumLinks = {
+  iFoundAUniverseWithinYourHeart: [
+    "https://selfishdream.bandcamp.com/album/i-found-a-universe-within-your-heart",
+    "i-found-a-universe-within-your-heart",
+  ],
   earthlyVariationsOfHeaven: [
     "https://selfishdream.bandcamp.com/album/earthly-variations-of-heaven",
     "earthly-variations",

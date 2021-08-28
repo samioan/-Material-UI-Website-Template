@@ -1,4 +1,9 @@
 const gameLinks = {
+  cosmos: [
+    "https://selfishdream.itch.io/cosmos/purchase",
+    "https://selfishdream.itch.io/cosmos",
+    "cosmos",
+  ],
   oneOfUs: [
     "https://selfishdream.itch.io/one-of-us/purchase",
     "https://selfishdream.itch.io/one-of-us",
