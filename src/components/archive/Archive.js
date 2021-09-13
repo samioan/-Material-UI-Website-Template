@@ -1,11 +1,17 @@
 import React, { useEffect } from "react";
-import styles from "./styles";
-
-import archiveDetails from "./constants/archiveDetails";
-import ArchiveList from "./components/archiveList/ArchiveList";
 import Typography from "@material-ui/core/Typography";
 
+import ArchiveList from "./components/archiveList/ArchiveList";
+
+import {
+  archiveGameDetails,
+  archiveMusicDetails,
+  archiveArtDetails,
+} from "./constants";
+
 import placeholderGif from "./images/placeholder";
+
+import styles from "./styles";
 
 const Archive = () => {
   const classes = styles();
@@ -25,8 +31,7 @@ const Archive = () => {
       </Typography>
 
       <ArchiveList
-        archiveDetailsArray={archiveDetails}
-        genre="Games"
+        archiveDetailsArray={archiveGameDetails}
         image={placeholderGif}
       />
 
@@ -35,8 +40,7 @@ const Archive = () => {
       </Typography>
 
       <ArchiveList
-        archiveDetailsArray={archiveDetails}
-        genre="Music"
+        archiveDetailsArray={archiveMusicDetails}
         image={placeholderGif}
       />
 
@@ -45,8 +49,7 @@ const Archive = () => {
       </Typography>
 
       <ArchiveList
-        archiveDetailsArray={archiveDetails}
-        genre="Art"
+        archiveDetailsArray={archiveArtDetails}
         image={placeholderGif}
       />
     </div>

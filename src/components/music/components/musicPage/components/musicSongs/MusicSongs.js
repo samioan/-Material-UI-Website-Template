@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 
 import styles from "./styles";
 
@@ -7,14 +7,7 @@ const MusicSongs = ({ link }) => {
   const classes = styles();
 
   return (
-    <Box
-      pt={3}
-      pb={3}
-      display="flex"
-      flexWrap="wrap"
-      alignItems="stretch"
-      justifyContent="center"
-    >
+    <Grid className={classes.songContainer} container justify="center">
       {link.albumCodes.trackCodes.map((item) => (
         <iframe
           className={classes.song}
@@ -23,7 +16,7 @@ const MusicSongs = ({ link }) => {
           seamless
         ></iframe>
       ))}
-    </Box>
+    </Grid>
   );
 };
 
