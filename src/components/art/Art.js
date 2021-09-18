@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
-import { ArtItem } from "./components";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Theme from "../theme";
+import Container from "@material-ui/core/Container";
+
+import { ArtItem } from "./components";
+
 import artDetails from "./util/artDetails";
+
+import Theme from "../theme";
 
 const Art = () => {
   const classes = Theme();
@@ -13,7 +17,7 @@ const Art = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Art
       </Typography>
@@ -25,8 +29,8 @@ const Art = () => {
             className={classes.content}
             item
             xs={12}
-            lg={6}
-            xl={4}
+            md={6}
+            lg={4}
           >
             <ArtItem
               image={artItem.image}
@@ -36,7 +40,7 @@ const Art = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

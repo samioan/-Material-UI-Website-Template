@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
-import { VideoItem } from "./components";
+import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Theme from "../theme";
+
+import { VideoItem } from "./components";
+
 import videoDetails from "./constants/videoDetails";
+
+import Theme from "../theme";
 
 const Videos = () => {
   const classes = Theme();
@@ -13,7 +17,7 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Videos
       </Typography>
@@ -31,8 +35,8 @@ const Videos = () => {
               className={classes.content}
               item
               xs={12}
-              lg={6}
-              xl={4}
+              md={6}
+              lg={4}
             >
               <VideoItem link={videoItem.link} title={videoItem.title} />
             </Grid>
@@ -52,14 +56,14 @@ const Videos = () => {
               className={classes.content}
               item
               xs={12}
-              lg={6}
-              xl={4}
+              md={6}
+              lg={4}
             >
               <VideoItem link={videoItem.link} title={videoItem.title} />
             </Grid>
           ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

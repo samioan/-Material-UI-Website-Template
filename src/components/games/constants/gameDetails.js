@@ -5,7 +5,6 @@ import gameCardItems from "./gameCardItems";
 
 const gameDetails = [
   "cosmos",
-  "oneOfUs",
   "tenebris",
   "within",
   "subminimal",
@@ -20,6 +19,7 @@ const gameDetails = [
   "sheIsAllYours",
   "personal",
   "skin",
+  "oneOfUs",
 ].map((game) => ({
   title: gameCardItems[game][0],
   tagline: gameCardItems[game][1],

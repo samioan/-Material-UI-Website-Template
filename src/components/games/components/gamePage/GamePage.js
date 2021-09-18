@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouteMatch } from "react-router-dom";
+import Container from "@material-ui/core/Container";
 import gameDetails from "../../constants/gameDetails";
 import { GameText, GameImageGallery, GameButtons } from "./components/";
 import styles from "./styles";
@@ -24,11 +25,11 @@ const GamePage = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="md" className={classes.page}>
       <GameText link={websiteLink} />
       <GameImageGallery link={websiteLink} />
       <GameButtons link={websiteLink} />
-    </div>
+    </Container>
   );
 };
 

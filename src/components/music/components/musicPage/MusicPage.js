@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-
-import styles from "./styles";
-import albumDetails from "../../constants/albumDetails";
 import { useRouteMatch } from "react-router-dom";
+import Container from "@material-ui/core/Container";
 
 import { MusicText, MusicSongs, MusicButtons } from "./components";
+import albumDetails from "../../constants/albumDetails";
+
+import styles from "./styles";
 
 const musicPageDetails = (album) => {
   const link = album.split("/")[2];
@@ -26,11 +27,11 @@ const MusicPage = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="md" className={classes.page}>
       <MusicText link={websiteLink} />
       <MusicSongs link={websiteLink} />
       <MusicButtons link={websiteLink} />
-    </div>
+    </Container>
   );
 };
 

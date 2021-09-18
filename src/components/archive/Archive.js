@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
 import ArchiveList from "./components/archiveList/ArchiveList";
 
@@ -21,7 +22,7 @@ const Archive = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Archive
       </Typography>
@@ -52,7 +53,7 @@ const Archive = () => {
         archiveDetailsArray={archiveArtDetails}
         image={placeholderGif}
       />
-    </div>
+    </Container>
   );
 };
 export { Archive };

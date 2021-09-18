@@ -2,8 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import background from "./background.jpg";
 
-const styles = makeStyles(({ breakpoints, palette }) => ({
+const styles = makeStyles(() => ({
   pageBackground: {
+    minHeight: "100vh",
     backgroundColor: "black",
     backgroundImage: `url(${background})`,
     backgroundPosition: "center",

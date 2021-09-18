@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Selfish Dream
       </Typography>
@@ -66,7 +66,7 @@ const Home = () => {
           </Button>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

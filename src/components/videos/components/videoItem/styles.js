@@ -9,7 +9,7 @@ const styles = makeStyles(({ palette }) => ({
     backgroundColor: "#111",
   },
   cardContent: {
-    minHeight: 250,
+    minHeight: 300,
   },
 }));
 

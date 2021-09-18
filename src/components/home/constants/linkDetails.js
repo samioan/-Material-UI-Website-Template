@@ -4,12 +4,20 @@ const linkDetails = [
     site: "https://selfishdream.itch.io/",
   },
   {
+    title: "Game Jolt",
+    site: "https://gamejolt.com/@SelfishDream",
+  },
+  {
     title: "SoundCloud",
     site: "https://soundcloud.com/selfishdream",
   },
   {
     title: "Bandcamp",
     site: "https://selfishdream.bandcamp.com/",
+  },
+  {
+    title: "Spotify",
+    site: "https://open.spotify.com/artist/0pHUwm22L3f17UQueMREdG",
   },
   {
     title: "Instagram",

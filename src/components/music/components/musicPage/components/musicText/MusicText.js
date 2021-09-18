@@ -27,8 +27,12 @@ const MusicText = ({ link }) => {
         {link.tagline}
       </Typography>
 
-      <Grid className={classes.contentContainer} container justify="center">
-        <div className={classes.content}>
+      <Grid
+        className={classes.contentContainer}
+        container
+        justify="space-between"
+      >
+        <Grid item xs={12} sm={5} className={classes.text}>
           {link.description.map((item) => (
             <Typography
               className={classes.description}
@@ -39,9 +43,10 @@ const MusicText = ({ link }) => {
               {item}
             </Typography>
           ))}
-        </div>
-
-        <YouTube className={classes.video} video={link.video} />
+        </Grid>
+        <Grid item xs={12} sm={5}>
+          <YouTube className={classes.video} video={link.video} />
+        </Grid>
       </Grid>
     </div>
   );

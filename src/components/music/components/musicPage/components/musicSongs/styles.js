@@ -7,8 +7,7 @@ const styles = makeStyles(({ breakpoints }) => ({
   },
   song: {
     border: "none",
-    width: "calc(100vw - 32px)",
-    [breakpoints.up("sm")]: { width: 500 },
+    width: "100%",
     height: 42,
   },
 }));

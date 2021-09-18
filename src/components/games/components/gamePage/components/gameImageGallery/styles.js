@@ -1,13 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints }) => ({
+const styles = makeStyles(() => ({
   gallery: {
     paddingTop: 8,
   },
-  images: {
+  imageContainer: {
     padding: 8,
-    width: "calc(100vw - 32px)",
-    [breakpoints.up("sm")]: { width: 347 },
+  },
+  image: {
+    width: "100%",
   },
 }));
 

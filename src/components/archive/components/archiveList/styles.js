@@ -9,7 +9,7 @@ const styles = makeStyles(({ breakpoints }) => ({
       justifyContent: "center",
     },
   },
-  images: {
+  image: {
     position: "relative",
     left: "50%",
     height: "100%",

@@ -11,15 +11,19 @@ const GameImageGallery = ({ link }) => {
   return (
     <Grid className={classes.gallery} container justify="center">
       {link.screenshots.map((item) => (
-        <ProgressiveImage
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          className={classes.imageContainer}
           key={item.toString()}
-          src={item}
-          placeholder={placeholderGif}
         >
-          {(src) => (
-            <img className={classes.images} src={src} alt={src.toString()} />
-          )}
-        </ProgressiveImage>
+          <ProgressiveImage src={item} placeholder={placeholderGif}>
+            {(src) => (
+              <img className={classes.image} src={src} alt={src.toString()} />
+            )}
+          </ProgressiveImage>
+        </Grid>
       ))}
     </Grid>
   );

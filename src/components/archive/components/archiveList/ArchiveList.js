@@ -34,7 +34,7 @@ const ArchiveList = ({ archiveDetailsArray, image, width }) => {
           >
             <ProgressiveImage src={item.img} placeholder={image}>
               {(src) => (
-                <img className={classes.images} src={src} alt={item.title} />
+                <img className={classes.image} src={src} alt={item.title} />
               )}
             </ProgressiveImage>
 
