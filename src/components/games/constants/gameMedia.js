@@ -4,12 +4,12 @@ const gameMedia = {
   cosmos: {
     splashImage: images.cosmos.cosmos5,
     screenshots: Object.values(images.cosmos),
-    video: "",
+    video: "m0gSNJGsA34",
   },
   oneOfUs: {
     splashImage: images.oneOfUs.oneOfUs3,
     screenshots: Object.values(images.oneOfUs),
-    video: "",
+    video: "0S_uhcd--30",
   },
   tenebris: {
     splashImage: images.tenebris.tenebris2,

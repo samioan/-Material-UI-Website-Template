@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 import ProgressiveImage from "react-progressive-graceful-image";
 
 import placeholderGif from "./images";
@@ -9,23 +9,23 @@ const GameImageGallery = ({ link }) => {
   const classes = styles();
 
   return (
-    <Box
-      pt={1}
-      display="flex"
-      flexWrap="wrap"
-      alignItems="stretch"
-      justifyContent="center"
-    >
+    <Grid className={classes.gallery} container justify="center">
       {link.screenshots.map((item) => (
-        <Box p={1} key={item.toString()}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          className={classes.imageContainer}
+          key={item.toString()}
+        >
           <ProgressiveImage src={item} placeholder={placeholderGif}>
             {(src) => (
-              <img className={classes.images} src={src} alt={src.toString()} />
+              <img className={classes.image} src={src} alt={src.toString()} />
             )}
           </ProgressiveImage>
-        </Box>
+        </Grid>
       ))}
-    </Box>
+    </Grid>
   );
 };
 

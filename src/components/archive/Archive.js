@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
-import styles from "./styles";
-
-import archiveDetails from "./constants/archiveDetails";
-import ArchiveList from "./components/archiveList/ArchiveList";
 import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+
+import ArchiveList from "./components/archiveList/ArchiveList";
+
+import {
+  archiveGameDetails,
+  archiveMusicDetails,
+  archiveArtDetails,
+} from "./constants";
 
 import placeholderGif from "./images/placeholder";
+
+import styles from "./styles";
 
 const Archive = () => {
   const classes = styles();
@@ -15,7 +22,7 @@ const Archive = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Archive
       </Typography>
@@ -25,8 +32,7 @@ const Archive = () => {
       </Typography>
 
       <ArchiveList
-        archiveDetailsArray={archiveDetails}
-        genre="Games"
+        archiveDetailsArray={archiveGameDetails}
         image={placeholderGif}
       />
 
@@ -35,8 +41,7 @@ const Archive = () => {
       </Typography>
 
       <ArchiveList
-        archiveDetailsArray={archiveDetails}
-        genre="Music"
+        archiveDetailsArray={archiveMusicDetails}
         image={placeholderGif}
       />
 
@@ -45,11 +50,10 @@ const Archive = () => {
       </Typography>
 
       <ArchiveList
-        archiveDetailsArray={archiveDetails}
-        genre="Art"
+        archiveDetailsArray={archiveArtDetails}
         image={placeholderGif}
       />
-    </div>
+    </Container>
   );
 };
 export { Archive };

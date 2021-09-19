@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import YouTube from "@u-wave/react-youtube";
 import styles from "./styles";
@@ -9,25 +9,30 @@ const MusicText = ({ link }) => {
 
   return (
     <div>
-      <Box pt={10} align="center">
-        <Typography className={classes.title} gutterBottom variant="h5">
-          {link.title}
-        </Typography>
-      </Box>
-      <Box align="center">
-        <Typography className={classes.tagline} gutterBottom variant="h6">
-          {link.tagline}
-        </Typography>
-      </Box>
-
-      <Box
-        pt={1}
-        display="flex"
-        flexWrap="wrap"
-        alignItems="stretch"
-        justifyContent="center"
+      <Typography
+        className={classes.title}
+        gutterBottom
+        variant="h5"
+        align="center"
       >
-        <Box p={1} className={classes.content}>
+        {link.title}
+      </Typography>
+
+      <Typography
+        className={classes.tagline}
+        gutterBottom
+        variant="h6"
+        align="center"
+      >
+        {link.tagline}
+      </Typography>
+
+      <Grid
+        className={classes.contentContainer}
+        container
+        justify="space-between"
+      >
+        <Grid item xs={12} sm={5} className={classes.text}>
           {link.description.map((item) => (
             <Typography
               className={classes.description}
@@ -38,11 +43,11 @@ const MusicText = ({ link }) => {
               {item}
             </Typography>
           ))}
-        </Box>
-        <Box p={1}>
+        </Grid>
+        <Grid item xs={12} sm={5}>
           <YouTube className={classes.video} video={link.video} />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
     </div>
   );
 };

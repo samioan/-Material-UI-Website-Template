@@ -17,7 +17,6 @@ import skin1 from "../../games/images/skin/skin1.jpg";
 
 const imagesCarousel = [
   { key: "cosmos", name: "Cosmos", img: cosmos5 },
-  { key: "oneOfUs", name: "One Of Us", img: oneOfUs3 },
   { key: "tenebris", name: "Tenebris", img: tenebris2 },
   { key: "within", name: "Within", img: within6 },
   { key: "subminimal", name: "subMINIMAL", img: subminimal2 },
@@ -44,6 +43,7 @@ const imagesCarousel = [
     img: personal1,
   },
   { key: "skin", name: "SKIN", img: skin1 },
+  { key: "oneOfUs", name: "One Of Us", img: oneOfUs3 },
 ];
 
 export { imagesCarousel };

@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
-import { GameItem } from "./components";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Theme from "../theme";
+import Container from "@material-ui/core/Container";
+
+import { GameItem } from "./components";
 import gameDetails from "./constants/gameDetails";
+
+import Theme from "../theme";
 
 const Games = () => {
   const classes = Theme();
@@ -13,7 +16,7 @@ const Games = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Games
       </Typography>
@@ -24,8 +27,8 @@ const Games = () => {
             className={classes.content}
             item
             xs={12}
-            lg={6}
-            xl={4}
+            md={6}
+            lg={4}
           >
             <GameItem
               image={gameItem.image}
@@ -37,7 +40,7 @@ const Games = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

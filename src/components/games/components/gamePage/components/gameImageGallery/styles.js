@@ -1,10 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints, palette }) => ({
-  images: {
-    width: "calc(100vw - 32px)",
-    [breakpoints.up("sm")]: { width: 347 },
-    margin: "auto",
+const styles = makeStyles(() => ({
+  gallery: {
+    paddingTop: 8,
+  },
+  imageContainer: {
+    padding: 8,
+  },
+  image: {
+    width: "100%",
   },
 }));
 

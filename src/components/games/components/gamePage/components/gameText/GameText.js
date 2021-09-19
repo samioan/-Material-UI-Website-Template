@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import YouTube from "@u-wave/react-youtube";
 import styles from "./styles";
@@ -27,14 +27,12 @@ const GameText = ({ link }) => {
         {link.tagline}
       </Typography>
 
-      <Box
-        pt={1}
-        display="flex"
-        flexWrap="wrap"
-        alignItems="stretch"
-        justifyContent="center"
+      <Grid
+        className={classes.contentContainer}
+        container
+        justify="space-between"
       >
-        <Box p={1} className={classes.content}>
+        <Grid item xs={12} sm={5} className={classes.text}>
           {link.description.map((item) => (
             <Typography
               className={classes.description}
@@ -45,11 +43,11 @@ const GameText = ({ link }) => {
               {item}
             </Typography>
           ))}
-        </Box>
-        <Box p={1}>
+        </Grid>
+        <Grid item xs={12} sm={5}>
           <YouTube className={classes.video} video={link.video} />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
     </div>
   );
 };

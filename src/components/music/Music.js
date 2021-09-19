@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Theme from "../theme";
+import Container from "@material-ui/core/Container";
+
 import { MusicItem } from "./components";
+
 import albumDetails from "./constants/albumDetails";
+
+import Theme from "../theme";
 
 const Music = () => {
   const classes = Theme();
@@ -13,7 +17,7 @@ const Music = () => {
   }, []);
 
   return (
-    <div className={classes.page}>
+    <Container maxWidth="lg" className={classes.page}>
       <Typography className={classes.title} variant="h2" align="center">
         Music
       </Typography>
@@ -25,8 +29,8 @@ const Music = () => {
             className={classes.content}
             item
             xs={12}
-            lg={6}
-            xl={4}
+            md={6}
+            lg={4}
           >
             <MusicItem
               image={musicItem.image}
@@ -38,7 +42,7 @@ const Music = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

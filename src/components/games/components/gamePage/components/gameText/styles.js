@@ -1,16 +1,22 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const styles = makeStyles(({ breakpoints, palette }) => ({
-  content: {
-    width: "calc(100vw - 32px)",
+  contentContainer: {
+    paddingTop: 8,
+    paddingLeft: 8,
+    paddingRight: 8,
+  },
+  text: {
+    paddingBottom: 8,
     textAlign: "center",
-    [breakpoints.up("sm")]: { width: 347, textAlign: "left" },
-    height: "100%",
+    [breakpoints.up("sm")]: {
+      textAlign: "left",
+    },
   },
   video: {
-    width: "calc(100vw - 32px)",
-    [breakpoints.up("sm")]: { width: 347 },
-    height: 196,
+    width: "100%",
+    minHeight: 206,
+    height: "100%",
   },
   title: {
     paddingTop: 80,
