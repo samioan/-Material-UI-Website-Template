@@ -45,7 +45,9 @@ const GameText = ({ link }) => {
           ))}
         </Grid>
         <Grid item xs={12} sm={5}>
-          <YouTube className={classes.video} video={link.video} />
+          {link.video && (
+            <YouTube className={classes.video} video={link.video} />
+          )}
         </Grid>
       </Grid>
     </div>

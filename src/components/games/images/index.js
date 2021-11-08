@@ -14,8 +14,10 @@ import within from "./within";
 import oneOfUs from "./oneOfUs";
 import recluse from "./recluse";
 import cosmos from "./cosmos";
+import theBeyonder from "./theBeyonder";
 
 const images = {
+  theBeyonder: theBeyonder,
   cosmos: cosmos,
   recluse: recluse,
   oneOfUs: oneOfUs,

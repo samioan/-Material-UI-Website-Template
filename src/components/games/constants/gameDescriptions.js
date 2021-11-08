@@ -1,4 +1,15 @@
 const gameDescriptions = {
+  theBeyonder: [
+    "The universe calls for you.",
+    "Will you answer?",
+    "Eternity awaits.",
+    "It is within your grasp.",
+    "Take the plunge.",
+    "It will guide you.",
+    "It envelopes us.",
+    "Do not deny our gift.",
+    "Go beyond reality.",
+  ],
   cosmos: [
     "In the beginning, there was a formless fog of matter.",
     "From this primordial essence, glimmers of light started appearing.",
