@@ -1,6 +1,11 @@
 import images from "../images";
 
 const gameMedia = {
+  theBeyonder: {
+    splashImage: images.theBeyonder.theBeyonder2,
+    screenshots: Object.values(images.theBeyonder),
+    video: "",
+  },
   cosmos: {
     splashImage: images.cosmos.cosmos5,
     screenshots: Object.values(images.cosmos),

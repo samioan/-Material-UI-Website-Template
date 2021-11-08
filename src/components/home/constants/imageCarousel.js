@@ -1,3 +1,4 @@
+import theBeyonder2 from "../../games/images/theBeyonder/theBeyonder2.jpg";
 import cosmos5 from "../../games/images/cosmos/cosmos5.jpg";
 import oneOfUs3 from "../../games/images/oneOfUs/oneOfUs3.jpg";
 import tenebris2 from "../../games/images/tenebris/tenebris2.jpg";
@@ -16,6 +17,7 @@ import personal1 from "../../games/images/personal/personal1.jpg";
 import skin1 from "../../games/images/skin/skin1.jpg";
 
 const imagesCarousel = [
+  { key: "theBeyonder", name: "The Beyonder", img: theBeyonder2 },
   { key: "cosmos", name: "Cosmos", img: cosmos5 },
   { key: "tenebris", name: "Tenebris", img: tenebris2 },
   { key: "within", name: "Within", img: within6 },
