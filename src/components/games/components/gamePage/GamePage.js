@@ -3,6 +3,9 @@ import { useRouteMatch } from "react-router-dom";
 import Container from "@material-ui/core/Container";
 import gameDetails from "../../constants/gameDetails";
 import { GameText, GameImageGallery, GameButtons } from "./components/";
+
+import { Scrollbars } from "react-custom-scrollbars";
+
 import styles from "./styles";
 
 const GamePage = () => {
@@ -25,11 +28,26 @@ const GamePage = () => {
   }, []);
 
   return (
-    <Container maxWidth="md" className={classes.page}>
-      <GameText link={websiteLink} />
-      <GameImageGallery link={websiteLink} />
-      <GameButtons link={websiteLink} />
-    </Container>
+    <Scrollbars
+      style={{ height: "100vh" }}
+      autoHide
+      autoHideTimeout={1000}
+      renderThumbVertical={(props) => (
+        <div
+          {...props}
+          style={{
+            borderRadius: 3,
+            background: "rgba(255, 255, 255, 0.5)",
+          }}
+        />
+      )}
+    >
+      <Container maxWidth="md" className={classes.page}>
+        <GameText link={websiteLink} />
+        <GameImageGallery link={websiteLink} />
+        <GameButtons link={websiteLink} />
+      </Container>
+    </Scrollbars>
   );
 };
 

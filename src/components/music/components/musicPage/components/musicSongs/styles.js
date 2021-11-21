@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints }) => ({
+const styles = makeStyles(() => ({
   songContainer: {
     paddingTop: 24,
     paddingBottom: 24,

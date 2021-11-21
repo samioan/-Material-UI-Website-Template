@@ -1,4 +1,8 @@
 const albumLinks = {
+  unrealizedDaysWithinImpureSuffering: [
+    "https://selfishdream.bandcamp.com/album/unrealized-days-within-impure-suffering",
+    "unrealized-days-within-impure-suffering",
+  ],
   iFoundAUniverseWithinYourHeart: [
     "https://selfishdream.bandcamp.com/album/i-found-a-universe-within-your-heart",
     "i-found-a-universe-within-your-heart",
