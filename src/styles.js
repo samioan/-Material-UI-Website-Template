@@ -1,12 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-import background from "./background.jpg";
-
 const styles = makeStyles(() => ({
   pageBackground: {
     minHeight: "100vh",
     backgroundColor: "black",
-    backgroundImage: `url(${background})`,
+    backgroundImage: `url(https://f4.bcbits.com/img/0021371731_130.jpg)`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",

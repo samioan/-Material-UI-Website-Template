@@ -1,6 +1,10 @@
 import images from "../images";
 
 const albumMedia = {
+  unrealizedDaysWithinImpureSuffering: {
+    splashImage: images.unrealized,
+    video: "8z0_jxvddeE",
+  },
   iFoundAUniverseWithinYourHeart: {
     splashImage: images.heart,
     video: "hmvVnj79hO0",

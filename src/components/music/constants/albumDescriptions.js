@@ -1,5 +1,9 @@
 const albumDescriptions = {
-  iFoundAUniverseWithinYourHeart: ["For everything we've been through."],
+  unrealizedDaysWithinImpureSuffering: ["Kill every thought.", "Every soul."],
+  iFoundAUniverseWithinYourHeart: [
+    "Dedicated to her.",
+    "For everything we've been through.",
+  ],
   earthlyVariationsOfHeaven: [
     "Do not be afraid.",
     "They have many faces.",
