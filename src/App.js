@@ -7,6 +7,7 @@ import gameDetails from "./components/games/constants/gameDetails";
 import albumDetails from "./components/music/constants/albumDetails";
 import styles from "./styles";
 
+import { Scrollbars } from "react-custom-scrollbars";
 const App = () => {
   const classes = styles();
 
@@ -29,16 +30,31 @@ const App = () => {
 
   return (
     <div className={classes.pageBackground}>
-      <Router>
-        <Header />
-        {pages.map((page) => (
-          <Switch key={page.link}>
-            <Route exact path={page.link}>
-              {page.component}
-            </Route>
-          </Switch>
-        ))}
-      </Router>
+      <Scrollbars
+        style={{ height: "100vh" }}
+        autoHide
+        autoHideTimeout={1000}
+        renderThumbVertical={(props) => (
+          <div
+            {...props}
+            style={{
+              borderRadius: 3,
+              background: "rgba(255, 255, 255, 0.5)",
+            }}
+          />
+        )}
+      >
+        <Router>
+          <Header />
+          {pages.map((page) => (
+            <Switch key={page.link}>
+              <Route exact path={page.link}>
+                {page.component}
+              </Route>
+            </Switch>
+          ))}
+        </Router>
+      </Scrollbars>
     </div>
   );
 };

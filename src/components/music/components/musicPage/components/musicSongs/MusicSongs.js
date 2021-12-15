@@ -8,12 +8,12 @@ const MusicSongs = ({ link }) => {
 
   return (
     <Container maxWidth="sm" className={classes.songContainer}>
-      {link.albumCodes.trackCodes.map((item) => (
+      {link.trackCodes.map((item) => (
         <iframe
           className={classes.song}
           title={item}
           key={item}
-          src={`https://bandcamp.com/EmbeddedPlayer/album=${link.albumCodes.albumCode}/size=small/bgcol=333333/linkcol=0f91ff/artwork=none/track=${item}/transparent=true/`}
+          src={`https://bandcamp.com/EmbeddedPlayer/album=${link.albumCode}/size=small/bgcol=333333/linkcol=0f91ff/artwork=none/track=${item}/transparent=true/`}
           seamless
         ></iframe>
       ))}

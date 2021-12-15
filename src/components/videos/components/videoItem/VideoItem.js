@@ -18,7 +18,7 @@ const VideoItem = ({ link, title }) => {
           playerClass="lty-playbtn"
           wrapperClass="yt-lite"
           poster="hqdefault"
-          noCookie={true}
+          noCookie
           id={link}
           title={title}
         />

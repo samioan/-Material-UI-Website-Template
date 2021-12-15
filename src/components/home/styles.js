@@ -22,6 +22,9 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     [breakpoints.up("sm")]: {
       width: "45vw",
     },
+    "& img": {
+      height: "100%",
+    },
   },
   button: {
     margin: 8,

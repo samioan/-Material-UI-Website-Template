@@ -1,37 +1,16 @@
-import gameMedia from "./gameMedia";
-import gameDescriptions from "./gameDescriptions";
-import gameLinks from "./gameLinks";
-import gameCardItems from "./gameCardItems";
+import gameData from "../../data/gameData.json";
 
-const gameDetails = [
-  "theBeyonder",
-  "cosmos",
-  "tenebris",
-  "within",
-  "subminimal",
-  "fateless",
-  "vessel",
-  "theFleshOfFallenAngels",
-  "isntLifeDisappointing",
-  "suffer",
-  "soul",
-  "recluse",
-  "suicide",
-  "sheIsAllYours",
-  "personal",
-  "skin",
-  "oneOfUs",
-].map((game) => ({
-  title: gameCardItems[game][0],
-  tagline: gameCardItems[game][1],
-  genre: gameCardItems[game][2],
-  description: gameDescriptions[game],
-  linkPrimary: gameLinks[game][0],
-  linkSecondary: gameLinks[game][1],
-  pageLink: gameLinks[game][2],
-  image: gameMedia[game].splashImage,
-  screenshots: gameMedia[game].screenshots,
-  video: gameMedia[game].video,
+const gameDetails = Object.values(gameData).map((game) => ({
+  title: game.title,
+  tagline: game.subtitle,
+  genre: game.genre,
+  description: game.description,
+  linkPrimary: game.links[0],
+  linkSecondary: game.links[1],
+  pageLink: game.links[2],
+  image: game.splashImage,
+  screenshots: game.screenshots,
+  video: game.video,
 }));
 
 export { gameDetails };
