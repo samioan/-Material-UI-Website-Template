@@ -5,8 +5,6 @@ import Container from "@material-ui/core/Container";
 import { MusicText, MusicSongs, MusicButtons } from "./components";
 import albumDetails from "../../constants/albumDetails";
 
-import { Scrollbars } from "react-custom-scrollbars";
-
 import styles from "./styles";
 
 const musicPageDetails = (album) => {
@@ -29,26 +27,11 @@ const MusicPage = () => {
   }, []);
 
   return (
-    <Scrollbars
-      style={{ height: "100vh" }}
-      autoHide
-      autoHideTimeout={1000}
-      renderThumbVertical={(props) => (
-        <div
-          {...props}
-          style={{
-            borderRadius: 3,
-            background: "rgba(255, 255, 255, 0.5)",
-          }}
-        />
-      )}
-    >
-      <Container maxWidth="md" className={classes.page}>
-        <MusicText link={websiteLink} />
-        <MusicSongs link={websiteLink} />
-        <MusicButtons link={websiteLink} />
-      </Container>
-    </Scrollbars>
+    <Container maxWidth="md" className={classes.page}>
+      <MusicText link={websiteLink} />
+      <MusicSongs link={websiteLink} />
+      <MusicButtons link={websiteLink} />
+    </Container>
   );
 };
 
