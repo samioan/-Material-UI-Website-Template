@@ -15,8 +15,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
   },
   video: {
     width: "100%",
-    minHeight: 206,
-    height: "100%",
+    height: 210,
   },
   title: {
     paddingTop: 80,

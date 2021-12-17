@@ -1,11 +1,9 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(({ palette }) => ({
+const styles = () => ({
   page: {
-    backgroundColor: palette.text.primary,
+    backgroundColor: "rgba(0, 0, 0, 0.87)",
     minHeight: "100vh",
   },
-}));
+});
 
 export { styles };
 export default styles;

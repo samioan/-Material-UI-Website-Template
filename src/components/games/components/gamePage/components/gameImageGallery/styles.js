@@ -1,6 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(() => ({
+const styles = () => ({
   gallery: {
     paddingTop: 8,
   },
@@ -10,7 +8,7 @@ const styles = makeStyles(() => ({
   image: {
     width: "100%",
   },
-}));
+});
 
 export { styles };
 export default styles;

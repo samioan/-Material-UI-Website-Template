@@ -24,7 +24,7 @@ const GameText = ({ link }) => {
         variant="h6"
         align="center"
       >
-        {link.tagline}
+        {link.subtitle}
       </Typography>
 
       <Grid
