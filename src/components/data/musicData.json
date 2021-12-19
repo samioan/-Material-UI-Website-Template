@@ -183,10 +183,6 @@
         "subtitle": "Don't lose hope.",
         "genre": "Orchestral",
         "description": [
-            "https://selfishdream.bandcamp.com/album/the-left-hand-path",
-            "the-left-hand-path"
-        ],
-        "links": [
             "Come to me,",
             "my children.",
             "Do not forget me,",
@@ -204,6 +200,10 @@
             "And I will be with you for always.",
             "Don't lose hope.",
             "Arise!"
+        ],
+        "links": [
+            "https://selfishdream.bandcamp.com/album/the-left-hand-path",
+            "the-left-hand-path"
         ],
         "splashImage": "https://f4.bcbits.com/img/a1215912089_10.jpg",
         "albumCode": "1780449005",
