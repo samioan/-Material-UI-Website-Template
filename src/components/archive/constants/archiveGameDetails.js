@@ -7,11 +7,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1U8JkivQ-5DPX8ZZo0nza8_6suEZF2ILO/view?usp=sharing",
   },
   {
-    img: games.among,
-    title: "One Among Many",
-    link: "https://drive.google.com/file/d/1LQ97DKC_rL0dYfEbHpZcDzm1DtZKPjLO/view?usp=sharing",
-  },
-  {
     img: games.womb,
     title: "Womb",
     link: "https://drive.google.com/file/d/1glVQxr62zxWxTXNbDmE6zxVFD5Y7Xzd0/view?usp=sharing",

@@ -1,4 +1,28 @@
 {
+    "semiramis": {
+        "title": "Semiramis",
+        "subtitle": "A fallen queen.",
+        "genre": "Electronic",
+        "description": [
+            "The blood of Babylon is on your hands."
+        ],
+        "links": [
+            "https://selfishdream.bandcamp.com/album/semiramis",
+            "semiramis"
+        ],
+        "splashImage": "https://f4.bcbits.com/img/a3766174013_10.jpg",
+        "albumCode": "224595516",
+        "trackCodes": [
+            "492951137",
+            "4128975348",
+            "3198249030",
+            "3086966016",
+            "3054033616",
+            "2358682959",
+            "1851572658"
+        ],
+        "video": "2XwgI8udK6I"
+    },
     "unrealizedDaysWithinImpureSuffering": {
         "title": "Unrealized Days Within Impure Suffering",
         "subtitle": "Kill every thought.",

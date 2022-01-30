@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
+
 import Container from "@material-ui/core/Container";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProgressiveImage from "react-progressive-graceful-image";
 
-import linkDetails from "./constants/linkDetails";
 import imageCarousel from "./constants/imageCarousel";
 
 import placeholderGif from "./images";
@@ -66,22 +64,6 @@ const Home = () => {
             </ProgressiveImage>
           ))}
         </Carousel>
-
-        <Grid container justify="center">
-          {linkDetails.map((item) => (
-            <Button
-              key={item.title}
-              className={classes.button}
-              href={item.site}
-              target="_blank"
-              variant="outlined"
-              size="large"
-              color="primary"
-            >
-              {item.title}
-            </Button>
-          ))}
-        </Grid>
       </Container>
     </Scrollbars>
   );

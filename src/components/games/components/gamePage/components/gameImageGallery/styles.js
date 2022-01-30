@@ -8,6 +8,12 @@ const styles = () => ({
   image: {
     width: "100%",
   },
+  loading: {
+    height: 247,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
 
 export { styles };

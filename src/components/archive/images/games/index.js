@@ -32,7 +32,6 @@ import transcendence from "./transcendence.jpg";
 import unkindled from "./unkindled.jpg";
 import womb from "./womb.jpg";
 
-import among from "./among.jpg";
 import prosopagnosia from "./prosopagnosia.jpg";
 
 const games = {
@@ -69,7 +68,6 @@ const games = {
   transcendence,
   unkindled,
   womb,
-  among,
   prosopagnosia,
 };
 

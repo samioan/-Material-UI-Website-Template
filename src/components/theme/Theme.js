@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const Theme = makeStyles(({ palette }) => ({
+const Theme = makeStyles(({ palette, breakpoints }) => ({
   page: {
     padding: 0,
     backgroundColor: palette.text.primary,
@@ -15,7 +15,10 @@ const Theme = makeStyles(({ palette }) => ({
     color: palette.grey[50],
   },
   content: {
-    padding: 16,
+    padding: "16px 16px 80px 16px",
+    [breakpoints.up("sm")]: {
+      padding: "16px 16px 60px 16px",
+    },
   },
 }));
 

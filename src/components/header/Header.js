@@ -155,9 +155,18 @@ export default function Header() {
   };
 
   const femmecubatorLogo = (
-    <Typography variant="h6" component="h1" className={logo}>
-      Selfish Dream
-    </Typography>
+    <Link
+      {...{
+        component: RouterLink,
+        to: headersData[0].href,
+        color: "inherit",
+        style: { textDecoration: "none" },
+      }}
+    >
+      <Typography variant="h6" component="h1" className={logo}>
+        Selfish Dream
+      </Typography>
+    </Link>
   );
 
   const getMenuButtons = () => {
