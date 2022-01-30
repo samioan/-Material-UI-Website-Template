@@ -1,35 +1,54 @@
+import {
+  twitterIcon,
+  spotifyIcon,
+  soundcloudIcon,
+  bandcampIcon,
+  instagramIcon,
+  youtubeIcon,
+  itchioIcon,
+  gamejoltIcon,
+} from "../images";
+
 const linkDetails = [
   {
-    title: "Itch.io",
+    label: "Itch.io",
     site: "https://selfishdream.itch.io/",
+    image: itchioIcon,
   },
   {
-    title: "Game Jolt",
+    label: "Game Jolt",
     site: "https://gamejolt.com/@SelfishDream",
+    image: gamejoltIcon,
   },
   {
-    title: "SoundCloud",
+    label: "SoundCloud",
     site: "https://soundcloud.com/selfishdream",
+    image: soundcloudIcon,
   },
   {
-    title: "Bandcamp",
+    label: "Bandcamp",
     site: "https://selfishdream.bandcamp.com/",
+    image: bandcampIcon,
   },
   {
-    title: "Spotify",
+    label: "Spotify",
     site: "https://open.spotify.com/artist/0pHUwm22L3f17UQueMREdG",
+    image: spotifyIcon,
   },
   {
-    title: "Instagram",
+    label: "Instagram",
     site: "https://www.instagram.com/theselfishdream/",
+    image: instagramIcon,
   },
   {
-    title: "YouTube",
+    label: "YouTube",
     site: "https://www.youtube.com/channel/UCPvWrxJnZXkp4F8MXAo0gUQ",
+    image: youtubeIcon,
   },
   {
-    title: "Twitter",
+    label: "Twitter",
     site: "https://twitter.com/theselfishdream",
+    image: twitterIcon,
   },
 ];
 

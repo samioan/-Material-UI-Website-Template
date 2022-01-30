@@ -1,5 +1,14 @@
 import React from "react";
-import { Home, Header, Games, Music, Art, Videos, Archive } from "./components";
+import {
+  Home,
+  Header,
+  Games,
+  Music,
+  Art,
+  Videos,
+  Archive,
+  Footer,
+} from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GamePage } from "./components/games/components/";
 import { MusicPage } from "./components/music/components";
@@ -39,6 +48,7 @@ const App = () => {
             </Route>
           </Switch>
         ))}
+        <Footer />
       </Router>
     </div>
   );

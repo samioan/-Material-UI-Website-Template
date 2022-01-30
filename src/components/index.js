@@ -5,5 +5,6 @@ import Music from "./music";
 import Art from "./art";
 import Videos from "./videos";
 import Archive from "./archive";
+import Footer from "./footer";
 
-export { Home, Games, Music, Header, Art, Videos, Archive };
+export { Home, Games, Music, Header, Art, Videos, Archive, Footer };

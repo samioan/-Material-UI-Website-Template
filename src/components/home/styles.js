@@ -20,7 +20,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     paddingBottom: 40,
     width: "calc(100vw - 32px)",
     [breakpoints.up("sm")]: {
-      width: "45vw",
+      width: "50vw",
     },
     "& img": {
       height: "100%",
