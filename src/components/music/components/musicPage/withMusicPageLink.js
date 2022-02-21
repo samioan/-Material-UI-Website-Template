@@ -4,8 +4,6 @@ import { useRouteMatch } from "react-router-dom";
 
 import musicData from "../../../data/musicData.json";
 
-import { Scrollbars } from "react-custom-scrollbars";
-
 const musicPageDetails = (album) => {
   const link = album.split("/")[2];
 
@@ -24,24 +22,7 @@ const withMusicPageLink = (Component) => (props) => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <Scrollbars
-      style={{ height: "100vh" }}
-      autoHide
-      autoHideTimeout={1000}
-      renderThumbVertical={(props) => (
-        <div
-          {...props}
-          style={{
-            borderRadius: 3,
-            background: "rgba(255, 255, 255, 0.5)",
-          }}
-        />
-      )}
-    >
-      <Component {...props} websiteLink={websiteLink} />
-    </Scrollbars>
-  );
+  return <Component {...props} websiteLink={websiteLink} />;
 };
 
 export { withMusicPageLink };

@@ -48,7 +48,15 @@ const useStyles = makeStyles(() => ({
     "@media (max-width: 900px)": {
       paddingLeft: 0,
     },
+    "&.MuiAppBar-positionFixed": {
+      right: "auto",
+      left: 0,
+    },
+    "&.MuiAppBar-root": {
+      width: "calc(100% - 8px)",
+    },
   },
+
   logo: {
     fontFamily: "Work Sans, sans-serif",
     fontWeight: 600,

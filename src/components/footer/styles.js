@@ -6,7 +6,7 @@ const styles = makeStyles(({ breakpoints }) => ({
     flexWrap: "wrap",
     position: "fixed",
     bottom: 0,
-    width: "100%",
+    width: "calc(100% - 8px)",
     minHeight: 64,
     backgroundColor: "#111",
     justifyContent: "center",

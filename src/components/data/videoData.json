@@ -1,5 +1,9 @@
 {
     "games": {
+        "ritual": {
+            "link": "NV--NI2a-rs",
+            "title": "Ritual"
+        },
         "eyes": {
             "link": "kf4sSpTmx70",
             "title": "Eyes"
@@ -99,9 +103,17 @@
         "hollow": {
             "link": "jeysnwumbS4",
             "title": "Hollow"
+        },
+        "oneOfUs": {
+            "link": "0S_uhcd--30",
+            "title": "One of Us"
         }
     },
     "music": {
+        "semiramis": {
+            "link": "2XwgI8udK6I",
+            "title": "Semiramis"
+        },
         "unrealizedDaysWithinImpureSuffering": {
             "link": "8z0_jxvddeE",
             "title": "Unrealized Days Within Impure Suffering"

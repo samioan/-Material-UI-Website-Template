@@ -6,6 +6,7 @@ import { compose } from "redux";
 
 import { GameText, GameImageGallery, GameButtons } from "./components/";
 
+import withScrollbars from "../../../theme/withScrollbars";
 import withGamePageLink from "./withGamePageLink";
 
 import styles from "./styles";
@@ -19,4 +20,8 @@ const GamePage = ({ websiteLink, classes }) => (
 );
 
 export { GamePage };
-export default compose(withStyles(styles), withGamePageLink)(GamePage);
+export default compose(
+  withStyles(styles),
+  withScrollbars,
+  withGamePageLink
+)(GamePage);
