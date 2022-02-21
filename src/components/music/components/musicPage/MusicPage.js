@@ -7,6 +7,7 @@ import { compose } from "redux";
 import { MusicText, MusicSongs, MusicButtons } from "./components";
 
 import withMusicPageLink from "./withMusicPageLink";
+import withScrollbars from "../../../theme/withScrollbars";
 
 import styles from "./styles";
 
@@ -20,4 +21,8 @@ const MusicPage = ({ websiteLink, classes }) => (
 
 export { MusicPage };
 
-export default compose(withStyles(styles), withMusicPageLink)(MusicPage);
+export default compose(
+  withStyles(styles),
+  withScrollbars,
+  withMusicPageLink
+)(MusicPage);

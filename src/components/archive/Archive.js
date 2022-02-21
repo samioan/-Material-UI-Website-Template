@@ -12,7 +12,7 @@ import {
 
 import placeholderGif from "./images/placeholder";
 
-import { Scrollbars } from "react-custom-scrollbars";
+import withScrollbars from "../theme/withScrollbars";
 
 import styles from "./styles";
 
@@ -24,62 +24,39 @@ const Archive = () => {
   }, []);
 
   return (
-    <Scrollbars
-      style={{ height: "100vh" }}
-      autoHide
-      autoHideTimeout={1000}
-      renderThumbVertical={(props) => (
-        <div
-          {...props}
-          style={{
-            borderRadius: 3,
-            background: "rgba(255, 255, 255, 0.5)",
-          }}
-        />
-      )}
-    >
-      <Container maxWidth="lg" className={classes.page}>
-        <Typography className={classes.title} variant="h2" align="center">
-          Archive
-        </Typography>
+    <Container maxWidth="lg" className={classes.page}>
+      <Typography className={classes.title} variant="h2" align="center">
+        Archive
+      </Typography>
 
-        <Typography className={classes.subtitle} variant="h5" align="center">
-          Games
-        </Typography>
+      <Typography className={classes.subtitle} variant="h5" align="center">
+        Games
+      </Typography>
 
-        <ArchiveList
-          archiveDetailsArray={archiveGameDetails}
-          image={placeholderGif}
-        />
+      <ArchiveList
+        archiveDetailsArray={archiveGameDetails}
+        image={placeholderGif}
+      />
 
-        <Typography
-          className={classes.innerSubtitle}
-          variant="h5"
-          align="center"
-        >
-          Music
-        </Typography>
+      <Typography className={classes.innerSubtitle} variant="h5" align="center">
+        Music
+      </Typography>
 
-        <ArchiveList
-          archiveDetailsArray={archiveMusicDetails}
-          image={placeholderGif}
-        />
+      <ArchiveList
+        archiveDetailsArray={archiveMusicDetails}
+        image={placeholderGif}
+      />
 
-        <Typography
-          className={classes.innerSubtitle}
-          variant="h5"
-          align="center"
-        >
-          Art
-        </Typography>
+      <Typography className={classes.innerSubtitle} variant="h5" align="center">
+        Art
+      </Typography>
 
-        <ArchiveList
-          archiveDetailsArray={archiveArtDetails}
-          image={placeholderGif}
-        />
-      </Container>
-    </Scrollbars>
+      <ArchiveList
+        archiveDetailsArray={archiveArtDetails}
+        image={placeholderGif}
+      />
+    </Container>
   );
 };
 export { Archive };
-export default Archive;
+export default withScrollbars(Archive);

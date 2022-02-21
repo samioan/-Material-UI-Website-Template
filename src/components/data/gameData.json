@@ -1,4 +1,37 @@
 {
+    "ritual": {
+        "title": "Ritual",
+        "subtitle": "Show me the way.",
+        "genre": "Experimental",
+        "description": [
+            "No one will know what I know.",
+            "No one will learn what I have learned.",
+            "Unless they are following the Path and wish to be educated.",
+            "I only desire a simple conversation.",
+            "To see what lies beyond.",
+            "So come unto me.",
+            "And show me the way."
+        ],
+        "links": [
+            "https://selfishdream.itch.io/ritual/purchase",
+            "https://selfishdream.itch.io/ritual",
+            "ritual"
+        ],
+        "splashImage": "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQ0LnBuZw==/original/RsRDil.png",
+        "screenshots": [
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjU0LmpwZw==/347x500/5p5vWL.jpg",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjM4LnBuZw==/347x500/Cqx7kq.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQwLnBuZw==/347x500/KPS7yF.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQ2LnBuZw==/347x500/BGMJBg.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQ3LnBuZw==/347x500/a%2BFGjl.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQxLnBuZw==/347x500/vCkwYI.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQyLnBuZw==/347x500/VLHNRM.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQ1LnBuZw==/347x500/3AiiPN.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQzLnBuZw==/347x500/8lThMs.png",
+            "https://img.itch.zone/aW1hZ2UvMTM3MDMzMC84MTI2MjQ0LnBuZw==/347x500/0bHwzj.png"
+        ],
+        "video": "NV--NI2a-rs"
+    },
     "eyes": {
         "title": "Eyes",
         "subtitle": "There's something they're not telling you.",
