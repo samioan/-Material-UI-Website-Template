@@ -7,7 +7,6 @@ const styles = makeStyles(({ breakpoints }) => ({
     position: "fixed",
     bottom: 0,
     width: "calc(100% - 8px)",
-    minHeight: 64,
     backgroundColor: "#111",
     justifyContent: "center",
     [breakpoints.up("md")]: {
@@ -15,8 +14,8 @@ const styles = makeStyles(({ breakpoints }) => ({
     },
   },
   icon: {
-    width: 32,
-    height: 32,
+    width: 24,
+    height: 24,
   },
 }));
 
