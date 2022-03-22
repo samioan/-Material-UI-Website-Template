@@ -12,11 +12,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1glVQxr62zxWxTXNbDmE6zxVFD5Y7Xzd0/view?usp=sharing",
   },
   {
-    img: games.prosopagnosia,
-    title: "Prosopagnosia",
-    link: "https://drive.google.com/file/d/1uvwdS0jiKPB85PsD75Wlg4FtD9aHmygZ/view?usp=sharing",
-  },
-  {
     img: games.futile,
     title: "Futile Effort",
     link: "https://drive.google.com/file/d/1k1RxZP2iZdB3lSulClFlVGcAFja45Prz/view?usp=sharing",

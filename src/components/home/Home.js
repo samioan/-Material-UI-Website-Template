@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
-
+import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 
 import { Carousel } from "react-responsive-carousel";
@@ -27,29 +27,34 @@ const Home = () => {
       <Typography className={classes.title} variant="h2" align="center">
         Selfish Dream
       </Typography>
-
-      <Typography className={classes.subtitle} variant="h5" align="center">
-        Someone. Anyone.
-      </Typography>
-
-      <Carousel
-        className={classes.carousel}
-        autoPlay="true"
-        infiniteLoop="true"
-        showThumbs={false}
-        interval={5000}
-        showStatus={false}
-      >
-        {imageCarousel.map((item) => (
-          <ProgressiveImage
-            key={item.key}
-            src={item.img}
-            placeholder={placeholderGif}
-          >
-            {(src) => <img src={src} alt={item.name} />}
-          </ProgressiveImage>
+      <Grid container justify="space-between" className={classes.content}>
+        {imageCarousel.map((section) => (
+          <Grid key={imageCarousel.indexOf(section)} item xs={12} md={4}>
+            <Carousel
+              className={classes.carousel}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+            >
+              {section.map((item) => (
+                <a
+                  key={item.key}
+                  href={item.link && `${item.name.split("-")[0]}/${item.link}`}
+                >
+                  <p>
+                    <ProgressiveImage
+                      src={item.img}
+                      placeholder={placeholderGif}
+                    >
+                      {(src) => <img src={src} alt={item.name} />}
+                    </ProgressiveImage>
+                  </p>
+                </a>
+              ))}
+            </Carousel>
+          </Grid>
         ))}
-      </Carousel>
+      </Grid>
     </Container>
   );
 };

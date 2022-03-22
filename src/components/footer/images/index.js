@@ -6,6 +6,7 @@ import instagramIcon from "./instagramIcon.svg";
 import youtubeIcon from "./youtubeIcon.svg";
 import itchioIcon from "./itchioIcon.png";
 import gamejoltIcon from "./gamejoltIcon.png";
+import kofiIcon from "./kofiIcon.png";
 
 export {
   spotifyIcon,
@@ -16,4 +17,5 @@ export {
   instagramIcon,
   youtubeIcon,
   itchioIcon,
+  kofiIcon,
 };

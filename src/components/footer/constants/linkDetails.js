@@ -7,9 +7,15 @@ import {
   youtubeIcon,
   itchioIcon,
   gamejoltIcon,
+  kofiIcon,
 } from "../images";
 
 const linkDetails = [
+  {
+    label: "Ko-fi",
+    site: "https://ko-fi.com/selfishdream",
+    image: kofiIcon,
+  },
   {
     label: "Itch.io",
     site: "https://selfishdream.itch.io/",
