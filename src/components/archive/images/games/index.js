@@ -32,8 +32,6 @@ import transcendence from "./transcendence.jpg";
 import unkindled from "./unkindled.jpg";
 import womb from "./womb.jpg";
 
-import prosopagnosia from "./prosopagnosia.jpg";
-
 const games = {
   abstractions,
   autoerotic,
@@ -68,7 +66,6 @@ const games = {
   transcendence,
   unkindled,
   womb,
-  prosopagnosia,
 };
 
 export { games };
