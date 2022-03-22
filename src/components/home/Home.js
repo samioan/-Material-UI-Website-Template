@@ -35,6 +35,8 @@ const Home = () => {
               showThumbs={false}
               showStatus={false}
               showIndicators={false}
+              autoFocus={false}
+              autoPlay={false}
             >
               {section.map((item) => (
                 <a

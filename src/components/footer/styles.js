@@ -9,6 +9,7 @@ const styles = makeStyles(({ breakpoints }) => ({
     width: "calc(100% - 8px)",
     backgroundColor: "#111",
     justifyContent: "center",
+    zIndex: 2,
     [breakpoints.up("md")]: {
       justifyContent: "flex-end",
     },
