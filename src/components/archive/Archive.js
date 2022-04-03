@@ -25,7 +25,7 @@ const Archive = () => {
 
   return (
     <Container maxWidth="lg" className={classes.page}>
-      <Typography className={classes.title} variant="h2" align="center">
+      <Typography className={classes.title} variant="h3" align="center">
         Archive
       </Typography>
 

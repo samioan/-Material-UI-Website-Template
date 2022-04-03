@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const Theme = makeStyles(({ palette, breakpoints }) => ({
+const theme = makeStyles(({ palette, breakpoints }) => ({
   page: {
     padding: 0,
     backgroundColor: palette.text.primary,
@@ -22,5 +22,5 @@ const Theme = makeStyles(({ palette, breakpoints }) => ({
   },
 }));
 
-export { Theme };
-export default Theme;
+export { theme };
+export default theme;

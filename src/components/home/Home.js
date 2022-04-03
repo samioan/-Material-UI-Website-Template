@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <Container maxWidth="lg" className={classes.page}>
-      <Typography className={classes.title} variant="h2" align="center">
+      <Typography className={classes.title} variant="h3" align="center">
         Selfish Dream
       </Typography>
       <Grid container justify="space-between" className={classes.content}>

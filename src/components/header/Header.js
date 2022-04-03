@@ -73,13 +73,20 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  drawer: {
+    "& .MuiDrawer-paperAnchorLeft": {
+      backgroundColor: "#111",
+    },
+  },
   drawerContainer: {
+    backgroundColor: "#111",
     padding: "20px 30px",
   },
 }));
 
 export default function Header() {
-  const { header, logo, menuButton, toolbar, drawerContainer } = useStyles();
+  const { header, logo, menuButton, toolbar, drawer, drawerContainer } =
+    useStyles();
 
   const [state, setState] = useState({
     mobileView: false,
@@ -130,6 +137,7 @@ export default function Header() {
         </IconButton>
 
         <Drawer
+          className={drawer}
           {...{
             anchor: "left",
             open: drawerOpen,
@@ -156,7 +164,7 @@ export default function Header() {
             key: label,
           }}
         >
-          <MenuItem>{label}</MenuItem>
+          <MenuItem style={{ color: "#fff" }}>{label}</MenuItem>
         </Link>
       );
     });
@@ -172,7 +180,7 @@ export default function Header() {
       }}
     >
       <Typography variant="h6" component="h1" className={logo}>
-        Selfish Dream
+        SD
       </Typography>
     </Link>
   );

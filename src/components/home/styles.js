@@ -11,7 +11,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     paddingTop: 80,
   },
   content: {
-    padding: "0 0 100px 0",
+    padding: 0,
     [breakpoints.up("md")]: {
       padding: "0px 16px",
     },

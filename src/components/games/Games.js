@@ -8,10 +8,10 @@ import gameData from "../data/gameData.json";
 
 import withScrollbars from "../theme/withScrollbars";
 
-import Theme from "../theme";
+import theme from "../theme";
 
 const Games = () => {
-  const classes = Theme();
+  const classes = theme();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ const Games = () => {
 
   return (
     <Container maxWidth="lg" className={classes.page}>
-      <Typography className={classes.title} variant="h2" align="center">
+      <Typography className={classes.title} variant="h3" align="center">
         Games
       </Typography>
       <Grid className={classes.content} container justify="center">
