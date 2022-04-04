@@ -34,6 +34,7 @@ const Home = ({ showScrollToTopButton, scrollToTop }) => {
                 showIndicators={false}
                 autoFocus={false}
                 autoPlay={false}
+                infiniteLoop
               >
                 {section.map((item) => (
                   <a
@@ -42,7 +43,7 @@ const Home = ({ showScrollToTopButton, scrollToTop }) => {
                       item.link && `${item.name.split("-")[0]}/${item.link}`
                     }
                   >
-                    <p>
+                    <div>
                       <ProgressiveImage src={item.img} placeholder="">
                         {(src, loading) => {
                           return loading ? (
@@ -54,7 +55,7 @@ const Home = ({ showScrollToTopButton, scrollToTop }) => {
                           );
                         }}
                       </ProgressiveImage>
-                    </p>
+                    </div>
                   </a>
                 ))}
               </Carousel>

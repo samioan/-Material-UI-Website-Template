@@ -32,7 +32,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
       "& a": {
         height: "100%",
         width: "100%",
-        "& p": {
+        "& div": {
           margin: 0,
           height: "100%",
           width: "100%",

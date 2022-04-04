@@ -20,7 +20,10 @@ const withScrollbars = (Component) => (props) => {
   };
 
   const scrollToTop = () => {
-    scrollbarsRef.current.scrollToTop();
+    scrollbarsRef.current.view.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const newProps = {
