@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
@@ -9,13 +9,10 @@ import styles from "components/theme/styles";
 import Footer from "components/layout/footer";
 import videoData from "components/data/videoData";
 import withScrollbars from "components/theme/withScrollbars";
+import ScrollToTopButton from "components/input/scroll-to-top-button";
 
-const Videos = () => {
+const Videos = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>
@@ -62,6 +59,7 @@ const Videos = () => {
           ))}
         </Grid>
       </Container>
+      {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
       <Footer />
     </>
   );

@@ -7,14 +7,25 @@ import styles from "./styles";
 import withGamePageLink from "./withGamePageLink";
 import { GameText, GameImageGallery, GameButtons } from "./components";
 
+import Footer from "components/layout/footer";
 import withScrollbars from "components/theme/withScrollbars";
+import ScrollToTopButton from "components/input/scroll-to-top-button";
 
-const GamePage = ({ websiteLink, classes }) => (
-  <Container maxWidth="md" className={classes.page}>
-    <GameText link={websiteLink} />
-    <GameImageGallery link={websiteLink} />
-    <GameButtons link={websiteLink} />
-  </Container>
+const GamePage = ({
+  websiteLink,
+  classes,
+  showScrollToTopButton,
+  scrollToTop,
+}) => (
+  <>
+    <Container maxWidth="md" className={classes.page}>
+      <GameText link={websiteLink} />
+      <GameImageGallery link={websiteLink} />
+      <GameButtons link={websiteLink} />
+    </Container>
+    {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
+    <Footer />
+  </>
 );
 
 export { GamePage };

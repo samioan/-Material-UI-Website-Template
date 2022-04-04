@@ -1,16 +1,20 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(() => ({
+const styles = makeStyles(({ breakpoints }) => ({
   button: {
-    height: 64,
-    width: 64,
     position: "fixed",
-    bottom: 32,
-    left: "50vw",
+    bottom: 0,
+    right: 0,
+    zIndex: "1000",
+    borderRadius: "10px 10px 0 0",
+    "&.MuiButton-containedPrimary": {
+      backgroundColor: "#111",
+    },
+    [breakpoints.up("lg")]: {
+      right: 40,
+    },
   },
-  icon: {
-    height: 64,
-    width: 64,
+  text: {
     color: "white",
   },
 }));

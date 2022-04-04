@@ -1,5 +1,5 @@
 import Grid from "@material-ui/core/Grid";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
@@ -9,20 +9,14 @@ import styles from "components/theme/styles";
 import Footer from "components/layout/footer";
 import gameData from "components/data/gameData";
 import withScrollbars from "components/theme/withScrollbars";
-// import ScrollToTopButton from "components/input/scroll-to-top-button";
+import ScrollToTopButton from "components/input/scroll-to-top-button";
 
-const Games = () => {
+const Games = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const ref = useRef();
 
   return (
     <>
-      <Container maxWidth="lg" className={classes.page} ref={ref}>
+      <Container maxWidth="lg" className={classes.page}>
         <Typography className={classes.title} variant="h3" align="center">
           Games
         </Typography>
@@ -47,15 +41,7 @@ const Games = () => {
           ))}
         </Grid>
       </Container>
-      {/* <ScrollToTopButton
-        onClick={() =>
-          ref.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest",
-          })
-        }
-      /> */}
+      {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
       <Footer />
     </>
   );

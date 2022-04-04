@@ -1,6 +1,6 @@
 import React from "react";
-import IconButton from "@material-ui/core/IconButton";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 import styles from "./styles";
 
@@ -8,9 +8,16 @@ const ScrollToTopButton = ({ onClick }) => {
   const classes = styles();
 
   return (
-    <IconButton onClick={onClick} className={classes.button}>
-      <ExpandLessIcon className={classes.icon} />
-    </IconButton>
+    <Button
+      color="primary"
+      variant="contained"
+      onClick={onClick}
+      className={classes.button}
+    >
+      <Typography variant="overline" className={classes.text}>
+        Back To Top
+      </Typography>
+    </Button>
   );
 };
 

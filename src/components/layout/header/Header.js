@@ -52,9 +52,6 @@ const useStyles = makeStyles(() => ({
       right: "auto",
       left: 0,
     },
-    "&.MuiAppBar-root": {
-      width: "calc(100% - 8px)",
-    },
   },
 
   logo: {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -9,13 +9,10 @@ import artDetails from "./util/artDetails";
 import styles from "components/theme/styles";
 import Footer from "components/layout/footer";
 import withScrollbars from "components/theme/withScrollbars";
+import ScrollToTopButton from "components/input/scroll-to-top-button";
 
-const Art = () => {
+const Art = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>
@@ -43,6 +40,7 @@ const Art = () => {
           ))}
         </Grid>
       </Container>
+      {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
       <Footer />
     </>
   );

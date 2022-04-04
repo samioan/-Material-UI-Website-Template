@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 const styles = makeStyles(() => ({
   footerContainer: {
     backgroundColor: "#111",
-    width: "calc(100% - 8px)",
   },
   icon: {
     width: 24,
