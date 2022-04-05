@@ -48,7 +48,9 @@ const Archive = ({ showScrollToTopButton, scrollToTop }) => {
           Art
         </Typography>
 
-        <ArchiveList archiveDetailsArray={archiveArtDetails} />
+        <div className={classes.bottomContainer}>
+          <ArchiveList archiveDetailsArray={archiveArtDetails} />
+        </div>
       </Container>
       {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
       <Footer />

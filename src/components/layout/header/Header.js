@@ -1,8 +1,10 @@
+import React, { useState, useEffect } from "react";
+import { Link as RouterLink } from "react-router-dom";
+
 import {
   AppBar,
   Toolbar,
   Typography,
-  makeStyles,
   Button,
   IconButton,
   Drawer,
@@ -10,80 +12,12 @@ import {
   MenuItem,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import React, { useState, useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
 
-const headersData = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Games",
-    href: "/games",
-  },
-  {
-    label: "Music",
-    href: "/music",
-  },
-  {
-    label: "Art",
-    href: "/art",
-  },
-  {
-    label: "Videos",
-    href: "/videos",
-  },
-  {
-    label: "Archive",
-    href: "/archive",
-  },
-];
+import { headersData } from "./constants";
+import styles from "./styles";
 
-const useStyles = makeStyles(() => ({
-  header: {
-    backgroundColor: "#111",
-    paddingRight: "79px",
-    paddingLeft: "118px",
-    "@media (max-width: 900px)": {
-      paddingLeft: 0,
-    },
-    "&.MuiAppBar-positionFixed": {
-      right: "auto",
-      left: 0,
-    },
-  },
-
-  logo: {
-    fontFamily: "Work Sans, sans-serif",
-    fontWeight: 600,
-    color: "#fff",
-    textAlign: "left",
-  },
-  menuButton: {
-    fontFamily: "Open Sans, sans-serif",
-    fontWeight: 700,
-    size: "18px",
-    marginLeft: "38px",
-  },
-  toolbar: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  drawer: {
-    "& .MuiDrawer-paperAnchorLeft": {
-      backgroundColor: "#111",
-    },
-  },
-  drawerContainer: {
-    backgroundColor: "#111",
-    padding: "20px 30px",
-  },
-}));
-
-export default function Header() {
-  const { header, logo, menuButton, toolbar, drawer, drawerContainer } =
-    useStyles();
+const Header = () => {
+  const classes = styles();
 
   const [state, setState] = useState({
     mobileView: false,
@@ -106,7 +40,7 @@ export default function Header() {
 
   const displayDesktop = () => {
     return (
-      <Toolbar className={toolbar}>
+      <Toolbar className={classes.toolbar}>
         {femmecubatorLogo}
         <div>{getMenuButtons()}</div>
       </Toolbar>
@@ -134,14 +68,14 @@ export default function Header() {
         </IconButton>
 
         <Drawer
-          className={drawer}
+          className={classes.drawer}
           {...{
             anchor: "left",
             open: drawerOpen,
             onClose: handleDrawerClose,
           }}
         >
-          <div className={drawerContainer}>{getDrawerChoices()}</div>
+          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
 
         <div>{femmecubatorLogo}</div>
@@ -161,7 +95,9 @@ export default function Header() {
             key: label,
           }}
         >
-          <MenuItem style={{ color: "#fff" }}>{label}</MenuItem>
+          <MenuItem style={{ color: "#fff", fontFamily: "Lucida Console" }}>
+            {label}
+          </MenuItem>
         </Link>
       );
     });
@@ -176,7 +112,7 @@ export default function Header() {
         style: { textDecoration: "none" },
       }}
     >
-      <Typography variant="h6" component="h1" className={logo}>
+      <Typography variant="h6" component="h1" className={classes.logo}>
         SD
       </Typography>
     </Link>
@@ -191,7 +127,7 @@ export default function Header() {
             color: "inherit",
             to: href,
             component: RouterLink,
-            className: menuButton,
+            className: classes.menuButton,
           }}
         >
           {label}
@@ -201,8 +137,11 @@ export default function Header() {
   };
 
   return (
-    <AppBar className={header}>
+    <AppBar className={classes.header}>
       {mobileView ? displayMobile() : displayDesktop()}
     </AppBar>
   );
-}
+};
+
+export { Header };
+export default Header;

@@ -6,7 +6,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     paddingLeft: 8,
     paddingRight: 8,
   },
-  text: {
+  textContainer: {
     paddingBottom: 8,
     textAlign: "center",
     [breakpoints.up("sm")]: {
@@ -20,12 +20,15 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
   title: {
     paddingTop: 80,
     color: palette.grey[50],
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
   tagline: {
     color: palette.grey[500],
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
   description: {
     color: palette.grey[50],
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
 }));
 

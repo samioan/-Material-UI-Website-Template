@@ -9,6 +9,9 @@ const styles = makeStyles(({ breakpoints }) => ({
       justifyContent: "center",
     },
   },
+  gridTitle: {
+    fontFamily: "Lucida Console, Courier New, monospace",
+  },
   image: {
     position: "relative",
     left: "50%",

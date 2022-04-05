@@ -47,7 +47,7 @@ const ArchiveList = ({ archiveDetailsArray, width }) => {
               }}
             </ProgressiveImage>
 
-            <GridListTileBar title={item.title} />
+            <GridListTileBar title={item.title} className={classes.gridTitle} />
           </GridListTile>
         ))}
       </GridList>

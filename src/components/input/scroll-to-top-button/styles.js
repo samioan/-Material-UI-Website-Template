@@ -16,6 +16,7 @@ const styles = makeStyles(({ breakpoints }) => ({
   },
   text: {
     color: "white",
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
 }));
 

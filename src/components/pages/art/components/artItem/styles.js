@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const styles = makeStyles(({ palette, breakpoints }) => ({
   title: {
     color: palette.grey[50],
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
   card: {
     backgroundColor: "#111",

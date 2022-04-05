@@ -7,7 +7,8 @@ const styles = makeStyles(() => ({
   },
   button: {
     margin: 8,
-    width: 150,
+    width: 200,
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
 }));
 

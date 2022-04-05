@@ -32,7 +32,7 @@ const MusicText = ({ link }) => {
         container
         justify="space-between"
       >
-        <Grid item xs={12} sm={5} className={classes.text}>
+        <Grid item xs={12} sm={5} className={classes.textContainer}>
           {link.description.map((item) => (
             <Typography
               className={classes.description}

@@ -4,6 +4,7 @@ const styles = makeStyles(({ palette }) => ({
   title: {
     marginTop: 16,
     color: palette.grey[50],
+    fontFamily: "Lucida Console, Courier New, monospace",
   },
   card: {
     backgroundColor: "#111",
