@@ -6,5 +6,16 @@ import Art from "./art";
 import Videos from "./videos";
 import Archive from "./archive";
 import Footer from "./footer";
+import ScrollToTopButton from "./scroll-to-top-button";
 
-export { Home, Games, Music, Header, Art, Videos, Archive, Footer };
+export {
+  Home,
+  Games,
+  Music,
+  Header,
+  Art,
+  Videos,
+  Archive,
+  Footer,
+  ScrollToTopButton,
+};

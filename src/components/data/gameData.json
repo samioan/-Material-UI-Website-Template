@@ -1,4 +1,32 @@
 {
+    "hamsa": {
+        "title": "Hamsa and the Evil Eye",
+        "subtitle": "Forgotten incantations.",
+        "genre": "Experimental",
+        "description": [
+            "The Hand of the Goddess will protect you against the evils of this world.",
+            "Our sacred rites will invoke a divine unreality.",
+            "From our forgotten incantations a new world will be forged.",
+            "A world pure and free of sin.",
+            "Yours for the taking..."
+        ],
+        "links": [
+            "https://selfishdream.itch.io/hamsa/purchase",
+            "https://selfishdream.itch.io/hamsa",
+            "hamsa"
+        ],
+        "splashImage": "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTQ2LnBuZw==/347x500/tDfkdr.png",
+        "screenshots": [
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTUxLnBuZw==/347x500/60byMM.png",
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTQyLnBuZw==/347x500/L5MbVk.png",
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTM4LnBuZw==/347x500/JSa4PV.png",
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTM3LnBuZw==/347x500/OLJZTV.png",
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTQwLnBuZw==/347x500/V%2F3Giu.png",
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTQ0LnBuZw==/347x500/AfyEsY.png",
+            "https://img.itch.zone/aW1hZ2UvMTQzNTA2NC84NTQ5OTQ2LnBuZw==/347x500/tDfkdr.png"
+        ],
+        "video": "h_qzIU8iJxA"
+    },
     "ritual": {
         "title": "Ritual",
         "subtitle": "Show me the way.",

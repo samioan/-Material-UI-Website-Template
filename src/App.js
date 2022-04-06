@@ -1,19 +1,12 @@
 import React from "react";
-import {
-  Home,
-  Header,
-  Games,
-  Music,
-  Art,
-  Videos,
-  Archive,
-  Footer,
-} from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { GamePage } from "./components/games/components/";
-import { MusicPage } from "./components/music/components";
+
+import { Header } from "./components/layout";
 import gameData from "./components/data/gameData.json";
 import musicData from "./components/data/musicData.json";
+import { GamePage } from "./components/pages/games/components";
+import { MusicPage } from "./components/pages/music/components";
+import { Home, Games, Music, Art, Videos, Archive } from "./components/pages";
 
 import styles from "./styles";
 
@@ -38,7 +31,7 @@ const App = () => {
   ];
 
   return (
-    <div className={classes.pageBackground}>
+    <div className={classes.appContainer}>
       <Router>
         <Header />
         {pages.map((page) => (
@@ -48,7 +41,6 @@ const App = () => {
             </Route>
           </Switch>
         ))}
-        <Footer />
       </Router>
     </div>
   );
