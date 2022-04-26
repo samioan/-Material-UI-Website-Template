@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 
 import linkDetails from "./constants/linkDetails";
@@ -11,9 +12,15 @@ const Footer = () => {
   return (
     <Grid container justify="center" className={classes.footerContainer}>
       {linkDetails.map((item) => (
-        <IconButton key={item.label} href={item.site} target="_blank">
-          <img src={item.image} alt={item.label} className={classes.icon}></img>
-        </IconButton>
+        <Tooltip key={item.label} arrow title={item.label}>
+          <IconButton href={item.site} target="_blank">
+            <img
+              src={item.image}
+              alt={item.label}
+              className={classes.icon}
+            ></img>
+          </IconButton>
+        </Tooltip>
       ))}
     </Grid>
   );

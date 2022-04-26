@@ -4,7 +4,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
   page: {
     padding: 0,
     backgroundColor: palette.text.primary,
-    minHeight: "100vh",
+    minHeight: "calc(100vh - 48px)",
   },
   title: {
     color: palette.grey[50],
@@ -38,7 +38,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
           height: "100%",
           width: "100%",
           "& img": {
-            borderRadius: 20,
+            borderRadius: 16,
             height: "100%",
             width: "100%",
             objectFit: "cover",

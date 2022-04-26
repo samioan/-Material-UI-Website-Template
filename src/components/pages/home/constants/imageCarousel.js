@@ -6,7 +6,7 @@ const imagesCarousel = [
   Object.values(gameData).map((item) => ({
     key: item.title,
     name: `games-${item.title}`,
-    img: item.splashImage,
+    img: item.carouselImage,
     link: item.links[2],
   })),
   Object.values(musicData).map((item) => ({

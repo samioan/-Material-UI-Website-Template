@@ -7,6 +7,7 @@ const styles = () => ({
   },
   image: {
     width: "100%",
+    borderRadius: 8,
   },
   loading: {
     height: 247,

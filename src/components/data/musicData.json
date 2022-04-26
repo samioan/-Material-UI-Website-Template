@@ -1,4 +1,29 @@
 {
+    "everyWordUnspoken": {
+        "title": "Every Word Unspoken",
+        "subtitle": "There is a snake inside the mind.",
+        "genre": "Ambient",
+        "description": [
+            "There is a snake inside the mind.",
+            "The snake of conformity."
+        ],
+        "links": [
+            "https://selfishdream.bandcamp.com/album/every-word-unspoken",
+            "every-word-unspoken"
+        ],
+        "splashImage": "https://f4.bcbits.com/img/a0390038294_10.jpg",
+        "albumCode": "3796268921",
+        "trackCodes": [
+            "194425117",
+            "2358236332",
+            "248496305",
+            "2126386361",
+            "81885153",
+            "3994506524",
+            "3007162476"
+        ],
+        "video": "23IM48-BndY"
+    },
     "semiramis": {
         "title": "Semiramis",
         "subtitle": "A fallen queen.",
