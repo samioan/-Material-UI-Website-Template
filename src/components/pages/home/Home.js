@@ -34,6 +34,7 @@ const Home = ({ showScrollToTopButton, scrollToTop }) => {
                 showIndicators={false}
                 autoFocus={false}
                 autoPlay={false}
+                swipeable={false}
                 infiniteLoop
               >
                 {section.map((item) => (

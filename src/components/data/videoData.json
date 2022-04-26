@@ -1,5 +1,9 @@
 {
     "games": {
+        "hamsa": {
+            "link": "h_qzIU8iJxA",
+            "title": "Hamsa and the Evil Eye"
+        },
         "ritual": {
             "link": "NV--NI2a-rs",
             "title": "Ritual"
@@ -114,6 +118,10 @@
         }
     },
     "music": {
+        "everyWordUnspoken": {
+            "link": "23IM48-BndY",
+            "title": "Every Word Unspoken"
+        },
         "semiramis": {
             "link": "2XwgI8udK6I",
             "title": "Semiramis"

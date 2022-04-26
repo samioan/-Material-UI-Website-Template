@@ -1,21 +1,21 @@
-import twitterIcon from "./twitterIcon.svg";
-import spotifyIcon from "./spotifyIcon.svg";
-import soundcloudIcon from "./soundcloudIcon.svg";
-import bandcampIcon from "./bandcampIcon.svg";
-import instagramIcon from "./instagramIcon.svg";
-import youtubeIcon from "./youtubeIcon.svg";
-import itchioIcon from "./itchioIcon.png";
-import gamejoltIcon from "./gamejoltIcon.png";
-import kofiIcon from "./kofiIcon.png";
+import itchio from "./itchio.svg";
+import youtube from "./youtube.svg";
+import spotify from "./spotify.svg";
+import instagram from "./instagram.svg";
+import kofi from "./kofi.svg";
+import twitterIcon from "./twitter.svg";
+import soundcloud from "./soundcloud.svg";
+import gamejolt from "./gamejolt.svg";
+import bandcamp from "./bandcamp.svg";
 
 export {
-  spotifyIcon,
+  itchio,
+  youtube,
+  spotify,
+  instagram,
+  kofi,
   twitterIcon,
-  gamejoltIcon,
-  soundcloudIcon,
-  bandcampIcon,
-  instagramIcon,
-  youtubeIcon,
-  itchioIcon,
-  kofiIcon,
+  soundcloud,
+  gamejolt,
+  bandcamp,
 };

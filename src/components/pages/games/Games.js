@@ -31,7 +31,7 @@ const Games = ({ showScrollToTopButton, scrollToTop }) => {
               lg={4}
             >
               <GameItem
-                image={gameItem.splashImage}
+                image={gameItem.cardImage}
                 title={gameItem.title}
                 tagline={gameItem.subtitle}
                 genre={gameItem.genre}
