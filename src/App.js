@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Header } from "./components/layout";
-import gameData from "./components/data/gameData.json";
-import musicData from "./components/data/musicData.json";
-import { GamePage } from "./components/pages/games/components";
-import { MusicPage } from "./components/pages/music/components";
-import { Home, Games, Music, Art, Videos, Archive } from "./components/pages";
+import Header from "components/layout/header";
+import gameData from "data/gameData.json";
+import musicData from "data/musicData.json";
+import { GamePage } from "pages/games/components";
+import { MusicPage } from "pages/music/components";
+import { Home, Games, Music, Art, Videos, Archive } from "pages";
 
 import styles from "./styles";
 
