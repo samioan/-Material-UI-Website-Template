@@ -27,6 +27,12 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     },
     "& li": {
       height: 200,
+      opacity: 1,
+      transition: "all .2s",
+      "&:hover": {
+        transform: "scale(1.1)",
+        opacity: 0.5,
+      },
       [breakpoints.up("md")]: {
         height: "70vh",
       },

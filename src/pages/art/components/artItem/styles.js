@@ -11,9 +11,17 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
       cursor: "pointer",
     },
   },
-
+  mediaContainer: {
+    overflow: "hidden",
+  },
   media: {
     height: 400,
+    opacity: 1,
+    transition: "all .2s",
+    "&:hover": {
+      transform: "scale(1.1)",
+      opacity: 0.5,
+    },
   },
   modal: {
     display: "flex",

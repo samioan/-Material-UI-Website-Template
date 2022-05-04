@@ -10,7 +10,9 @@ import withArtItemState from "./withArtItemState";
 const ArtItem = ({ image, title, classes, open, handleOpen, handleClose }) => (
   <div>
     <Card className={classes.card} onClick={handleOpen}>
-      <CardMedia className={classes.media} image={image} title={title} />
+      <div className={classes.mediaContainer}>
+        <CardMedia className={classes.media} image={image} title={title} />
+      </div>
       <CardContent>
         <Typography
           className={classes.title}

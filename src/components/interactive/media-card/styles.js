@@ -11,9 +11,11 @@ const styles = makeStyles(({ palette }) => ({
   },
   media: {
     height: 300,
-    transition: "transform .2s",
+    opacity: 1,
+    transition: "all .2s",
     "&:hover": {
       transform: "scale(1.1)",
+      opacity: 0.5,
     },
   },
   cardContent: {
