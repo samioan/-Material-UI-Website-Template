@@ -8,7 +8,7 @@ import Footer from "components/layout/footer";
 import gameData from "data/gameData";
 import withScrollbars from "theme/withScrollbars";
 import MediaCard from "components/interactive/media-card";
-import ScrollToTopButton from "components/input/scroll-to-top-button";
+import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
 const Games = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
@@ -34,6 +34,8 @@ const Games = ({ showScrollToTopButton, scrollToTop }) => {
                 title={gameItem.title}
                 tagline={gameItem.subtitle}
                 genre={gameItem.genre}
+                downloadLink={gameItem.links[0]}
+                itchioLink={gameItem.links[1]}
                 pageLink={gameItem.links[2]}
               />
             </Grid>

@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
-import CircularProgress from "@material-ui/core/CircularProgress";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
-import ProgressiveImage from "react-progressive-graceful-image";
+import LoadingImage from "components/design/loading-image";
 
 import styles from "./styles";
 
@@ -35,18 +34,12 @@ const ArchiveList = ({ archiveDetailsArray, width }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <ProgressiveImage src={item.img} placeholder="">
-              {(src, loading) => {
-                return loading ? (
-                  <div className={classes.loading}>
-                    <CircularProgress />
-                  </div>
-                ) : (
-                  <img className={classes.image} src={src} alt={item.title} />
-                );
-              }}
-            </ProgressiveImage>
-
+            <LoadingImage
+              image={item.img}
+              customLoaderClass={classes.loading}
+              customImageClass={classes.image}
+              alt={item.title}
+            />
             <GridListTileBar title={item.title} className={classes.gridTitle} />
           </GridListTile>
         ))}

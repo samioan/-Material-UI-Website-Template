@@ -8,7 +8,7 @@ import Footer from "components/layout/footer";
 import musicData from "data/musicData";
 import withScrollbars from "theme/withScrollbars";
 import MediaCard from "components/interactive/media-card";
-import ScrollToTopButton from "components/input/scroll-to-top-button";
+import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
 const Music = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
@@ -35,6 +35,7 @@ const Music = ({ showScrollToTopButton, scrollToTop }) => {
                 title={musicItem.title}
                 tagline={musicItem.subtitle}
                 genre={musicItem.genre}
+                downloadLink={musicItem.links[0]}
                 pageLink={musicItem.links[1]}
               />
             </Grid>

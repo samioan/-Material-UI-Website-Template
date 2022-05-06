@@ -23,6 +23,10 @@ const styles = makeStyles(({ breakpoints }) => ({
       width: "100%",
       height: "auto",
       transform: "translateY(-50%)",
+      transition: "all .2s",
+      "&:hover": {
+        opacity: 0.5,
+      },
     },
   },
   loading: {

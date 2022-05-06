@@ -2,18 +2,17 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import ProgressiveImage from "react-progressive-graceful-image";
-
-import styles from "./styles";
-import imageCarousel from "./constants/imageCarousel";
 
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
-import ScrollToTopButton from "components/input/scroll-to-top-button";
+import LoadingImage from "components/design/loading-image";
+import ScrollToTopButton from "components/interactive/scroll-to-top-button";
+
+import styles from "./styles";
+import imageCarousel from "./constants/imageCarousel";
 
 const Home = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
@@ -45,17 +44,11 @@ const Home = ({ showScrollToTopButton, scrollToTop }) => {
                     }
                   >
                     <div>
-                      <ProgressiveImage src={item.img} placeholder="">
-                        {(src, loading) => {
-                          return loading ? (
-                            <div className={classes.loading}>
-                              <CircularProgress />
-                            </div>
-                          ) : (
-                            <img src={src} alt={item.name} />
-                          );
-                        }}
-                      </ProgressiveImage>
+                      <LoadingImage
+                        image={item.img}
+                        customLoaderClass={classes.loading}
+                        alt={item.name}
+                      />
                     </div>
                   </a>
                 ))}

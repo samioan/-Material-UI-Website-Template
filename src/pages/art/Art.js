@@ -9,7 +9,7 @@ import artDetails from "./util/artDetails";
 import styles from "theme/styles";
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
-import ScrollToTopButton from "components/input/scroll-to-top-button";
+import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
 const Art = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();

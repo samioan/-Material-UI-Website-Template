@@ -8,15 +8,40 @@ const styles = makeStyles(({ palette }) => ({
   },
   mediaContainer: {
     overflow: "hidden",
+    position: "relative",
+    width: "100%",
+
+    "&:hover": {
+      "& div:first-child": {
+        transform: "scale(1.1)",
+      },
+      "& div:last-child": {
+        opacity: 1,
+      },
+    },
   },
   media: {
     height: 300,
-    opacity: 1,
     transition: "all .2s",
-    "&:hover": {
-      transform: "scale(1.1)",
-      opacity: 0.5,
-    },
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: "100%",
+    width: "100%",
+    opacity: 0,
+    backgroundColor: "rgba(0,0,0,0.8)",
+    transition: "all .2s",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 16,
+  },
+  iconButton: {
+    color: palette.grey[50],
   },
   cardContent: {
     minHeight: 140,

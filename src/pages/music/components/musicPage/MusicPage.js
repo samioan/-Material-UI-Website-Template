@@ -10,7 +10,7 @@ import { MusicSongs } from "./components";
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
 import { PageText, PageButtons } from "components/interactive";
-import ScrollToTopButton from "components/input/scroll-to-top-button";
+import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
 const MusicPage = ({
   websiteLink,
