@@ -7,7 +7,7 @@ const withScrollbars = (Component) => (props) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const scrollbarsRef = useRef();
+  const scrollbarsRef = useRef(null);
 
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
 
@@ -26,10 +26,18 @@ const withScrollbars = (Component) => (props) => {
     });
   };
 
+  const scrollToBottom = () => {
+    scrollbarsRef.current.view.scroll({
+      top: scrollbarsRef?.current?.view?.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   const newProps = {
     ...props,
     showScrollToTopButton,
     scrollToTop,
+    scrollToBottom,
   };
 
   return (

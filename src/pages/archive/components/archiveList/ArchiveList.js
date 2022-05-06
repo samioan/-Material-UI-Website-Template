@@ -12,20 +12,20 @@ import styles from "./styles";
 const ArchiveList = ({ archiveDetailsArray, width }) => {
   const classes = styles();
 
-  const getGridListCols = () => {
+  const getGridListCols = (() => {
     if (isWidthUp("md", width)) {
       return 6;
     }
 
     return 12;
-  };
+  })();
 
   return (
     <div className={classes.gridList}>
       <GridList cols={12}>
         {archiveDetailsArray.map((item) => (
           <GridListTile
-            cols={getGridListCols()}
+            cols={getGridListCols}
             key={item.title}
             component={Link}
             to={{

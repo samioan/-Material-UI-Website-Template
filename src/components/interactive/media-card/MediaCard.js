@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
 import Chip from "@material-ui/core/Chip";
-import LinkIcon from "@material-ui/icons/Link";
 import InfoIcon from "@material-ui/icons/Info";
 import Tooltip from "@material-ui/core/Tooltip";
 import GetAppIcon from "@material-ui/icons/GetApp";
@@ -10,6 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { Link, useRouteMatch } from "react-router-dom";
 import CardContent from "@material-ui/core/CardContent";
+import StorefrontIcon from "@material-ui/icons/Storefront";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 import styles from "./styles";
@@ -27,14 +27,6 @@ const MediaCard = ({
   const classes = styles();
   let match = useRouteMatch();
 
-  // const getGridListCols = () => {
-  //   if (isWidthUp("md", width)) {
-  //     return 6;
-  //   }
-
-  //   return 12;
-  // };
-
   return (
     <Card className={classes.card}>
       <div className={classes.mediaContainer}>
@@ -48,7 +40,7 @@ const MediaCard = ({
                   href={downloadLink}
                   target="_blank"
                 >
-                  <GetAppIcon />
+                  <GetAppIcon className={classes.icon} />
                 </IconButton>
               </Tooltip>
               {match.url === "/games" && (
@@ -58,7 +50,7 @@ const MediaCard = ({
                     href={itchioLink}
                     target="_blank"
                   >
-                    <LinkIcon />
+                    <StorefrontIcon className={classes.icon} />
                   </IconButton>
                 </Tooltip>
               )}
@@ -67,7 +59,7 @@ const MediaCard = ({
                   className={classes.iconButton}
                   href={`${match.url}/${pageLink}`}
                 >
-                  <InfoIcon />
+                  <InfoIcon className={classes.icon} />
                 </IconButton>
               </Tooltip>
             </>
@@ -76,7 +68,7 @@ const MediaCard = ({
               to={{
                 pathname: `${match.url}/${pageLink}`,
               }}
-              style={{ textDecoration: "none", width: "100%", height: "100%" }}
+              className={classes.fullLink}
             />
           )}
         </div>
@@ -85,7 +77,7 @@ const MediaCard = ({
         to={{
           pathname: `${match.url}/${pageLink}`,
         }}
-        style={{ textDecoration: "none" }}
+        className={classes.link}
       >
         <CardContent className={classes.cardContent}>
           <Typography className={classes.title} gutterBottom variant="h5">

@@ -42,6 +42,12 @@ const styles = makeStyles(({ palette }) => ({
   },
   iconButton: {
     color: palette.grey[50],
+    width: 32,
+    height: 32,
+  },
+  icon: {
+    width: 32,
+    height: 32,
   },
   cardContent: {
     minHeight: 140,
@@ -59,6 +65,14 @@ const styles = makeStyles(({ palette }) => ({
     borderColor: palette.grey[600],
     fontFamily: "Lucida Console, Courier New, monospace",
     cursor: "pointer",
+  },
+  fullLink: {
+    textDecoration: "none",
+    width: "100%",
+    height: "100%",
+  },
+  link: {
+    textDecoration: "none",
   },
 }));
 
