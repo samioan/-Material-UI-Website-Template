@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from // , { useState }
+"react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
@@ -8,13 +9,13 @@ import gameData from "data/gameData";
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
 import MediaCard from "components/interactive/media-card";
-import ShowMoreButton from "components/interactive/show-more-button";
+// import ShowMoreButton from "components/interactive/show-more-button";
 import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
 const Games = ({ showScrollToTopButton, scrollToTop }) => {
   const classes = styles();
 
-  const [itemsShown, setItemsShown] = useState(12);
+  // const [itemsShown, setItemsShown] = useState(12);
 
   return (
     <>
@@ -24,7 +25,7 @@ const Games = ({ showScrollToTopButton, scrollToTop }) => {
         </Typography>
         <Grid className={classes.content} container justify="center">
           {Object.values(gameData)
-            .slice(0, itemsShown)
+            // .slice(0, itemsShown)
             .map((gameItem) => (
               <Grid
                 key={gameItem.title}
@@ -45,9 +46,9 @@ const Games = ({ showScrollToTopButton, scrollToTop }) => {
                 />
               </Grid>
             ))}
-          {itemsShown < Object.values(gameData).length && (
+          {/* {itemsShown < Object.values(gameData).length && (
             <ShowMoreButton onClick={() => setItemsShown(itemsShown + 6)} />
-          )}
+          )} */}
         </Grid>
       </Container>
       {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
