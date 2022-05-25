@@ -13,7 +13,7 @@ const ArtItem = ({ image, title, classes, open, handleOpen, handleClose }) => (
       <div className={classes.mediaContainer}>
         <CardMedia className={classes.media} image={image} title={title} />
       </div>
-      <CardContent>
+      <CardContent className={classes.cardContent}>
         <Typography
           className={classes.title}
           gutterBottom

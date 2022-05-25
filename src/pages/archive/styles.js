@@ -10,17 +10,6 @@ const styles = makeStyles(({ palette }) => ({
     paddingBottom: 40,
     fontFamily: "Lucida Console, Courier New, monospace",
   },
-  subtitle: {
-    color: palette.grey[50],
-    paddingBottom: 40,
-    fontFamily: "Lucida Console, Courier New, monospace",
-  },
-  innerSubtitle: {
-    color: palette.grey[50],
-    paddingTop: 40,
-    paddingBottom: 40,
-    fontFamily: "Lucida Console, Courier New, monospace",
-  },
   bottomContainer: {
     paddingBottom: 32,
   },

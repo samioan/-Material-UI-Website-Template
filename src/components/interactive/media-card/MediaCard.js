@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Card from "@material-ui/core/Card";
 import Chip from "@material-ui/core/Chip";
 import InfoIcon from "@material-ui/icons/Info";
@@ -7,7 +9,6 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 import CardMedia from "@material-ui/core/CardMedia";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import { Link, useRouteMatch } from "react-router-dom";
 import CardContent from "@material-ui/core/CardContent";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
@@ -22,10 +23,10 @@ const MediaCard = ({
   pageLink,
   downloadLink,
   itchioLink,
+  currentPage,
   width,
 }) => {
   const classes = styles();
-  let match = useRouteMatch();
 
   return (
     <Card className={classes.card}>
@@ -43,7 +44,7 @@ const MediaCard = ({
                   <GetAppIcon className={classes.icon} />
                 </IconButton>
               </Tooltip>
-              {match.url === "/games" && (
+              {currentPage === "games" && (
                 <Tooltip title="Itch.io Page" arrow placement="top">
                   <IconButton
                     className={classes.iconButton}
@@ -56,8 +57,9 @@ const MediaCard = ({
               )}
               <Tooltip title="More Info" arrow placement="top">
                 <IconButton
+                  component={Link}
+                  to={`/${currentPage}/${pageLink}`}
                   className={classes.iconButton}
-                  href={`${match.url}/${pageLink}`}
                 >
                   <InfoIcon className={classes.icon} />
                 </IconButton>
@@ -66,7 +68,7 @@ const MediaCard = ({
           ) : (
             <Link
               to={{
-                pathname: `${match.url}/${pageLink}`,
+                pathname: `/${currentPage}/${pageLink}`,
               }}
               className={classes.fullLink}
             />
@@ -75,7 +77,7 @@ const MediaCard = ({
       </div>
       <Link
         to={{
-          pathname: `${match.url}/${pageLink}`,
+          pathname: `/${currentPage}/${pageLink}`,
         }}
         className={classes.link}
       >

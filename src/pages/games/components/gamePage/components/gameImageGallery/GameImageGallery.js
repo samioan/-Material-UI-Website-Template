@@ -5,9 +5,9 @@ import LoadingImage from "components/design/loading-image";
 
 import styles from "./styles";
 
-const GameImageGallery = ({ link, classes }) => (
+const GameImageGallery = ({ pageItem, classes }) => (
   <Grid className={classes.gallery} container justify="center">
-    {link.screenshots.map((item) => (
+    {pageItem?.screenshots?.map((item) => (
       <Grid
         item
         xs={12}

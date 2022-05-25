@@ -7,6 +7,8 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
   },
   card: {
     backgroundColor: "transparent",
+    color: "transparent",
+    boxShadow: "none",
     "&:hover": {
       cursor: "pointer",
     },
@@ -22,6 +24,9 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
       transform: "scale(1.1)",
       opacity: 0.5,
     },
+  },
+  cardContent: {
+    padding: "16px 0",
   },
   modal: {
     display: "flex",

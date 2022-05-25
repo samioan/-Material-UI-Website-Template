@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const styles = makeStyles(({ palette }) => ({
   card: {
     backgroundColor: "transparent",
+    color: "transparent",
+    boxShadow: "none",
   },
   cardContent: {
     minHeight: 300,

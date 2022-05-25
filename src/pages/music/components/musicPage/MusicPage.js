@@ -3,26 +3,30 @@ import { compose } from "redux";
 import Container from "@material-ui/core/Container";
 import withStyles from "@material-ui/styles/withStyles";
 
-import styles from "./styles";
-import withMusicPageLink from "./withMusicPageLink";
-import { MusicSongs } from "./components";
-
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
 import { PageText, PageButtons } from "components/interactive";
 import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
+import styles from "./styles";
+import { MusicSongs } from "./components";
+import withMusicPageProps from "./withMusicPageProps";
+
 const MusicPage = ({
-  websiteLink,
   classes,
   showScrollToTopButton,
   scrollToTop,
+  musicPageItems,
 }) => (
   <>
     <Container maxWidth="md" className={classes.page}>
-      <PageText link={websiteLink} />
-      <MusicSongs link={websiteLink} />
-      <PageButtons link={websiteLink} />
+      {musicPageItems.links !== undefined && (
+        <>
+          <PageText pageItem={musicPageItems} />
+          <MusicSongs pageItem={musicPageItems} />
+          <PageButtons pageItem={musicPageItems} />
+        </>
+      )}
     </Container>
     {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
     <Footer />
@@ -32,7 +36,7 @@ const MusicPage = ({
 export { MusicPage };
 
 export default compose(
+  withMusicPageProps,
   withStyles(styles),
-  withScrollbars,
-  withMusicPageLink
+  withScrollbars
 )(MusicPage);

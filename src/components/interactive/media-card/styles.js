@@ -51,6 +51,7 @@ const styles = makeStyles(({ palette }) => ({
   },
   cardContent: {
     minHeight: 140,
+    padding: "16px 0",
   },
   title: {
     color: palette.grey[50],
