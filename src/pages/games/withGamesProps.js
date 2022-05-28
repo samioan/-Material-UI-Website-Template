@@ -26,9 +26,13 @@ const withGamesProps = (Component) => (props) => {
   } = props;
 
   useEffect(() => {
-    loadInitialGames(Object.values(gameData));
-    setCurrentPage("games");
-  }, [loadInitialGames, setCurrentPage]);
+    if (currentPage !== "games") {
+      setCurrentPage("games");
+    }
+    if (gamesShown.length === 0) {
+      loadInitialGames(Object.values(gameData));
+    }
+  }, [gamesShown.length, currentPage, loadInitialGames, setCurrentPage]);
 
   const onLoadMoreGames = () => loadMoreGames(Object.values(gameData));
 

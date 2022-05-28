@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
@@ -35,7 +37,8 @@ const PageButtons = ({ pageItem }) => {
 
       <Button
         className={classes.button}
-        href={`/${pageItem?.type}`}
+        component={Link}
+        to={`/${pageItem?.type}`}
         variant="outlined"
         size="large"
         color="primary"

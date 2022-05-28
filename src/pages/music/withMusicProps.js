@@ -24,9 +24,13 @@ const withMusicProps = (Component) => (props) => {
   } = props;
 
   useEffect(() => {
-    loadInitialAlbums(Object.values(musicData));
-    setCurrentPage("music");
-  }, [loadInitialAlbums, setCurrentPage]);
+    if (currentPage !== "music") {
+      setCurrentPage("music");
+    }
+    if (albumsShown.length === 0) {
+      loadInitialAlbums(Object.values(musicData));
+    }
+  }, [loadInitialAlbums, albumsShown.length, setCurrentPage, currentPage]);
 
   const onLoadMoreAlbums = () => loadMoreAlbums(Object.values(musicData));
 

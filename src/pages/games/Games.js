@@ -1,5 +1,6 @@
 import React from "react";
 import { compose } from "redux";
+
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
@@ -20,7 +21,6 @@ const Games = ({
   gamesShown,
   gamesOnPage,
   gamesTotal,
-  loadGamePageItems,
   currentPage,
 }) => {
   const classes = styles();

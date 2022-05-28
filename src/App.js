@@ -4,9 +4,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import store from "models/store";
 import Header from "components/layout/header";
-import { GamePage } from "pages/games/components";
-import { MusicPage } from "pages/music/components";
-import { Home, Games, Music, Art, Videos, Archive } from "pages";
+import {
+  Home,
+  Games,
+  GamePage,
+  Music,
+  MusicPage,
+  Art,
+  Videos,
+  Archive,
+} from "pages";
 
 import styles from "./styles";
 

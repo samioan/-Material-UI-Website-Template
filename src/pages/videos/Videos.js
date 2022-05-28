@@ -1,14 +1,14 @@
 import React from "react";
 import { compose } from "redux";
+
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
-import { VideoItem } from "./components";
-
 import styles from "theme/styles";
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
+import MediaCard from "components/interactive/media-card";
 import ShowMoreButton from "components/interactive/show-more-button";
 import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
@@ -25,6 +25,7 @@ const Videos = ({
   musicVideosShown,
   musicVideosOnPage,
   musicVideosTotal,
+  currentPage,
 }) => {
   const classes = styles();
 
@@ -49,7 +50,11 @@ const Videos = ({
               md={6}
               lg={4}
             >
-              <VideoItem link={videoItem.link} title={videoItem.title} />
+              <MediaCard
+                currentPage={currentPage}
+                link={videoItem.link}
+                title={videoItem.title}
+              />
             </Grid>
           ))}
           {gameVideosOnPage < gameVideosTotal && (
@@ -71,7 +76,11 @@ const Videos = ({
               md={6}
               lg={4}
             >
-              <VideoItem link={videoItem.link} title={videoItem.title} />
+              <MediaCard
+                currentPage={currentPage}
+                link={videoItem.link}
+                title={videoItem.title}
+              />
             </Grid>
           ))}
           {musicVideosOnPage < musicVideosTotal && (

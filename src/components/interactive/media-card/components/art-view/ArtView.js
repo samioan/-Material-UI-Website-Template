@@ -5,9 +5,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 
-import withArtItemState from "./withArtItemState";
+import withArtViewProps from "./withArtViewProps";
 
-const ArtItem = ({ image, title, classes, open, handleOpen, handleClose }) => (
+const ArtView = ({ image, title, classes, open, handleOpen, handleClose }) => (
   <div>
     <Card className={classes.card} onClick={handleOpen}>
       <div className={classes.mediaContainer}>
@@ -32,5 +32,5 @@ const ArtItem = ({ image, title, classes, open, handleOpen, handleClose }) => (
   </div>
 );
 
-export { ArtItem };
-export default withArtItemState(ArtItem);
+export { ArtView };
+export default withArtViewProps(ArtView);

@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
-const VideoItem = ({ link, title }) => {
+const VideoView = ({ link, title }) => {
   const classes = styles();
 
   return (
@@ -31,5 +31,5 @@ const VideoItem = ({ link, title }) => {
   );
 };
 
-export { VideoItem };
-export default VideoItem;
+export { VideoView };
+export default VideoView;

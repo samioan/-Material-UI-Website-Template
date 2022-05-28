@@ -24,6 +24,7 @@ import {
   archivedArtOnPage,
   archivedArtTotal,
 } from "models/archive";
+import { setCurrentPage, currentPage } from "models/page";
 
 const withArchiveProps = (Component) => (props) => {
   const {
@@ -42,16 +43,32 @@ const withArchiveProps = (Component) => (props) => {
     archivedMusicTotal,
     archivedArtOnPage,
     archivedArtTotal,
+    setCurrentPage,
+    currentPage,
   } = props;
 
   useEffect(() => {
-    loadInitialArchivedGames(archiveGameDetails);
-    loadInitialArchivedMusic(archiveMusicDetails);
-    loadInitialArchivedArt(archiveArtDetails);
+    if (currentPage !== "archive") {
+      setCurrentPage("archive");
+    }
+    if (archivedGamesShown.length === 0) {
+      loadInitialArchivedGames(archiveGameDetails);
+    }
+    if (archivedMusicShown.length === 0) {
+      loadInitialArchivedMusic(archiveMusicDetails);
+    }
+    if (archivedArtShown.length === 0) {
+      loadInitialArchivedArt(archiveArtDetails);
+    }
   }, [
+    currentPage,
+    setCurrentPage,
     loadInitialArchivedGames,
     loadInitialArchivedMusic,
     loadInitialArchivedArt,
+    archivedGamesShown.length,
+    archivedMusicShown.length,
+    archivedArtShown.length,
   ]);
 
   const onLoadMoreArchivedGames = () =>
@@ -89,6 +106,7 @@ const mapStateToProps = (state) => ({
   archivedMusicTotal: archivedMusicTotal(state),
   archivedArtOnPage: archivedArtOnPage(state),
   archivedArtTotal: archivedArtTotal(state),
+  currentPage: currentPage(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -98,6 +116,7 @@ const mapDispatchToProps = (dispatch) => ({
   loadMoreArchivedMusic: (data) => dispatch(loadMoreArchivedMusic(data)),
   loadInitialArchivedArt: (data) => dispatch(loadInitialArchivedArt(data)),
   loadMoreArchivedArt: (data) => dispatch(loadMoreArchivedArt(data)),
+  setCurrentPage: (data) => dispatch(setCurrentPage(data)),
 });
 
 export { withArchiveProps };

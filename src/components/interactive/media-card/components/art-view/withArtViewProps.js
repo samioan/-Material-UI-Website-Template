@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import styles from "./styles";
 
-const withArtItemState = (Component) => (props) => {
+const withArtViewProps = (Component) => (props) => {
   const classes = styles();
 
   const [open, setOpen] = useState(false);
@@ -26,5 +26,5 @@ const withArtItemState = (Component) => (props) => {
   );
 };
 
-export { withArtItemState };
-export default withArtItemState;
+export { withArtViewProps };
+export default withArtViewProps;
