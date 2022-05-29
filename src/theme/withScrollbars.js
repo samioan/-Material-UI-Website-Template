@@ -11,7 +11,7 @@ const withScrollbars = (Component) => (props) => {
 
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
 
-  const onScrollFrame = () => {
+  const onScrollShowButton = () => {
     if (scrollbarsRef.current.viewScrollTop > 200) {
       setShowScrollToTopButton(true);
     } else {
@@ -45,7 +45,7 @@ const withScrollbars = (Component) => (props) => {
       autoHeight
       autoHeightMin={"100vh"}
       ref={scrollbarsRef}
-      onScrollFrame={onScrollFrame}
+      onScrollStop={onScrollShowButton}
       renderTrackVertical={(props) => (
         <div
           {...props}
