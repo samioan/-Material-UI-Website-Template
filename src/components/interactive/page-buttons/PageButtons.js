@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
 import styles from "./styles";
 
-const PageButtons = ({ link }) => {
+const PageButtons = ({ pageItem }) => {
   const classes = styles();
 
   return (
@@ -12,7 +14,7 @@ const PageButtons = ({ link }) => {
       <Button
         className={classes.button}
         target="_blank"
-        href={link.links[0]}
+        href={pageItem.links[0]}
         variant="outlined"
         size="large"
         color="primary"
@@ -20,11 +22,11 @@ const PageButtons = ({ link }) => {
         Download
       </Button>
 
-      {link.type === "games" && (
+      {pageItem?.type === "games" && (
         <Button
           className={classes.button}
           target="_blank"
-          href={link.links[1]}
+          href={pageItem?.links[1]}
           variant="outlined"
           size="large"
           color="primary"
@@ -35,7 +37,8 @@ const PageButtons = ({ link }) => {
 
       <Button
         className={classes.button}
-        href={`/${link.type}`}
+        component={Link}
+        to={`/${pageItem?.type}`}
         variant="outlined"
         size="large"
         color="primary"

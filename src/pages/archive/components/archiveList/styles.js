@@ -1,6 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints }) => ({
+const styles = makeStyles(({ breakpoints, palette }) => ({
+  label: {
+    color: palette.grey[50],
+    paddingBottom: 40,
+    fontFamily: "Lucida Console, Courier New, monospace",
+  },
+  innerLabel: {
+    color: palette.grey[50],
+    paddingTop: 40,
+    paddingBottom: 40,
+    fontFamily: "Lucida Console, Courier New, monospace",
+  },
   gridList: {
     margin: "auto",
     paddingLeft: 16,
@@ -35,6 +46,9 @@ const styles = makeStyles(({ breakpoints }) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  showMoreButtonContainer: {
+    marginTop: 32,
   },
 }));
 
