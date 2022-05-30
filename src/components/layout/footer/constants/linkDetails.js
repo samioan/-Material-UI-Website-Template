@@ -8,6 +8,7 @@ import {
   twitterIcon,
   soundcloud,
   gamejolt,
+  discord,
 } from "../images";
 
 const linkDetails = [
@@ -55,6 +56,11 @@ const linkDetails = [
     label: "Twitter",
     site: "https://twitter.com/theselfishdream",
     image: twitterIcon,
+  },
+  {
+    label: "Discord",
+    site: "https://discord.gg/YPbupyYB",
+    image: discord,
   },
 ];
 

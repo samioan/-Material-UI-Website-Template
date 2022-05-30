@@ -4,7 +4,7 @@ const styles = makeStyles(({ breakpoints }) => ({
   button: {
     position: "fixed",
     bottom: 0,
-    right: 0,
+    right: 8,
     zIndex: "1000",
     borderRadius: "10px 10px 0 0",
     "&.MuiButton-containedPrimary": {

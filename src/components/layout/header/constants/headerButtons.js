@@ -1,4 +1,4 @@
-const headersData = [
+const headerButtons = [
   {
     label: "Home",
     href: "/",
@@ -23,7 +23,10 @@ const headersData = [
     label: "Archive",
     href: "/archive",
   },
+  {
+    label: "Contact",
+  },
 ];
 
-export { headersData };
-export default headersData;
+export { headerButtons };
+export default headerButtons;

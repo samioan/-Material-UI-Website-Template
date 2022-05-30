@@ -50,7 +50,7 @@ const withScrollbars = (Component) => (props) => {
         <div
           {...props}
           style={{
-            width: 8,
+            width: 6,
             position: "absolute",
             right: 0,
             bottom: 0,
@@ -63,7 +63,7 @@ const withScrollbars = (Component) => (props) => {
         <div
           {...props}
           style={{
-            borderRadius: 3,
+            borderRadius: 2,
             background: "rgba(255, 255, 255, 0.5)",
             zIndex: 2000,
           }}
