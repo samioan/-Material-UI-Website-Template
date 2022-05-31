@@ -1,42 +1,84 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const withContactFormModalProps = (Component) => (props) => {
-  const [status, setStatus] = useState("Submit");
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-    setStatus("Sending...");
-
-    const { name, email, message } = e.target.elements;
-
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    }).catch((error) => {
-      alert("Couldn't send your message. Please try again later!");
-    });
-
-    setStatus("Submit");
-
-    let result = await response.json();
-
-    alert(result.status);
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      });
+      setInputs({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      setStatus({
+        info: { error: true, msg: msg },
+      });
+    }
   };
+
+  const handleOnChange = (e) => {
+    e.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    });
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+    axios({
+      method: "POST",
+      url: "https://formspree.io/f/xdobbbja",
+      data: inputs,
+    })
+      .then((response) => {
+        handleServerResponse(
+          true,
+          "Thank you, your message has been submitted."
+        );
+      })
+      .catch((error) => {
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
+
+  const label = (() => {
+    if (!status.submitting && !status.submitted) return "Submit";
+    if (status.submitting) return "Submitting...";
+    if (status.submitted) return "Submitted!";
+  })();
 
   const newProps = {
     ...props,
+    handleOnSubmit,
+    handleOnChange,
+    inputs,
     status,
-    handleSubmit,
+    label,
+    setStatus,
   };
 
   return <Component {...newProps} />;
