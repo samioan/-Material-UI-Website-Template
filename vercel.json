@@ -1,0 +1,16 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/api/contact.js"
+        },
+        {
+            "src": "/contact",
+            "methods": [
+                "POST",
+                "GET"
+            ],
+            "dest": "/api/contact.js"
+        }
+    ]
+}
