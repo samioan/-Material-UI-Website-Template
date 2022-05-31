@@ -2,14 +2,14 @@
     "routes": [
         {
             "src": "/",
-            "dest": "/api/contact.js"
+            "dest": "/contact.js"
         },
         {
             "src": "/contact",
             "methods": [
                 "POST"
             ],
-            "dest": "/api/contact.js"
+            "dest": "/contact.js"
         }
     ]
 }
