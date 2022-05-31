@@ -60,6 +60,10 @@ const styles = makeStyles(({ palette }) => ({
   button: {
     width: 200,
     fontFamily: "Lucida Console, Courier New, monospace",
+    "&:disabled": {
+      borderColor: "#3f51b5",
+      color: "#3f51b5",
+    },
   },
 }));
 

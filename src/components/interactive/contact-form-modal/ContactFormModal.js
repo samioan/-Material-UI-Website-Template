@@ -11,9 +11,16 @@ const ContactFormModal = ({ open, handleClose, handleSubmit, status }) => {
   const classes = styles();
 
   return (
-    <Modal className={classes.modal} open={open} onClose={handleClose}>
+    <Modal
+      className={classes.modal}
+      open={open}
+      onClose={status !== "Sending..." && handleClose}
+    >
       <Grid container direction="column" className={classes.container}>
-        <ModalHeader title="Contact" onClose={handleClose} />
+        <ModalHeader
+          title="Contact"
+          onClose={status !== "Sending..." && handleClose}
+        />
 
         <ContactForm handleSubmit={handleSubmit} status={status} />
       </Grid>

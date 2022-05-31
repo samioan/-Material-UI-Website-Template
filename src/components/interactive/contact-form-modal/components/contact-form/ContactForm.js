@@ -45,6 +45,7 @@ const ContactForm = ({ handleSubmit, status }) => {
           size="large"
           color="primary"
           type="submit"
+          disabled={status === "Sending..."}
           className={classes.button}
         >
           {status}
