@@ -7,6 +7,7 @@ import twitterIcon from "./twitter.svg";
 import soundcloud from "./soundcloud.svg";
 import gamejolt from "./gamejolt.svg";
 import bandcamp from "./bandcamp.svg";
+import discord from "./discord.svg";
 
 export {
   itchio,
@@ -18,4 +19,5 @@ export {
   soundcloud,
   gamejolt,
   bandcamp,
+  discord,
 };

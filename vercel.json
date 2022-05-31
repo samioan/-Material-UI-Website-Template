@@ -1,0 +1,15 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/contact.js"
+        },
+        {
+            "src": "/contact",
+            "methods": [
+                "POST"
+            ],
+            "dest": "/contact.js"
+        }
+    ]
+}

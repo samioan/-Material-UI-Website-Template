@@ -1,10 +1,12 @@
 import React from "react";
+
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 import styles from "./styles";
 
-const ScrollToTopButton = ({ onClick }) => {
+const ScrollToTopButton = ({ onClick, width }) => {
   const classes = styles();
 
   return (
@@ -14,12 +16,16 @@ const ScrollToTopButton = ({ onClick }) => {
       onClick={onClick}
       className={classes.button}
     >
-      <Typography variant="overline" className={classes.text}>
-        Back To Top
-      </Typography>
+      {isWidthUp("lg", width) ? (
+        <Typography variant="overline" className={classes.text}>
+          Back To Top
+        </Typography>
+      ) : (
+        <>&#129093;</>
+      )}
     </Button>
   );
 };
 
 export { ScrollToTopButton };
-export default ScrollToTopButton;
+export default withWidth()(ScrollToTopButton);
