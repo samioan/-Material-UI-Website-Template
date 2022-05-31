@@ -15,6 +15,7 @@ const styles = makeStyles(({ palette }) => ({
     color: palette.grey[50],
   },
   divider: {
+    margin: "0 16px",
     backgroundColor: palette.grey[600],
   },
 }));
