@@ -1,17 +1,32 @@
 import React from "react";
+import { compose } from "redux";
+
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
-import { VideoItem } from "./components";
-
 import styles from "theme/styles";
 import Footer from "components/layout/footer";
-import videoData from "data/videoData";
 import withScrollbars from "theme/withScrollbars";
+import MediaCard from "components/interactive/media-card";
+import ShowMoreButton from "components/interactive/show-more-button";
 import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
-const Videos = ({ showScrollToTopButton, scrollToTop }) => {
+import withVideosProps from "./withVideosProps";
+
+const Videos = ({
+  showScrollToTopButton,
+  scrollToTop,
+  onLoadMoreGameVideos,
+  onLoadMoreMusicVideos,
+  gameVideosShown,
+  gameVideosOnPage,
+  gameVideosTotal,
+  musicVideosShown,
+  musicVideosOnPage,
+  musicVideosTotal,
+  currentPage,
+}) => {
   const classes = styles();
 
   return (
@@ -26,7 +41,7 @@ const Videos = ({ showScrollToTopButton, scrollToTop }) => {
         </Typography>
 
         <Grid className={classes.content} container justify="center">
-          {Object.values(videoData.games).map((videoItem) => (
+          {gameVideosShown.map((videoItem) => (
             <Grid
               key={videoItem.title}
               className={classes.content}
@@ -35,9 +50,16 @@ const Videos = ({ showScrollToTopButton, scrollToTop }) => {
               md={6}
               lg={4}
             >
-              <VideoItem link={videoItem.link} title={videoItem.title} />
+              <MediaCard
+                currentPage={currentPage}
+                link={videoItem.link}
+                title={videoItem.title}
+              />
             </Grid>
           ))}
+          {gameVideosOnPage < gameVideosTotal && (
+            <ShowMoreButton onClick={onLoadMoreGameVideos} />
+          )}
         </Grid>
 
         <Typography className={classes.subtitle} variant="h5" align="center">
@@ -45,7 +67,7 @@ const Videos = ({ showScrollToTopButton, scrollToTop }) => {
         </Typography>
 
         <Grid className={classes.content} container justify="center">
-          {Object.values(videoData.music).map((videoItem) => (
+          {musicVideosShown.map((videoItem) => (
             <Grid
               key={videoItem.title}
               className={classes.content}
@@ -54,9 +76,16 @@ const Videos = ({ showScrollToTopButton, scrollToTop }) => {
               md={6}
               lg={4}
             >
-              <VideoItem link={videoItem.link} title={videoItem.title} />
+              <MediaCard
+                currentPage={currentPage}
+                link={videoItem.link}
+                title={videoItem.title}
+              />
             </Grid>
           ))}
+          {musicVideosOnPage < musicVideosTotal && (
+            <ShowMoreButton onClick={onLoadMoreMusicVideos} />
+          )}
         </Grid>
       </Container>
       {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
@@ -66,4 +95,4 @@ const Videos = ({ showScrollToTopButton, scrollToTop }) => {
 };
 
 export { Videos };
-export default withScrollbars(Videos);
+export default compose(withVideosProps, withScrollbars)(Videos);

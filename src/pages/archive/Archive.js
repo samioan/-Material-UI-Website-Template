@@ -1,20 +1,33 @@
 import React from "react";
+import { compose } from "redux";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import ArchiveList from "./components/archiveList/ArchiveList";
-import {
-  archiveGameDetails,
-  archiveMusicDetails,
-  archiveArtDetails,
-} from "./constants";
-import styles from "./styles";
 
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
 import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
-const Archive = ({ showScrollToTopButton, scrollToTop }) => {
+import styles from "./styles";
+import withArchiveProps from "./withArchiveProps";
+
+const Archive = ({
+  showScrollToTopButton,
+  scrollToTop,
+  onLoadMoreArchivedGames,
+  onLoadMoreArchivedMusic,
+  onLoadMoreArchivedArt,
+  archivedGamesShown,
+  archivedMusicShown,
+  archivedArtShown,
+  archivedGamesOnPage,
+  archivedGamesTotal,
+  archivedMusicOnPage,
+  archivedMusicTotal,
+  archivedArtOnPage,
+  archivedArtTotal,
+}) => {
   const classes = styles();
 
   return (
@@ -24,32 +37,32 @@ const Archive = ({ showScrollToTopButton, scrollToTop }) => {
           Archive
         </Typography>
 
-        <Typography className={classes.subtitle} variant="h5" align="center">
-          Games
-        </Typography>
+        <ArchiveList
+          label="Games"
+          archiveDetailsArray={archivedGamesShown}
+          itemsOnPage={archivedGamesOnPage}
+          itemsTotal={archivedGamesTotal}
+          loadMoreItems={onLoadMoreArchivedGames}
+        />
 
-        <ArchiveList archiveDetailsArray={archiveGameDetails} />
-
-        <Typography
-          className={classes.innerSubtitle}
-          variant="h5"
-          align="center"
-        >
-          Music
-        </Typography>
-
-        <ArchiveList archiveDetailsArray={archiveMusicDetails} />
-
-        <Typography
-          className={classes.innerSubtitle}
-          variant="h5"
-          align="center"
-        >
-          Art
-        </Typography>
+        <ArchiveList
+          label="Music"
+          isInnerList
+          archiveDetailsArray={archivedMusicShown}
+          itemsOnPage={archivedMusicOnPage}
+          itemsTotal={archivedMusicTotal}
+          loadMoreItems={onLoadMoreArchivedMusic}
+        />
 
         <div className={classes.bottomContainer}>
-          <ArchiveList archiveDetailsArray={archiveArtDetails} />
+          <ArchiveList
+            label="Art"
+            isInnerList
+            archiveDetailsArray={archivedArtShown}
+            itemsOnPage={archivedArtOnPage}
+            itemsTotal={archivedArtTotal}
+            loadMoreItems={onLoadMoreArchivedArt}
+          />
         </div>
       </Container>
       {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
@@ -58,4 +71,4 @@ const Archive = ({ showScrollToTopButton, scrollToTop }) => {
   );
 };
 export { Archive };
-export default withScrollbars(Archive);
+export default compose(withArchiveProps, withScrollbars)(Archive);

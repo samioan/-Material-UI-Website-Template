@@ -7,7 +7,7 @@ import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 
 import styles from "./styles";
 
-const PageText = ({ link }) => {
+const PageText = ({ pageItem }) => {
   const classes = styles();
 
   return (
@@ -23,13 +23,15 @@ const PageText = ({ link }) => {
         </Link>
         <Link
           to={{
-            pathname: `/${link.type}`,
+            pathname: `/${pageItem?.type}`,
           }}
           className={classes.link}
         >
-          {`${link.type.charAt(0).toUpperCase()}${link.type.slice(1)}`}
+          {`${pageItem?.type?.charAt(0).toUpperCase()}${pageItem?.type?.slice(
+            1
+          )}`}
         </Link>
-        <Typography className={classes.link}>{link.title}</Typography>
+        <Typography className={classes.link}>{pageItem?.title}</Typography>
       </Breadcrumbs>
       <Typography
         className={classes.title}
@@ -37,7 +39,7 @@ const PageText = ({ link }) => {
         variant="h5"
         align="center"
       >
-        {link.title}
+        {pageItem?.title}
       </Typography>
 
       <Typography
@@ -46,7 +48,7 @@ const PageText = ({ link }) => {
         variant="h6"
         align="center"
       >
-        {link.subtitle}
+        {pageItem?.subtitle}
       </Typography>
 
       <Grid
@@ -55,7 +57,7 @@ const PageText = ({ link }) => {
         justify="space-between"
       >
         <Grid item xs={12} sm={5} className={classes.textContainer}>
-          {link.description.map((item) => (
+          {pageItem?.description?.map((item) => (
             <Typography
               className={classes.description}
               variant="body2"
@@ -67,8 +69,8 @@ const PageText = ({ link }) => {
           ))}
         </Grid>
         <Grid item xs={12} sm={5}>
-          {link.video && (
-            <YouTube className={classes.video} video={link.video} />
+          {pageItem?.video && (
+            <YouTube className={classes.video} video={pageItem?.video} />
           )}
         </Grid>
       </Grid>

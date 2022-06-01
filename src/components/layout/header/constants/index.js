@@ -1,3 +1,3 @@
-import headersData from "./headersData";
+import headerButtons from "./headerButtons";
 
-export { headersData };
+export { headerButtons };

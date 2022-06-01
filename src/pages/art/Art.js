@@ -1,17 +1,20 @@
 import React from "react";
+import { compose } from "redux";
+
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 
-import { ArtItem } from "./components";
-import artDetails from "./util/artDetails";
-
 import styles from "theme/styles";
 import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
+import MediaCard from "components/interactive/media-card";
 import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
-const Art = ({ showScrollToTopButton, scrollToTop }) => {
+import withArtProps from "./withArtProps";
+import artDetails from "./util/artDetails";
+
+const Art = ({ showScrollToTopButton, scrollToTop, currentPage }) => {
   const classes = styles();
 
   return (
@@ -31,7 +34,8 @@ const Art = ({ showScrollToTopButton, scrollToTop }) => {
               md={6}
               lg={4}
             >
-              <ArtItem
+              <MediaCard
+                currentPage={currentPage}
                 image={artItem.image}
                 title={artItem.title}
                 link={artItem.link}
@@ -47,4 +51,4 @@ const Art = ({ showScrollToTopButton, scrollToTop }) => {
 };
 
 export { Art };
-export default withScrollbars(Art);
+export default compose(withArtProps, withScrollbars)(Art);
