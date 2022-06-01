@@ -5,16 +5,18 @@ import TextField from "@material-ui/core/TextField";
 
 import styles from "./styles";
 
-const ContactForm = ({ handleSubmit, status }) => {
+const ContactForm = ({ onSubmit, onChange, disabled, inputs, label }) => {
   const classes = styles();
 
   return (
-    <form onSubmit={handleSubmit} className={classes.form}>
+    <form onSubmit={onSubmit} className={classes.form}>
       <TextField
         id="name"
         label="Name"
         type="text"
         variant="outlined"
+        value={inputs.name}
+        onChange={onChange}
         required
         classes={{
           root: classes.textField,
@@ -26,6 +28,8 @@ const ContactForm = ({ handleSubmit, status }) => {
         label="Email"
         type="email"
         variant="outlined"
+        value={inputs.email}
+        onChange={onChange}
         required
         classes={{
           root: classes.textField,
@@ -35,6 +39,8 @@ const ContactForm = ({ handleSubmit, status }) => {
       <textarea
         id="message"
         placeholder="Message*"
+        value={inputs.message}
+        onChange={onChange}
         required
         className={classes.textArea}
       />
@@ -45,10 +51,10 @@ const ContactForm = ({ handleSubmit, status }) => {
           size="large"
           color="primary"
           type="submit"
-          disabled={status === "Sending..."}
+          disabled={disabled}
           className={classes.button}
         >
-          {status}
+          {label}
         </Button>
       </div>
     </form>

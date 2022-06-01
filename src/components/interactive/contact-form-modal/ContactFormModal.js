@@ -7,22 +7,53 @@ import styles from "./styles";
 import { ModalHeader, ContactForm } from "./components";
 import withContactFormModalProps from "./withContactFormModalProps";
 
-const ContactFormModal = ({ open, handleClose, handleSubmit, status }) => {
+const ContactFormModal = ({
+  open,
+  handleClose,
+  handleOnSubmit,
+  handleOnChange,
+  status,
+  inputs,
+  label,
+  setStatus,
+}) => {
   const classes = styles();
 
   return (
     <Modal
       className={classes.modal}
       open={open}
-      onClose={status !== "Sending..." && handleClose}
+      onClose={() => {
+        !status.submitting && handleClose();
+        !status.submitting &&
+          setStatus({
+            submitted: false,
+            submitting: false,
+            info: { error: false, msg: null },
+          });
+      }}
     >
       <Grid container direction="column" className={classes.container}>
         <ModalHeader
           title="Contact"
-          onClose={status !== "Sending..." && handleClose}
+          onClose={() => {
+            !status.submitting && handleClose();
+            !status.submitting &&
+              setStatus({
+                submitted: false,
+                submitting: false,
+                info: { error: false, msg: null },
+              });
+          }}
         />
 
-        <ContactForm handleSubmit={handleSubmit} status={status} />
+        <ContactForm
+          onSubmit={handleOnSubmit}
+          onChange={handleOnChange}
+          inputs={inputs}
+          disabled={status.submitting}
+          label={label}
+        />
       </Grid>
     </Modal>
   );
