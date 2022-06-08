@@ -107,11 +107,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1t7zEFWA59kMRyUNW3ziyvbNPVR2e0WOh/view?usp=sharing",
   },
   {
-    img: games.hollow,
-    title: "Hollow",
-    link: "https://drive.google.com/file/d/1aAtsEn2HG4ff_totbW2rozYF6Q7hp8jK/view?usp=sharing",
-  },
-  {
     img: games.hunter,
     title: "The Fires of a Lone Hunter",
     link: "https://drive.google.com/file/d/1qhT2SvB85PMm3DLbhTDKFCxKxPt8hn0U/view?usp=sharing",
