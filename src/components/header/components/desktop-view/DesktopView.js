@@ -2,7 +2,7 @@ import React from "react";
 
 import Toolbar from "@material-ui/core/Toolbar";
 
-import HeaderLogo from "components/layout/header/components/header-logo";
+import { HeaderLogo } from "components/header/components";
 
 import styles from "./styles";
 import { MenuButtons } from "./components";

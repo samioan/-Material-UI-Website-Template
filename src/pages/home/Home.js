@@ -7,10 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
-import LoadingImage from "components/design/loading-image";
-import ScrollToTopButton from "components/interactive/scroll-to-top-button";
+import { Footer, LoadingImage, ScrollToTopButton } from "components";
 
 import styles from "./styles";
 import imageCarousel from "./constants/imageCarousel";

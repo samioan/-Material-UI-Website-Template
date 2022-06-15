@@ -1,6 +1,6 @@
 import React from "react";
 
-import GeneralPage from "components/layout/general-page";
+import { GeneralPage } from "components";
 
 import withMusicProps from "./withMusicProps";
 

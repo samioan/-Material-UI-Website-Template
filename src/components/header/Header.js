@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import AppBar from "@material-ui/core/AppBar";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
-import ContactFormModal from "components/interactive/contact-form-modal";
+
+import { ContactFormModal } from "components";
 
 import styles from "./styles";
 import { headerButtons } from "./constants";

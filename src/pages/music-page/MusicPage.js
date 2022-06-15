@@ -1,6 +1,6 @@
 import React from "react";
 
-import MediaPage from "components/layout/media-page";
+import { MediaPage } from "components";
 
 import { MusicSongs } from "./components";
 import withMusicPageProps from "./withMusicPageProps";

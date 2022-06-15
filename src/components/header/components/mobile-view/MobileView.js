@@ -5,7 +5,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 
-import HeaderLogo from "components/layout/header/components/header-logo";
+import { HeaderLogo } from "components/header/components";
 
 import styles from "./styles";
 import { DrawerButtons } from "./components";

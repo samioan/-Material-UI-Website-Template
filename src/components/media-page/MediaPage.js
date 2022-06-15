@@ -1,14 +1,14 @@
 import React from "react";
 import { compose } from "redux";
+
 import Container from "@material-ui/core/Container";
 import withStyles from "@material-ui/styles/withStyles";
 
-import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
-import ScrollToTopButton from "components/interactive/scroll-to-top-button";
+import { Footer, ScrollToTopButton } from "components";
 
-import { PageText, PageButtons } from "./components";
 import styles from "./styles";
+import { PageText, PageButtons } from "./components";
 
 const MediaPage = ({
   classes,

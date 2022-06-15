@@ -7,8 +7,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
-import LoadingImage from "components/design/loading-image";
-import ShowMoreButton from "components/interactive/show-more-button";
+import { LoadingImage, ShowMoreButton } from "components";
 
 import styles from "./styles";
 

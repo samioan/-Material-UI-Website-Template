@@ -4,11 +4,13 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
-import Footer from "components/layout/footer";
+import {
+  Footer,
+  MediaCard,
+  ShowMoreButton,
+  ScrollToTopButton,
+} from "components";
 import withScrollbars from "theme/withScrollbars";
-import MediaCard from "components/interactive/media-card";
-import ShowMoreButton from "components/interactive/show-more-button";
-import ScrollToTopButton from "components/interactive/scroll-to-top-button";
 
 import styles from "./styles";
 
