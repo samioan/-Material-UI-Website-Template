@@ -103,14 +103,14 @@ const MediaCard = ({
       </Grid>
 
       <CardContent
-        // component={
-        //   currentPage === "games" || currentPage === "music" ? Link : "div"
-        // }
-        // to={
-        //   currentPage === "games" || currentPage === "music"
-        //     ? `/${currentPage}/${pageLink}`
-        //     : ""
-        // }
+        component={
+          currentPage === "games" || currentPage === "music" ? Link : "div"
+        }
+        to={
+          currentPage === "games" || currentPage === "music"
+            ? `/${currentPage}/${pageLink}`
+            : ""
+        }
         className={classNames({
           [classes.cardContent]:
             currentPage === "games" || currentPage === "music",

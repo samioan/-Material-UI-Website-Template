@@ -53,6 +53,7 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
     minHeight: 140,
     padding: "16px 0",
     textDecoration: "none",
+    display: "inline-block",
   },
   title: {
     color: palette.grey[50],
@@ -63,6 +64,7 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
   genre: {
     color: palette.grey[600],
     borderColor: palette.grey[600],
+    cursor: "pointer",
   },
   fullLink: {
     textDecoration: "none",
