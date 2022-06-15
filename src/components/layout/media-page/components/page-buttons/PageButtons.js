@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 import styles from "./styles";
 
-const PageButtons = ({ pageItem }) => {
+const PageButtons = ({ pageItem, type }) => {
   const classes = styles();
 
   return (
@@ -14,7 +14,7 @@ const PageButtons = ({ pageItem }) => {
       <Button
         className={classes.button}
         target="_blank"
-        href={pageItem.links[0]}
+        href={pageItem.links[1]}
         variant="outlined"
         size="large"
         color="primary"
@@ -22,11 +22,11 @@ const PageButtons = ({ pageItem }) => {
         Download
       </Button>
 
-      {pageItem?.type === "games" && (
+      {type === "games" && (
         <Button
           className={classes.button}
           target="_blank"
-          href={pageItem?.links[1]}
+          href={pageItem?.links[2]}
           variant="outlined"
           size="large"
           color="primary"
@@ -38,7 +38,7 @@ const PageButtons = ({ pageItem }) => {
       <Button
         className={classes.button}
         component={Link}
-        to={`/${pageItem?.type}`}
+        to={`/${type}`}
         variant="outlined"
         size="large"
         color="primary"

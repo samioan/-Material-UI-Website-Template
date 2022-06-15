@@ -17,7 +17,7 @@ const musicReducer = (state = initialState, action) => {
       return {
         ...state,
         albumsShown: action.payload.slice(0, 12),
-        albumsOnPage: action.payload.slice(0, 12).length,
+        albumsOnPage: 12,
         albumsTotal: action.payload.length,
       };
     }

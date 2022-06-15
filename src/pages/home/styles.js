@@ -9,7 +9,6 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
   title: {
     color: palette.grey[50],
     paddingTop: 80,
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   content: {
     padding: 0,

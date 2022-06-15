@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { compose } from "redux";
 import { connect } from "react-redux";
+import { useParams, useLocation } from "react-router-dom";
 
 import { musicPageItems, loadMusicPageItems } from "models/music";
 
@@ -10,17 +10,19 @@ import musicData from "data/musicData.json";
 const withGamePageProps = (Component) => (props) => {
   const { musicPageItems, loadMusicPageItems } = props;
 
-  const params = useParams();
+  const paramsTitle = useParams().title;
+  const currentPage = useLocation().pathname.split("/")[1];
 
   useEffect(() => {
     loadMusicPageItems(
-      Object.values(musicData).find(({ links }) => links[1] === params.title)
+      Object.values(musicData).find(({ links }) => links[0] === paramsTitle)
     );
-  }, [params.title, loadMusicPageItems]);
+  }, [paramsTitle, loadMusicPageItems]);
 
   const newProps = {
     ...props,
     musicPageItems,
+    currentPage,
   };
 
   return <Component {...newProps} />;

@@ -7,7 +7,7 @@ import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 
 import styles from "./styles";
 
-const PageText = ({ pageItem }) => {
+const PageText = ({ pageItem, type }) => {
   const classes = styles();
 
   return (
@@ -23,13 +23,11 @@ const PageText = ({ pageItem }) => {
         </Link>
         <Link
           to={{
-            pathname: `/${pageItem?.type}`,
+            pathname: `/${type}`,
           }}
           className={classes.link}
         >
-          {`${pageItem?.type?.charAt(0).toUpperCase()}${pageItem?.type?.slice(
-            1
-          )}`}
+          {`${type?.charAt(0).toUpperCase()}${type?.slice(1)}`}
         </Link>
         <Typography className={classes.link}>{pageItem?.title}</Typography>
       </Breadcrumbs>

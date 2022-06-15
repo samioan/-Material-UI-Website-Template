@@ -23,11 +23,9 @@ const styles = makeStyles(({ palette }) => ({
     },
     "& label": {
       color: palette.grey[600],
-      fontFamily: "Lucida Console, Courier New, monospace",
     },
     "& input": {
       color: palette.grey[50],
-      fontFamily: "Lucida Console, Courier New, monospace",
     },
     marginBottom: 8,
   },
@@ -38,7 +36,6 @@ const styles = makeStyles(({ palette }) => ({
     borderColor: "rgba(63, 81, 181, 0.5)",
     borderRadius: 4,
     color: palette.grey[50],
-    fontFamily: "Lucida Console, Courier New, monospace",
     resize: "none",
     padding: "18.5px 14px",
     boxSizing: "border-box",
@@ -59,7 +56,6 @@ const styles = makeStyles(({ palette }) => ({
   },
   button: {
     width: 200,
-    fontFamily: "Lucida Console, Courier New, monospace",
     "&:disabled": {
       borderColor: "#3f51b5",
       color: "#3f51b5",

@@ -59,7 +59,7 @@ const linkDetails = [
   },
   {
     label: "Discord",
-    site: "https://discord.gg/YPbupyYB",
+    site: "https://discord.gg/Gp38uRajxW",
     image: discord,
   },
 ];

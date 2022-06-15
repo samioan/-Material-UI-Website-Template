@@ -7,7 +7,6 @@ const styles = makeStyles(() => ({
   },
   menuItem: {
     color: "#fff",
-    fontFamily: "Lucida Console",
   },
 }));
 

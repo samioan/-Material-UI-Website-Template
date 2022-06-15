@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ palette }) => ({
+const styles = makeStyles(({ palette, breakpoints }) => ({
   card: {
     backgroundColor: "transparent",
     color: "transparent",
@@ -52,20 +52,17 @@ const styles = makeStyles(({ palette }) => ({
   cardContent: {
     minHeight: 140,
     padding: "16px 0",
+    textDecoration: "none",
   },
   title: {
     color: palette.grey[50],
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   tagline: {
     color: palette.grey[500],
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   genre: {
     color: palette.grey[600],
     borderColor: palette.grey[600],
-    fontFamily: "Lucida Console, Courier New, monospace",
-    cursor: "pointer",
   },
   fullLink: {
     textDecoration: "none",
@@ -74,6 +71,48 @@ const styles = makeStyles(({ palette }) => ({
   },
   link: {
     textDecoration: "none",
+  },
+  artMediaContainer: {
+    overflow: "hidden",
+    cursor: "pointer",
+  },
+  artMedia: {
+    height: 400,
+    opacity: 1,
+    transition: "all .2s",
+    "&:hover": {
+      transform: "scale(1.1)",
+      opacity: 0.5,
+    },
+  },
+  artCardContent: {
+    padding: "16px 0",
+  },
+  artModal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    outline: "none",
+    "& img": {
+      width: "100%",
+    },
+    [breakpoints.up("sm")]: {
+      height: "75%",
+      "& img": {
+        width: "auto",
+        height: "100%",
+      },
+    },
+  },
+  videoCardContent: {
+    minHeight: 300,
+    padding: 0,
+  },
+  videoTitle: {
+    marginTop: 16,
+    color: palette.grey[50],
   },
 }));
 

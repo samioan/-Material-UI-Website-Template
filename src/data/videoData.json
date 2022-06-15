@@ -1,5 +1,9 @@
 {
     "games": {
+        "hollow-redux": {
+            "link": "XdRHYUtflqM",
+            "title": "Hollow Redux"
+        },
         "shade": {
             "link": "tiR1v09mZZ8",
             "title": "198145"
@@ -116,9 +120,9 @@
             "link": "jeysnwumbS4",
             "title": "Hollow"
         },
-        "oneOfUs": {
+        "oneOfUs-redux": {
             "link": "0S_uhcd--30",
-            "title": "One of Us"
+            "title": "One of Us Redux"
         }
     },
     "music": {

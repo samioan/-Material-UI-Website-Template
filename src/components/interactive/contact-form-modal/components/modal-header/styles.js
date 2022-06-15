@@ -6,7 +6,6 @@ const styles = makeStyles(({ palette }) => ({
   },
   title: {
     color: palette.grey[50],
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   iconButton: {
     padding: 0,
