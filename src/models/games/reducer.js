@@ -13,7 +13,7 @@ const gamesReducer = (state = initialState, action) => {
       return {
         ...state,
         gamesShown: action.payload.slice(0, 12),
-        gamesOnPage: action.payload.slice(0, 12).length,
+        gamesOnPage: 12,
         gamesTotal: action.payload.length,
       };
     }

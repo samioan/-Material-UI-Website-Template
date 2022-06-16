@@ -1,13 +1,13 @@
 import React from "react";
 import { compose } from "redux";
+
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import ArchiveList from "./components/archiveList/ArchiveList";
 
-import Footer from "components/layout/footer";
 import withScrollbars from "theme/withScrollbars";
-import ScrollToTopButton from "components/interactive/scroll-to-top-button";
+import { Footer, ScrollToTopButton } from "components";
 
 import styles from "./styles";
 import withArchiveProps from "./withArchiveProps";

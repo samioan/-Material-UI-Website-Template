@@ -12,7 +12,7 @@ const artReducer = (state = initialState, action) => {
       return {
         ...state,
         artShown: action.payload.slice(0, 12),
-        artOnPage: action.payload.slice(0, 12).length,
+        artOnPage: 12,
         artTotal: action.payload.length,
       };
     }

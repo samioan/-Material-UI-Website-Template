@@ -4,13 +4,11 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
   label: {
     color: palette.grey[50],
     paddingBottom: 40,
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   innerLabel: {
     color: palette.grey[50],
     paddingTop: 40,
     paddingBottom: 40,
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   gridList: {
     margin: "auto",
@@ -20,9 +18,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
       justifyContent: "center",
     },
   },
-  gridTitle: {
-    fontFamily: "Lucida Console, Courier New, monospace",
-  },
+  gridTitle: {},
   image: {
     position: "relative",
     left: "50%",

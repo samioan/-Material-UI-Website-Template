@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
 import { compose } from "redux";
+import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 import gameData from "data/gameData";
 import {
@@ -11,7 +12,6 @@ import {
   gamesTotal,
   loadGamePageItems,
 } from "models/games";
-import { setCurrentPage, currentPage } from "models/page";
 
 const withGamesProps = (Component) => (props) => {
   const {
@@ -20,19 +20,16 @@ const withGamesProps = (Component) => (props) => {
     gamesShown,
     gamesOnPage,
     gamesTotal,
-    setCurrentPage,
-    currentPage,
     loadGamePageItems,
   } = props;
 
   useEffect(() => {
-    if (currentPage !== "games") {
-      setCurrentPage("games");
-    }
     if (gamesShown.length === 0) {
       loadInitialGames(Object.values(gameData));
     }
-  }, [gamesShown.length, currentPage, loadInitialGames, setCurrentPage]);
+  }, [gamesShown.length, loadInitialGames]);
+
+  const currentPage = useLocation().pathname.split("/")[1];
 
   const onLoadMoreGames = () => loadMoreGames(Object.values(gameData));
 
@@ -42,8 +39,8 @@ const withGamesProps = (Component) => (props) => {
     gamesShown,
     gamesOnPage,
     gamesTotal,
-    currentPage,
     loadGamePageItems,
+    currentPage,
   };
 
   return <Component {...newProps} />;
@@ -53,13 +50,11 @@ const mapStateToProps = (state) => ({
   gamesShown: gamesShown(state),
   gamesOnPage: gamesOnPage(state),
   gamesTotal: gamesTotal(state),
-  currentPage: currentPage(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   loadInitialGames: (data) => dispatch(loadInitialGames(data)),
   loadMoreGames: (data) => dispatch(loadMoreGames(data)),
-  setCurrentPage: (data) => dispatch(setCurrentPage(data)),
   loadGamePageItems: (data) => dispatch(loadGamePageItems(data)),
 });
 

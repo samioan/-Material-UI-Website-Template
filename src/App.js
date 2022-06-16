@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import store from "models/store";
-import Header from "components/layout/header";
+import { Header } from "components";
 import {
   Home,
   Games,

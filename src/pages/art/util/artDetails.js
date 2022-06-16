@@ -2,51 +2,51 @@ import imagesJpg from "../images";
 
 const artDetails = [
   {
-    image: imagesJpg.lustfulJpg,
+    cardImage: imagesJpg.lustfulJpg,
     title: "Lustful",
   },
   {
-    image: imagesJpg.pondJpg,
+    cardImage: imagesJpg.pondJpg,
     title: "Pond",
   },
   {
-    image: imagesJpg.cagedJpg,
+    cardImage: imagesJpg.cagedJpg,
     title: "Caged",
   },
   {
-    image: imagesJpg.masksJpg,
+    cardImage: imagesJpg.masksJpg,
     title: "Masks",
   },
   {
-    image: imagesJpg.prometheusJpg,
+    cardImage: imagesJpg.prometheusJpg,
     title: "Prometheus",
   },
   {
-    image: imagesJpg.porcelainJpg,
+    cardImage: imagesJpg.porcelainJpg,
     title: "Porcelain",
   },
   {
-    image: imagesJpg.vesselJpg,
+    cardImage: imagesJpg.vesselJpg,
     title: "Vessel",
   },
   {
-    image: imagesJpg.brokenJpg,
+    cardImage: imagesJpg.brokenJpg,
     title: "Broken",
   },
   {
-    image: imagesJpg.horizonJpg,
+    cardImage: imagesJpg.horizonJpg,
     title: "Horizon",
   },
   {
-    image: imagesJpg.wavesJpg,
+    cardImage: imagesJpg.wavesJpg,
     title: "Waves",
   },
   {
-    image: imagesJpg.coupleJpg,
+    cardImage: imagesJpg.coupleJpg,
     title: "Couple",
   },
   {
-    image: imagesJpg.entangledJpg,
+    cardImage: imagesJpg.entangledJpg,
     title: "Entangled",
   },
 ];

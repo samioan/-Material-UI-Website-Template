@@ -1,7 +1,9 @@
 import React from "react";
+
 import Grid from "@material-ui/core/Grid";
 import withStyles from "@material-ui/styles/withStyles";
-import LoadingImage from "components/design/loading-image";
+
+import { LoadingImage } from "components";
 
 import styles from "./styles";
 

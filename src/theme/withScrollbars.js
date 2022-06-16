@@ -26,18 +26,10 @@ const withScrollbars = (Component) => (props) => {
     });
   };
 
-  const scrollToBottom = () => {
-    scrollbarsRef.current.view.scroll({
-      top: scrollbarsRef?.current?.view?.scrollHeight,
-      behavior: "smooth",
-    });
-  };
-
   const newProps = {
     ...props,
     showScrollToTopButton,
     scrollToTop,
-    scrollToBottom,
   };
 
   return (
@@ -64,7 +56,7 @@ const withScrollbars = (Component) => (props) => {
           {...props}
           style={{
             borderRadius: 2,
-            background: "rgba(255, 255, 255, 0.5)",
+            background: "rgba(135, 135, 135, 1)",
             zIndex: 2000,
           }}
         />

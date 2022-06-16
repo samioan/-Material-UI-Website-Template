@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
 import { compose } from "redux";
+import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 import videoData from "data/videoData";
 import {
@@ -15,7 +16,6 @@ import {
   musicVideosOnPage,
   musicVideosTotal,
 } from "models/videos";
-import { setCurrentPage, currentPage } from "models/page";
 
 const withVideosProps = (Component) => (props) => {
   const {
@@ -29,14 +29,9 @@ const withVideosProps = (Component) => (props) => {
     musicVideosShown,
     musicVideosOnPage,
     musicVideosTotal,
-    setCurrentPage,
-    currentPage,
   } = props;
 
   useEffect(() => {
-    if (currentPage !== "videos") {
-      setCurrentPage("videos");
-    }
     if (gameVideosShown.length === 0) {
       loadInitialGameVideos(Object.values(videoData.games));
     }
@@ -44,13 +39,13 @@ const withVideosProps = (Component) => (props) => {
       loadInitialMusicVideos(Object.values(videoData.music));
     }
   }, [
-    currentPage,
-    setCurrentPage,
     loadInitialGameVideos,
     loadInitialMusicVideos,
     gameVideosShown.length,
     musicVideosShown.length,
   ]);
+
+  const currentPage = useLocation().pathname.split("/")[1];
 
   const onLoadMoreGameVideos = () =>
     loadMoreGameVideos(Object.values(videoData.games));
@@ -81,7 +76,6 @@ const mapStateToProps = (state) => ({
   musicVideosShown: musicVideosShown(state),
   musicVideosOnPage: musicVideosOnPage(state),
   musicVideosTotal: musicVideosTotal(state),
-  currentPage: currentPage(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -89,7 +83,6 @@ const mapDispatchToProps = (dispatch) => ({
   loadMoreGameVideos: (data) => dispatch(loadMoreGameVideos(data)),
   loadInitialMusicVideos: (data) => dispatch(loadInitialMusicVideos(data)),
   loadMoreMusicVideos: (data) => dispatch(loadMoreMusicVideos(data)),
-  setCurrentPage: (data) => dispatch(setCurrentPage(data)),
 });
 
 export { withVideosProps };
