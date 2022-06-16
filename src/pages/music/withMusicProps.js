@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
 import { compose } from "redux";
+import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 import musicData from "data/musicData";
 import {
@@ -10,7 +11,6 @@ import {
   albumsOnPage,
   albumsTotal,
 } from "models/music";
-import { setCurrentPage, currentPage } from "models/page";
 
 const withMusicProps = (Component) => (props) => {
   const {
@@ -19,18 +19,15 @@ const withMusicProps = (Component) => (props) => {
     albumsShown,
     albumsOnPage,
     albumsTotal,
-    setCurrentPage,
-    currentPage,
   } = props;
 
   useEffect(() => {
-    if (currentPage !== "music") {
-      setCurrentPage("music");
-    }
     if (albumsShown.length === 0) {
       loadInitialAlbums(Object.values(musicData));
     }
-  }, [loadInitialAlbums, albumsShown.length, setCurrentPage, currentPage]);
+  }, [loadInitialAlbums, albumsShown.length]);
+
+  const currentPage = useLocation().pathname.split("/")[1];
 
   const onLoadMoreAlbums = () => loadMoreAlbums(Object.values(musicData));
 
@@ -50,13 +47,11 @@ const mapStateToProps = (state) => ({
   albumsShown: albumsShown(state),
   albumsOnPage: albumsOnPage(state),
   albumsTotal: albumsTotal(state),
-  currentPage: currentPage(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   loadInitialAlbums: (data) => dispatch(loadInitialAlbums(data)),
   loadMoreAlbums: (data) => dispatch(loadMoreAlbums(data)),
-  setCurrentPage: (data) => dispatch(setCurrentPage(data)),
 });
 
 export { withMusicProps };

@@ -1,4 +1,3 @@
-import { initialState as pageInitialState } from "./page/reducer";
 import { initialState as archiveInitialState } from "./archive/reducer";
 import { initialState as artInitialState } from "./art/reducer";
 import { initialState as gamesInitialState } from "./games/reducer";
@@ -22,7 +21,6 @@ if (devToolsExtension && typeof devToolsExtension === "function") {
 const store = createStore(
   rootReducer,
   {
-    page: pageInitialState,
     archive: archiveInitialState,
     art: artInitialState,
     games: gamesInitialState,

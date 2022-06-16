@@ -8,7 +8,6 @@ const styles = makeStyles(({ palette }) => ({
     color: palette.grey[50],
     paddingTop: 80,
     paddingBottom: 40,
-    fontFamily: "Lucida Console, Courier New, monospace",
   },
   bottomContainer: {
     paddingBottom: 32,

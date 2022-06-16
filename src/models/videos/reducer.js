@@ -20,7 +20,7 @@ const videosReducer = (state = initialState, action) => {
       return {
         ...state,
         gameVideosShown: action.payload.slice(0, 12),
-        gameVideosOnPage: action.payload.slice(0, 12).length,
+        gameVideosOnPage: 12,
         gameVideosTotal: action.payload.length,
       };
     }
@@ -42,7 +42,7 @@ const videosReducer = (state = initialState, action) => {
       return {
         ...state,
         musicVideosShown: action.payload.slice(0, 12),
-        musicVideosOnPage: action.payload.slice(0, 12).length,
+        musicVideosOnPage: 12,
         musicVideosTotal: action.payload.length,
       };
     }
