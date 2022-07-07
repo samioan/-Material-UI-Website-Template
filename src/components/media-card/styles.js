@@ -40,20 +40,12 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
     justifyContent: "center",
     gap: 16,
   },
-  iconButton: {
-    color: palette.grey[50],
-    width: 32,
-    height: 32,
-  },
-  icon: {
-    width: 32,
-    height: 32,
-  },
   cardContent: {
     minHeight: 140,
     padding: "16px 0",
     textDecoration: "none",
     display: "inline-block",
+    width: "100%",
   },
   title: {
     color: palette.grey[50],
@@ -89,24 +81,6 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
   },
   artCardContent: {
     padding: "16px 0",
-  },
-  artModal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  paper: {
-    outline: "none",
-    "& img": {
-      width: "100%",
-    },
-    [breakpoints.up("sm")]: {
-      height: "75%",
-      "& img": {
-        width: "auto",
-        height: "100%",
-      },
-    },
   },
   videoCardContent: {
     minHeight: 300,

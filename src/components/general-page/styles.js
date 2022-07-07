@@ -5,6 +5,11 @@ const styles = makeStyles(({ palette }) => ({
     padding: 0,
     backgroundColor: palette.text.primary,
     minHeight: "calc(100vh - 48px)",
+    maxWidth: "1280px",
+    width: "100%",
+    display: "block",
+    boxSizing: "border-box",
+    margin: "auto",
   },
   title: {
     paddingTop: 80,

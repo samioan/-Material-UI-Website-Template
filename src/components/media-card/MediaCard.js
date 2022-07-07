@@ -6,20 +6,15 @@ import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import Chip from "@material-ui/core/Chip";
-import Modal from "@material-ui/core/Modal";
-import InfoIcon from "@material-ui/icons/Info";
-import Tooltip from "@material-ui/core/Tooltip";
-import GetAppIcon from "@material-ui/icons/GetApp";
 import CardMedia from "@material-ui/core/CardMedia";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
-import StorefrontIcon from "@material-ui/icons/Storefront";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
+import { ArtModal, CardButton } from "./components";
 import withMediaCardProps from "./withMediaCardProps";
 
 const MediaCard = ({
@@ -30,15 +25,14 @@ const MediaCard = ({
   tagline,
   genre,
   pageLink,
-  downloadLink,
-  itchioLink,
   currentPage,
   link,
   handleOpen,
   open,
   handleClose,
+  overlayButtons,
 }) => (
-  <div>
+  <>
     <Card className={classes.card}>
       <Grid
         onClick={currentPage === "art" ? handleOpen : () => {}}
@@ -58,35 +52,17 @@ const MediaCard = ({
           <div className={classes.overlay}>
             {isWidthUp("md", width) && (
               <>
-                <Tooltip title="Download" arrow placement="top">
-                  <IconButton
-                    className={classes.iconButton}
-                    href={downloadLink}
-                    target="_blank"
-                  >
-                    <GetAppIcon className={classes.icon} />
-                  </IconButton>
-                </Tooltip>
-                {currentPage === "games" && (
-                  <Tooltip title="Itch.io Page" arrow placement="top">
-                    <IconButton
-                      className={classes.iconButton}
-                      href={itchioLink}
-                      target="_blank"
-                    >
-                      <StorefrontIcon className={classes.icon} />
-                    </IconButton>
-                  </Tooltip>
-                )}
-                <Tooltip title="More Info" arrow placement="top">
-                  <IconButton
-                    component={Link}
-                    to={`/${currentPage}/${pageLink}`}
-                    className={classes.iconButton}
-                  >
-                    <InfoIcon className={classes.icon} />
-                  </IconButton>
-                </Tooltip>
+                {overlayButtons
+                  .filter(({ show }) => show)
+                  .map(({ title, link, target, icon }) => (
+                    <CardButton
+                      key={title}
+                      title={title}
+                      link={link}
+                      target={target}
+                      icon={icon}
+                    />
+                  ))}
               </>
             )}
 
@@ -159,12 +135,13 @@ const MediaCard = ({
       </CardContent>
     </Card>
 
-    <Modal className={classes.artModal} open={open} onClose={handleClose}>
-      <div className={classes.paper} onClick={handleClose}>
-        <img src={image} alt={title} />
-      </div>
-    </Modal>
-  </div>
+    <ArtModal
+      image={image}
+      title={title}
+      open={open}
+      handleClose={handleClose}
+    />
+  </>
 );
 
 export { MediaCard };

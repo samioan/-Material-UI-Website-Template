@@ -54,6 +54,7 @@ const withArchiveProps = (Component) => (props) => {
     if (archivedArtShown.length === 0) {
       loadInitialArchivedArt(archiveArtDetails);
     }
+    document.title = "Archive";
   }, [
     loadInitialArchivedGames,
     loadInitialArchivedMusic,

@@ -1,8 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const styles = makeStyles(() => ({
-  footerContainer: {
+  container: {
     backgroundColor: "#111",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
   },
   icon: {
     width: 24,
