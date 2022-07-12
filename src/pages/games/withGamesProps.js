@@ -27,6 +27,7 @@ const withGamesProps = (Component) => (props) => {
     if (gamesShown.length === 0) {
       loadInitialGames(Object.values(gameData));
     }
+    document.title = "Games";
   }, [gamesShown.length, loadInitialGames]);
 
   const currentPage = useLocation().pathname.split("/")[1];

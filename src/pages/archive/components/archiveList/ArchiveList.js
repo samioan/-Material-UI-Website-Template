@@ -58,10 +58,7 @@ const ArchiveList = ({
                 customImageClass={classes.image}
                 alt={item.title}
               />
-              <GridListTileBar
-                title={item.title}
-                className={classes.gridTitle}
-              />
+              <GridListTileBar title={item.title} />
             </GridListTile>
           ))}
         </GridList>

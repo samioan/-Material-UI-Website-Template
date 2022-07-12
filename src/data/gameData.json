@@ -1,4 +1,35 @@
 {
+    "aSmallPriceToPay": {
+        "title": "A Small Price to Pay",
+        "subtitle": ":)",
+        "genre": "Adventure",
+        "description": [
+            "Why should you resist your immoral urges and violent tendencies?",
+            "It is only natural after all.",
+            "Plus, you've already been predisposed to it, haven't you?",
+            "You are, of course, free to do as you please.",
+            "There is just a small price to pay.",
+            "It's a tiny little thing, you won't even notice it.",
+            ":)"
+        ],
+        "links": [
+            "a-small-price-to-pay",
+            "https://selfishdream.itch.io/a-small-price-to-pay/purchase",
+            "https://selfishdream.itch.io/a-small-price-to-pay"
+        ],
+        "cardImage": "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5ODAxLnBuZw==/347x500/IdBQbj.png",
+        "carouselImage": "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5ODAxLnBuZw==/original/c4iC6k.png",
+        "screenshots": [
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5Nzk3LnBuZw==/original/yN3kQa.png",
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5Nzk4LnBuZw==/original/Q3hP7q.png",
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5Nzk5LnBuZw==/original/isWMhX.png",
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5ODAwLnBuZw==/original/P07e00.png",
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5ODAxLnBuZw==/original/c4iC6k.png",
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5ODAyLnBuZw==/original/%2FiwFLJ.png",
+            "https://img.itch.zone/aW1hZ2UvMTU1OTUxNi85MTU5ODAzLnBuZw==/original/Z73Q1u.png"
+        ],
+        "video": "EN4R7S-v_1g"
+    },
     "hollow": {
         "title": "Hollow",
         "subtitle": "Your denial feeds my hunger.",
@@ -96,7 +127,7 @@
     "ritual": {
         "title": "Ritual",
         "subtitle": "Show me the way.",
-        "genre": "Experimental",
+        "genre": "Adventure",
         "description": [
             "No one will know what I know.",
             "No one will learn what I have learned.",

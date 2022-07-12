@@ -1,24 +1,15 @@
 import React from "react";
-import { compose } from "redux";
 
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
-import {
-  Footer,
-  MediaCard,
-  ShowMoreButton,
-  ScrollToTopButton,
-} from "components";
-import styles from "theme/styles";
-import withScrollbars from "theme/withScrollbars";
+import { MediaCard, ShowMoreButton } from "components";
 
+import styles from "./styles";
 import withVideosProps from "./withVideosProps";
 
 const Videos = ({
-  showScrollToTopButton,
-  scrollToTop,
   onLoadMoreGameVideos,
   onLoadMoreMusicVideos,
   gameVideosShown,
@@ -90,11 +81,9 @@ const Videos = ({
           )}
         </Grid>
       </Container>
-      {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
-      <Footer />
     </>
   );
 };
 
 export { Videos };
-export default compose(withVideosProps, withScrollbars)(Videos);
+export default withVideosProps(Videos);

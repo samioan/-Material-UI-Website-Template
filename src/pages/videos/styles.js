@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const styles = makeStyles(({ palette }) => ({
   page: {
     padding: 0,
-    backgroundColor: palette.text.primary,
+    backgroundColor: "#000",
     minHeight: "calc(100vh - 48px)",
   },
   title: {

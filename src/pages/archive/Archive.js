@@ -1,20 +1,14 @@
 import React from "react";
-import { compose } from "redux";
 
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import ArchiveList from "./components/archiveList/ArchiveList";
 
-import withScrollbars from "theme/withScrollbars";
-import { Footer, ScrollToTopButton } from "components";
-
 import styles from "./styles";
 import withArchiveProps from "./withArchiveProps";
 
 const Archive = ({
-  showScrollToTopButton,
-  scrollToTop,
   onLoadMoreArchivedGames,
   onLoadMoreArchivedMusic,
   onLoadMoreArchivedArt,
@@ -65,10 +59,8 @@ const Archive = ({
           />
         </div>
       </Container>
-      {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
-      <Footer />
     </>
   );
 };
 export { Archive };
-export default compose(withArchiveProps, withScrollbars)(Archive);
+export default withArchiveProps(Archive);

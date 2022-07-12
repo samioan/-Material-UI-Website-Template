@@ -18,7 +18,6 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
       justifyContent: "center",
     },
   },
-  gridTitle: {},
   image: {
     position: "relative",
     left: "50%",
