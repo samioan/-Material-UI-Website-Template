@@ -1,4 +1,6 @@
 import ArtModal from "./art-modal";
-import CardButton from "./card-button";
+import OverlayButtons from "./overlay-buttons";
+import CardMediaContainer from "./card-media-container";
+import CardContentContainer from "./card-content-container";
 
-export { ArtModal, CardButton };
+export { ArtModal, OverlayButtons, CardMediaContainer, CardContentContainer };

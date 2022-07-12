@@ -16,7 +16,6 @@ const ArtModal = ({ image, title, open, handleClose }) => {
   return (
     <Modal className={classes.modal} open={open} onClose={handleClose}>
       <div className={classes.paper}>
-        {/* <img src={image} alt={title} /> */}
         <LoadingImage
           image={image}
           customLoaderClass={classes.loading}

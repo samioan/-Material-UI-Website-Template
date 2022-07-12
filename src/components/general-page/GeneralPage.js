@@ -18,7 +18,7 @@ const GeneralPage = ({
   const classes = styles();
 
   return (
-    <section className={classes.page}>
+    <main className={classes.page}>
       <Typography className={classes.title} variant="h3" align="center">
         {title}
       </Typography>
@@ -46,7 +46,7 @@ const GeneralPage = ({
         ))}
         {itemsOnPage < itemsTotal && <ShowMoreButton onClick={loadMoreItems} />}
       </Grid>
-    </section>
+    </main>
   );
 };
 

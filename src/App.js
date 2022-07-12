@@ -2,8 +2,8 @@ import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import withScrollbars from "theme/withScrollbars";
-import ScrollToTop from "theme/scrollToTop";
+import { withScrollbars } from "theme/hocs";
+import { ScrollToTop } from "theme/components";
 import store from "models/store";
 import { Header, Footer, ScrollToTopButton } from "components";
 import {

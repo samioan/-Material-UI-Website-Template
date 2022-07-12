@@ -1,6 +1,6 @@
 const styles = () => ({
   page: {
-    backgroundColor: "rgba(0, 0, 0, 0.87)",
+    backgroundColor: "#000",
     minHeight: "calc(100vh - 48px)",
   },
 });

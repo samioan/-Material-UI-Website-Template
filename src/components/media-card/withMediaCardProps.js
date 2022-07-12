@@ -49,6 +49,11 @@ const withMediaCardProps = (Component) => (props) => {
     },
   ];
 
+  const isCurrentPageGamesOrMusic =
+    currentPage === "games" || currentPage === "music";
+  const isCurrentPageArt = currentPage === "art";
+  const isCurrentPageVideos = currentPage === "videos";
+
   const newProps = {
     ...props,
     classes,
@@ -56,6 +61,9 @@ const withMediaCardProps = (Component) => (props) => {
     handleOpen,
     handleClose,
     overlayButtons,
+    isCurrentPageGamesOrMusic,
+    isCurrentPageArt,
+    isCurrentPageVideos,
   };
 
   return <Component {...newProps} />;

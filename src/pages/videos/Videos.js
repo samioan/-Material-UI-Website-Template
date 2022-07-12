@@ -5,8 +5,8 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import { MediaCard, ShowMoreButton } from "components";
-import styles from "theme/styles";
 
+import styles from "./styles";
 import withVideosProps from "./withVideosProps";
 
 const Videos = ({

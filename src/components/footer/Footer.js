@@ -10,14 +10,10 @@ const Footer = () => {
   const classes = styles();
   return (
     <footer className={classes.container}>
-      {linkDetails.map((item) => (
-        <Tooltip key={item.label} arrow title={item.label}>
-          <IconButton href={item.site} target="_blank">
-            <img
-              src={item.image}
-              alt={item.label}
-              className={classes.icon}
-            ></img>
+      {linkDetails.map(({ label, site, image }) => (
+        <Tooltip key={label} arrow title={label}>
+          <IconButton href={site} target="_blank">
+            <img src={image} alt={label} className={classes.icon}></img>
           </IconButton>
         </Tooltip>
       ))}

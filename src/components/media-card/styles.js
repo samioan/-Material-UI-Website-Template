@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ palette, breakpoints }) => ({
+const styles = makeStyles(() => ({
   card: {
     backgroundColor: "transparent",
     color: "transparent",
@@ -20,75 +20,9 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
       },
     },
   },
-  media: {
-    height: 300,
-    transition: "all .2s",
-  },
-  overlay: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: "100%",
-    width: "100%",
-    opacity: 0,
-    backgroundColor: "rgba(0,0,0,0.8)",
-    transition: "all .2s",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 16,
-  },
-  cardContent: {
-    minHeight: 140,
-    padding: "16px 0",
-    textDecoration: "none",
-    display: "inline-block",
-    width: "100%",
-  },
-  title: {
-    color: palette.grey[50],
-  },
-  tagline: {
-    color: palette.grey[500],
-  },
-  genre: {
-    color: palette.grey[600],
-    borderColor: palette.grey[600],
-    cursor: "pointer",
-  },
-  fullLink: {
-    textDecoration: "none",
-    width: "100%",
-    height: "100%",
-  },
-  link: {
-    textDecoration: "none",
-  },
   artMediaContainer: {
     overflow: "hidden",
     cursor: "pointer",
-  },
-  artMedia: {
-    height: 400,
-    opacity: 1,
-    transition: "all .2s",
-    "&:hover": {
-      transform: "scale(1.1)",
-      opacity: 0.5,
-    },
-  },
-  artCardContent: {
-    padding: "16px 0",
-  },
-  videoCardContent: {
-    minHeight: 300,
-    padding: 0,
-  },
-  videoTitle: {
-    marginTop: 16,
-    color: palette.grey[50],
   },
 }));
 
