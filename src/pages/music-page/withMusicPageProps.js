@@ -17,7 +17,8 @@ const withGamePageProps = (Component) => (props) => {
     loadMusicPageItems(
       Object.values(musicData).find(({ links }) => links[0] === paramsTitle)
     );
-  }, [paramsTitle, loadMusicPageItems]);
+    document.title = musicPageItems.title;
+  }, [paramsTitle, loadMusicPageItems, musicPageItems.title]);
 
   const newProps = {
     ...props,

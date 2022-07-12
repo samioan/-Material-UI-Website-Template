@@ -25,6 +25,7 @@ const withMusicProps = (Component) => (props) => {
     if (albumsShown.length === 0) {
       loadInitialAlbums(Object.values(musicData));
     }
+    document.title = "Music";
   }, [loadInitialAlbums, albumsShown.length]);
 
   const currentPage = useLocation().pathname.split("/")[1];

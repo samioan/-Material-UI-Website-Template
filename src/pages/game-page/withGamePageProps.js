@@ -17,7 +17,8 @@ const withGamePageProps = (Component) => (props) => {
     loadGamePageItems(
       Object.values(gameData).find(({ links }) => links[0] === paramsTitle)
     );
-  }, [paramsTitle, loadGamePageItems]);
+    document.title = gamePageItems.title;
+  }, [paramsTitle, loadGamePageItems, gamePageItems.title]);
 
   const newProps = {
     ...props,

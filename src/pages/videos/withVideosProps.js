@@ -38,6 +38,7 @@ const withVideosProps = (Component) => (props) => {
     if (musicVideosShown.length === 0) {
       loadInitialMusicVideos(Object.values(videoData.music));
     }
+    document.title = "Videos";
   }, [
     loadInitialGameVideos,
     loadInitialMusicVideos,

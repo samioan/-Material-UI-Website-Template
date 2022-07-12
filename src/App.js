@@ -2,8 +2,10 @@ import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import { withScrollbars } from "theme/hocs";
+import { ScrollToTop } from "theme/components";
 import store from "models/store";
-import { Header } from "components";
+import { Header, Footer, ScrollToTopButton } from "components";
 import {
   Home,
   Games,
@@ -15,11 +17,7 @@ import {
   Archive,
 } from "pages";
 
-import styles from "./styles";
-
-const App = () => {
-  const classes = styles();
-
+const App = ({ showScrollToTopButton, scrollToTop }) => {
   const pages = [
     { link: "/", component: <Home /> },
     { link: "/games", component: <Games /> },
@@ -32,21 +30,23 @@ const App = () => {
   ];
 
   return (
-    <div className={classes.appContainer}>
-      <Provider store={store}>
-        <Router>
-          <Header />
-          {pages.map((page) => (
-            <Switch key={page.link}>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        {pages.map((page) => (
+          <ScrollToTop key={page.link}>
+            <Switch>
               <Route exact path={page.link}>
                 {page.component}
               </Route>
             </Switch>
-          ))}
-        </Router>
-      </Provider>
-    </div>
+          </ScrollToTop>
+        ))}
+        {showScrollToTopButton && <ScrollToTopButton onClick={scrollToTop} />}
+        <Footer />
+      </Router>
+    </Provider>
   );
 };
 
-export default App;
+export default withScrollbars(App);
