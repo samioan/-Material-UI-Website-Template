@@ -1,6 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(() => ({
+const styles = () => ({
   modal: {
     display: "flex",
     alignItems: "center",
@@ -8,11 +6,11 @@ const styles = makeStyles(() => ({
     flexDirection: "column",
   },
   container: {
-    backgroundColor: "#111",
+    backgroundColor: "#000000",
     borderRadius: 8,
     maxWidth: 600,
   },
-}));
+});
 
 export { styles };
 export default styles;

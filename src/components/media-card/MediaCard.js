@@ -1,8 +1,10 @@
 import React from "react";
+import { compose } from "redux";
 import classNames from "classnames";
 
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
+import withStyles from "@material-ui/styles/withStyles";
 
 import {
   ArtModal,
@@ -10,6 +12,7 @@ import {
   CardMediaContainer,
   CardContentContainer,
 } from "./components";
+import styles from "./styles";
 import withMediaCardProps from "./withMediaCardProps";
 
 const MediaCard = ({
@@ -77,4 +80,4 @@ const MediaCard = ({
 );
 
 export { MediaCard };
-export default withMediaCardProps(MediaCard);
+export default compose(withStyles(styles), withMediaCardProps)(MediaCard);

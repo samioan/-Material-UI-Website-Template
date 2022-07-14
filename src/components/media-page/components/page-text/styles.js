@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints, palette }) => ({
+const styles = makeStyles(({ breakpoints }) => ({
   container: {
     paddingTop: 80,
   },
@@ -8,28 +8,28 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     marginBottom: 16,
     "& li": {
       fontSize: "0.8rem",
-      color: palette.grey[600],
+      color: "#FFFFFF",
     },
     "& p": {
       fontSize: "0.8rem",
       "&:hover": {
-        color: palette.grey[600],
+        color: "#FFFFFF",
       },
     },
   },
   link: {
     textDecoration: "none",
-    color: palette.grey[600],
-
+    color: "#FFFFFF",
+    transition: "all 250ms",
     "&:hover": {
-      color: palette.grey[50],
+      color: "#888888",
     },
   },
   title: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
   },
   tagline: {
-    color: palette.grey[500],
+    color: "#FFFFFF",
   },
   contentContainer: {
     paddingTop: 8,
@@ -44,11 +44,7 @@ const styles = makeStyles(({ breakpoints, palette }) => ({
     },
   },
   description: {
-    color: palette.grey[50],
-  },
-  video: {
-    width: "100%",
-    height: 210,
+    color: "#FFFFFF",
   },
 }));
 

@@ -7,6 +7,10 @@ const styles = makeStyles(() => ({
   },
   menuItem: {
     color: "#fff",
+    transition: "all 250ms",
+    "&:hover": {
+      color: "#888888",
+    },
   },
 }));
 

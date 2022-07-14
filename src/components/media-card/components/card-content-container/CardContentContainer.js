@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import Chip from "@material-ui/core/Chip";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
+import withStyles from "@material-ui/styles/withStyles";
 
 import { VideoContent } from "./components";
 import styles from "./styles";
 
 const CardContentContainer = ({
+  classes,
   title,
   tagline,
   genre,
@@ -19,43 +21,38 @@ const CardContentContainer = ({
   isCurrentPageGamesOrMusic,
   isCurrentPageArt,
   isCurrentPageVideos,
-}) => {
-  const classes = styles();
+}) => (
+  <CardContent
+    component={isCurrentPageGamesOrMusic ? Link : "div"}
+    to={isCurrentPageGamesOrMusic ? `/${currentPage}/${pageLink}` : ""}
+    className={classNames({
+      [classes.cardContent]: isCurrentPageGamesOrMusic,
+      [classes.artCardContent]: isCurrentPageArt,
+      [classes.videoCardContent]: isCurrentPageVideos,
+    })}
+  >
+    {isCurrentPageVideos && <VideoContent link={link} />}
 
-  return (
-    <CardContent
-      component={isCurrentPageGamesOrMusic ? Link : "div"}
-      to={isCurrentPageGamesOrMusic ? `/${currentPage}/${pageLink}` : ""}
+    <Typography
       className={classNames({
-        [classes.cardContent]: isCurrentPageGamesOrMusic,
-        [classes.artCardContent]: isCurrentPageArt,
-        [classes.videoCardContent]: isCurrentPageVideos,
+        [classes.videoTitle]: isCurrentPageVideos,
+        [classes.title]: !isCurrentPageVideos,
       })}
+      variant="h5"
     >
-      {isCurrentPageVideos && <VideoContent link={link} />}
+      {title}
+    </Typography>
 
-      <Typography
-        className={classNames({
-          [classes.videoTitle]: isCurrentPageVideos,
-          [classes.title]: !isCurrentPageVideos,
-        })}
-        gutterBottom
-        variant="h5"
-      >
-        {title}
-      </Typography>
-
-      {isCurrentPageGamesOrMusic && (
-        <>
-          <Typography className={classes.tagline} gutterBottom variant="h6">
-            {tagline}
-          </Typography>
-          <Chip label={genre} variant="outlined" className={classes.genre} />
-        </>
-      )}
-    </CardContent>
-  );
-};
+    {isCurrentPageGamesOrMusic && (
+      <>
+        <Typography className={classes.tagline} variant="h6">
+          {tagline}
+        </Typography>
+        <Chip label={genre} variant="outlined" className={classes.genre} />
+      </>
+    )}
+  </CardContent>
+);
 
 export { CardContentContainer };
-export default CardContentContainer;
+export default withStyles(styles)(CardContentContainer);

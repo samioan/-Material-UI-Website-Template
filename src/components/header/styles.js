@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const styles = makeStyles(({ breakpoints }) => ({
   header: {
-    backgroundColor: "#222",
+    backgroundColor: "#000000",
     paddingRight: 79,
     paddingLeft: 0,
     [breakpoints.up("lg")]: {

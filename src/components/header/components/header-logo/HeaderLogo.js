@@ -6,14 +6,14 @@ import Typography from "@material-ui/core/Typography";
 
 import styles from "./styles";
 
-const HeaderLogo = ({ headerButtons }) => {
+const HeaderLogo = () => {
   const classes = styles();
 
   return (
     <Link
       {...{
         component: RouterLink,
-        to: headerButtons[0].href,
+        to: "/",
         color: "inherit",
         style: { textDecoration: "none" },
       }}

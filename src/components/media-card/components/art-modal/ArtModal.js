@@ -32,7 +32,7 @@ const ArtModal = ({ image, title, open, handleClose }) => {
             {title}
           </Typography>
           <IconButton onClick={handleClose} className={classes.iconButton}>
-            <CloseIcon className={classes.icon} />
+            <CloseIcon />
           </IconButton>
         </Grid>
       </div>

@@ -1,23 +1,23 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(({ breakpoints }) => ({
+const styles = () => ({
   button: {
     position: "fixed",
-    bottom: 0,
-    right: 8,
+    bottom: 48,
+    right: 16,
     zIndex: "1000",
-    borderRadius: "10px 10px 0 0",
-    "&.MuiButton-containedPrimary": {
-      backgroundColor: "#111",
-    },
-    [breakpoints.up("lg")]: {
-      right: 40,
+    backgroundColor: "#000000",
+    border: "1px solid #FFFFFF",
+    color: "#FFFFFF",
+    transition: "all 250ms",
+    "&:hover": {
+      backgroundColor: "#000000",
+      borderColor: "#888888",
+      color: "#888888",
     },
   },
   text: {
-    color: "white",
+    color: "#FFFFFF",
   },
-}));
+});
 
 export { styles };
 export default styles;

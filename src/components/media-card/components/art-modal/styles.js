@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ palette, breakpoints }) => ({
+const styles = makeStyles(({ breakpoints }) => ({
   modal: {
     display: "flex",
     alignItems: "center",
@@ -14,7 +14,7 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
     maxHeight: 600,
     width: "auto",
     height: "auto",
-    backgroundColor: "#111",
+    backgroundColor: "#000000",
     marginLeft: 16,
     marginRight: 16,
     [breakpoints.up("sm")]: {
@@ -50,13 +50,15 @@ const styles = makeStyles(({ palette, breakpoints }) => ({
     backgroundColor: "rgba(0,0,0,0.5)",
   },
   title: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
   },
   iconButton: {
     padding: 0,
-  },
-  icon: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
+    transition: "all 250ms",
+    "&:hover": {
+      color: "#888888",
+    },
   },
 }));
 
