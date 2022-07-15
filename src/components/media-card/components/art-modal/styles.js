@@ -1,45 +1,32 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(({ breakpoints }) => ({
+const styles = () => ({
   modal: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
   paper: {
+    height: "calc(100vw - 32px)",
+    width: "calc(100vw - 32px)",
     borderRadius: 8,
     position: "relative",
     outline: "none",
     maxWidth: 600,
     maxHeight: 600,
-    width: "auto",
-    height: "auto",
     backgroundColor: "#000000",
     marginLeft: 16,
     marginRight: 16,
-    [breakpoints.up("sm")]: {
-      width: "100%",
-      height: "75%",
-    },
   },
   image: {
-    width: "100%",
     borderRadius: 8,
-    [breakpoints.up("sm")]: {
-      width: "auto",
-      height: "100%",
-    },
   },
   loading: {
     height: "calc(100vw - 32px)",
     width: "calc(100vw - 32px)",
+    maxWidth: "inherit",
+    maxHeight: "inherit",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    [breakpoints.up("sm")]: {
-      height: "100%",
-      width: "100%",
-    },
   },
   container: {
     borderTopLeftRadius: 8,
@@ -60,7 +47,7 @@ const styles = makeStyles(({ breakpoints }) => ({
       color: "#888888",
     },
   },
-}));
+});
 
 export { styles };
 export default styles;

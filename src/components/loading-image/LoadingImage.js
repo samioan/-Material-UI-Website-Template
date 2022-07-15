@@ -19,7 +19,13 @@ const LoadingImage = ({
           <CircularProgress className={classes.loadingIcon} />
         </div>
       ) : (
-        <img className={customImageClass} src={src} alt={alt} />
+        <img
+          className={customImageClass}
+          src={src}
+          alt={alt}
+          width="100%"
+          height="100%"
+        />
       );
     }}
   </ProgressiveImage>
