@@ -1,9 +1,5 @@
 const headerButtons = [
   {
-    label: "Home",
-    href: "/",
-  },
-  {
     label: "Games",
     href: "/games",
   },

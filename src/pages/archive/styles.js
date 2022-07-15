@@ -1,11 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ palette }) => ({
+const styles = makeStyles(() => ({
   page: {
-    backgroundColor: "#000",
+    backgroundColor: "#000000",
   },
   title: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
     paddingTop: 80,
     paddingBottom: 40,
   },

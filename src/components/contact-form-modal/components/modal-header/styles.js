@@ -1,23 +1,23 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(({ palette }) => ({
+const styles = () => ({
   headerContainer: {
     padding: "24px 16px",
   },
   title: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
   },
   iconButton: {
     padding: 0,
-  },
-  icon: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
+    transition: "all 250ms",
+    "&:hover": {
+      color: "#888888",
+    },
   },
   divider: {
     margin: "0 16px",
-    backgroundColor: palette.grey[600],
+    backgroundColor: "#FFFFFF",
   },
-}));
+});
 
 export { styles };
 export default styles;

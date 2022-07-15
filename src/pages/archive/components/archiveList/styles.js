@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints, palette }) => ({
+const styles = makeStyles(({ breakpoints }) => ({
   label: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
     paddingBottom: 40,
   },
   innerLabel: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
     paddingTop: 40,
     paddingBottom: 40,
   },

@@ -12,7 +12,7 @@ const DesktopView = ({ headerButtons, onClick }) => {
 
   return (
     <Toolbar className={classes.toolbar}>
-      <HeaderLogo headerButtons={headerButtons} />
+      <HeaderLogo />
       <MenuButtons headerButtons={headerButtons} onClick={onClick} />
     </Toolbar>
   );

@@ -1,13 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ breakpoints, palette }) => ({
+const styles = makeStyles(({ breakpoints }) => ({
   page: {
     padding: 0,
-    backgroundColor: palette.text.primary,
+    backgroundColor: "#000000",
     minHeight: "calc(100vh - 48px)",
   },
   title: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
     paddingTop: 80,
   },
   content: {

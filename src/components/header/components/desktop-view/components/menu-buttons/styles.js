@@ -6,6 +6,10 @@ const styles = makeStyles(() => ({
     size: 18,
     marginLeft: 38,
     color: "inherit",
+    transition: "all 250ms",
+    "&:hover": {
+      color: "#888888",
+    },
   },
 }));
 

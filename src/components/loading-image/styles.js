@@ -1,6 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(() => ({
+const styles = () => ({
   loading: {
     height: "100%",
     width: "100%",
@@ -8,7 +6,10 @@ const styles = makeStyles(() => ({
     alignItems: "center",
     justifyContent: "center",
   },
-}));
+  loadingIcon: {
+    color: "#FFF",
+  },
+});
 
 export { styles };
 export default styles;

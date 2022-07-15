@@ -8,6 +8,13 @@ const styles = makeStyles(() => ({
   button: {
     margin: 8,
     width: 200,
+    color: "#FFFFFF",
+    border: "1px solid #FFFFFF",
+    transition: "all 250ms",
+    "&:hover": {
+      borderColor: "#888888",
+      color: "#888888",
+    },
   },
 }));
 

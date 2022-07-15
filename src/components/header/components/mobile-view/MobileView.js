@@ -43,7 +43,7 @@ const MobileView = ({ headerButtons, onClick }) => {
         </div>
       </Drawer>
 
-      <HeaderLogo headerButtons={headerButtons} />
+      <HeaderLogo />
     </Toolbar>
   );
 };

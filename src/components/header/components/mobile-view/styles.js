@@ -6,11 +6,11 @@ const styles = makeStyles(() => ({
   },
   drawer: {
     "& .MuiDrawer-paperAnchorLeft": {
-      backgroundColor: "#111",
+      backgroundColor: "#000",
     },
   },
   drawerContainer: {
-    backgroundColor: "#111",
+    backgroundColor: "#000",
     padding: "20px 30px",
   },
 }));
