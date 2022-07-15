@@ -4,12 +4,8 @@ import InfoIcon from "@material-ui/icons/Info";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 
-import styles from "./styles";
-
 const withMediaCardProps = (Component) => (props) => {
   const { downloadLink, itchioLink, currentPage, pageLink } = props;
-
-  const classes = styles();
 
   const [open, setOpen] = useState(false);
 
@@ -56,7 +52,6 @@ const withMediaCardProps = (Component) => (props) => {
 
   const newProps = {
     ...props,
-    classes,
     open,
     handleOpen,
     handleClose,

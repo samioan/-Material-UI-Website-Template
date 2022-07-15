@@ -1,6 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(() => ({
+const styles = () => ({
   card: {
     backgroundColor: "transparent",
     color: "transparent",
@@ -24,7 +22,7 @@ const styles = makeStyles(() => ({
     overflow: "hidden",
     cursor: "pointer",
   },
-}));
+});
 
 export { styles };
 export default styles;

@@ -1,22 +1,35 @@
 import React from "react";
+import withStyles from "@material-ui/styles/withStyles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ProgressiveImage from "react-progressive-graceful-image";
 
-const LoadingImage = ({ image, customLoaderClass, customImageClass, alt }) => {
-  return (
-    <ProgressiveImage src={image} placeholder="">
-      {(src, loading) => {
-        return loading ? (
-          <div className={customLoaderClass}>
-            <CircularProgress />
-          </div>
-        ) : (
-          <img className={customImageClass} src={src} alt={alt} />
-        );
-      }}
-    </ProgressiveImage>
-  );
-};
+import styles from "./styles";
+
+const LoadingImage = ({
+  classes,
+  image,
+  customLoaderClass,
+  customImageClass,
+  alt,
+}) => (
+  <ProgressiveImage src={image} placeholder="">
+    {(src, loading) => {
+      return loading ? (
+        <div className={customLoaderClass}>
+          <CircularProgress className={classes.loadingIcon} />
+        </div>
+      ) : (
+        <img
+          className={customImageClass}
+          src={src}
+          alt={alt}
+          width="100%"
+          height="100%"
+        />
+      );
+    }}
+  </ProgressiveImage>
+);
 
 LoadingImage.defaultProps = {
   image: null,
@@ -26,4 +39,4 @@ LoadingImage.defaultProps = {
 };
 
 export { LoadingImage };
-export default LoadingImage;
+export default withStyles(styles)(LoadingImage);

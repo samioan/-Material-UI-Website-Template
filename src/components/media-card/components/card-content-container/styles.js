@@ -1,6 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(({ palette }) => ({
+const styles = () => ({
   cardContent: {
     minHeight: 140,
     padding: "16px 0",
@@ -17,20 +15,22 @@ const styles = makeStyles(({ palette }) => ({
   },
   videoTitle: {
     marginTop: 16,
-    color: palette.grey[50],
+    color: "#FFFFFF",
   },
   title: {
-    color: palette.grey[50],
+    color: "#FFFFFF",
+    marginBottom: 2,
   },
   tagline: {
-    color: palette.grey[500],
+    color: "#FFFFFF",
+    marginBottom: 10,
   },
   genre: {
-    color: palette.grey[600],
-    borderColor: palette.grey[600],
+    color: "#FFFFFF",
+    borderColor: "#FFFFFF",
     cursor: "pointer",
   },
-}));
+});
 
 export { styles };
 export default styles;

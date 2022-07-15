@@ -1,32 +1,16 @@
 import React from "react";
 
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import IconButton from "@material-ui/core/IconButton";
+import withStyles from "@material-ui/styles/withStyles";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
-import { arrow } from "./images";
 import styles from "./styles";
 
-const ScrollToTopButton = ({ onClick, width }) => {
-  const classes = styles();
-
-  return (
-    <Button
-      color="primary"
-      variant="contained"
-      onClick={onClick}
-      className={classes.button}
-    >
-      {isWidthUp("lg", width) && (
-        <Typography variant="overline" className={classes.text}>
-          Back To Top
-        </Typography>
-      )}
-
-      {!isWidthUp("lg", width) && <img src={arrow} alt="Back To Top" />}
-    </Button>
-  );
-};
+const ScrollToTopButton = ({ classes, onClick }) => (
+  <IconButton onClick={onClick} className={classes.button}>
+    <ArrowUpwardIcon />
+  </IconButton>
+);
 
 export { ScrollToTopButton };
-export default withWidth()(ScrollToTopButton);
+export default withStyles(styles)(ScrollToTopButton);

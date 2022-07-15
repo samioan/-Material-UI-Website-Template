@@ -1,7 +1,7 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import YouTube from "@u-wave/react-youtube";
 import { Link } from "react-router-dom";
+
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 
@@ -68,7 +68,14 @@ const PageText = ({ pageItem, type }) => {
         </Grid>
         <Grid item xs={12} sm={5}>
           {pageItem?.video && (
-            <YouTube className={classes.video} video={pageItem?.video} />
+            <iframe
+              title="media"
+              width="100%"
+              height="210"
+              frameBorder="0"
+              allow="fullscreen;"
+              src={`https://www.youtube.com/embed/${pageItem?.video}`}
+            ></iframe>
           )}
         </Grid>
       </Grid>

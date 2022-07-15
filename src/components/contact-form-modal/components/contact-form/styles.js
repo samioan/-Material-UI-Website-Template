@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const styles = makeStyles(({ palette }) => ({
+const styles = makeStyles(() => ({
   form: {
     marginTop: 32,
     display: "flex",
@@ -12,20 +12,20 @@ const styles = makeStyles(({ palette }) => ({
     width: "100%",
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "rgba(63, 81, 181, 0.5)",
+        borderColor: "#FFFFFF",
       },
       "&:hover fieldset": {
-        borderColor: "#3f51b5",
+        borderColor: "#888888",
       },
       "&.Mui-focused fieldset": {
-        borderColor: "#3f51b5",
+        borderColor: "#888888",
       },
     },
     "& label": {
-      color: palette.grey[600],
+      color: "#888888 !important",
     },
     "& input": {
-      color: palette.grey[50],
+      color: "#FFFFFF",
     },
     marginBottom: 8,
   },
@@ -33,18 +33,18 @@ const styles = makeStyles(({ palette }) => ({
     width: "100%",
     height: 150,
     backgroundColor: "transparent",
-    borderColor: "rgba(63, 81, 181, 0.5)",
+    borderColor: "#FFFFFF",
     borderRadius: 4,
-    color: palette.grey[50],
+    color: "#FFFFFF",
     resize: "none",
     padding: "18.5px 14px",
     boxSizing: "border-box",
     "&:focus-visible": {
       outline: "none",
-      borderColor: "#3f51b5",
+      borderColor: "#888888",
     },
     "&::placeholder": {
-      color: palette.grey[600],
+      color: "#888888",
     },
   },
   buttonContainer: {
@@ -56,9 +56,17 @@ const styles = makeStyles(({ palette }) => ({
   },
   button: {
     width: 200,
+    color: "#FFFFFF",
+    backgroundColor: "#000000",
+    border: "1px solid #FFFFFF",
+    transition: "all 250ms",
+    "&:hover": {
+      borderColor: "#888888",
+      color: "#888888",
+    },
     "&:disabled": {
-      borderColor: "#3f51b5",
-      color: "#3f51b5",
+      borderColor: "#888888",
+      color: "#888888",
     },
   },
 }));

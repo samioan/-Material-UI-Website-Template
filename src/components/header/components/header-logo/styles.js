@@ -5,6 +5,10 @@ const styles = makeStyles(() => ({
     fontWeight: 600,
     color: "#fff",
     textAlign: "left",
+    transition: "all 250ms",
+    "&:hover": {
+      color: "#888888",
+    },
   },
 }));
 
