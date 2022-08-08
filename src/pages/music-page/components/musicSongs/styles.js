@@ -1,7 +1,6 @@
 const styles = () => ({
   songContainer: {
     paddingTop: 24,
-    paddingBottom: 24,
   },
   song: {
     border: "none",

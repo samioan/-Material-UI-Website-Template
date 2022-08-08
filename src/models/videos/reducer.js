@@ -3,6 +3,8 @@ import {
   loadMoreGameVideos,
   loadInitialMusicVideos,
   loadMoreMusicVideos,
+  setVideosLoading,
+  setVideosError,
 } from "./actions";
 
 const initialState = {
@@ -12,16 +14,23 @@ const initialState = {
   musicVideosShown: [],
   musicVideosOnPage: null,
   musicVideosTotal: null,
+  allGameVideos: [],
+  allMusicVideos: [],
+  videosError: false,
+  videosLoading: false,
 };
 
-const videosReducer = (state = initialState, action) => {
-  switch (action.type) {
+const videosReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case loadInitialGameVideos.type: {
       return {
         ...state,
-        gameVideosShown: action.payload.slice(0, 12),
+        allGameVideos: payload,
+        gameVideosShown: payload.slice(0, 12),
         gameVideosOnPage: 12,
-        gameVideosTotal: action.payload.length,
+        gameVideosTotal: payload.length,
+        videosError: false,
+        videosLoading: false,
       };
     }
     case loadMoreGameVideos.type: {
@@ -29,21 +38,26 @@ const videosReducer = (state = initialState, action) => {
         ...state,
         gameVideosShown: [
           ...state.gameVideosShown,
-          ...action.payload.slice(
+          ...state.allGameVideos.slice(
             state.gameVideosOnPage,
             state.gameVideosOnPage + 6
           ),
         ],
-        gameVideosOnPage: action.payload.slice(0, state.gameVideosOnPage + 6)
-          .length,
+        gameVideosOnPage: state.allGameVideos.slice(
+          0,
+          state.gameVideosOnPage + 6
+        ).length,
       };
     }
     case loadInitialMusicVideos.type: {
       return {
         ...state,
-        musicVideosShown: action.payload.slice(0, 12),
+        allMusicVideos: payload,
+        musicVideosShown: payload.slice(0, 12),
         musicVideosOnPage: 12,
-        musicVideosTotal: action.payload.length,
+        musicVideosTotal: payload.length,
+        videosError: false,
+        videosLoading: false,
       };
     }
     case loadMoreMusicVideos.type: {
@@ -51,13 +65,29 @@ const videosReducer = (state = initialState, action) => {
         ...state,
         musicVideosShown: [
           ...state.musicVideosShown,
-          ...action.payload.slice(
+          ...state.allMusicVideos.slice(
             state.musicVideosOnPage,
             state.musicVideosOnPage + 6
           ),
         ],
-        musicVideosOnPage: action.payload.slice(0, state.musicVideosOnPage + 6)
-          .length,
+        musicVideosOnPage: state.allMusicVideos.slice(
+          0,
+          state.musicVideosOnPage + 6
+        ).length,
+      };
+    }
+    case setVideosLoading.type: {
+      return {
+        ...state,
+        videosError: false,
+        videosLoading: true,
+      };
+    }
+    case setVideosError.type: {
+      return {
+        ...state,
+        videosError: true,
+        videosLoading: false,
       };
     }
     default:

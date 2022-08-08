@@ -14,7 +14,7 @@ const PageButtons = ({ pageItem, type }) => {
       <Button
         className={classes.button}
         target="_blank"
-        href={pageItem.links[1]}
+        href={pageItem?.links?.[1]}
         variant="outlined"
         size="large"
         color="primary"
@@ -26,7 +26,7 @@ const PageButtons = ({ pageItem, type }) => {
         <Button
           className={classes.button}
           target="_blank"
-          href={pageItem?.links[2]}
+          href={pageItem?.links?.[2]}
           variant="outlined"
           size="large"
           color="primary"

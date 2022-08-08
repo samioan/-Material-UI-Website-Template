@@ -1,7 +1,7 @@
 const styles = () => ({
   button: {
     position: "fixed",
-    bottom: 48,
+    bottom: 64,
     right: 16,
     zIndex: "1000",
     backgroundColor: "#000000",

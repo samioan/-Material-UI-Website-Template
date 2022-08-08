@@ -1,20 +1,36 @@
-import { loadInitialGames, loadMoreGames, loadGamePageItems } from "./actions";
+import {
+  loadInitialGames,
+  loadMoreGames,
+  loadGamePageItems,
+  setGamesError,
+  setGamesLoading,
+  setGamePageLoading,
+  setGamePageError,
+} from "./actions";
 
 const initialState = {
   gamesShown: [],
   gamesOnPage: null,
   gamesTotal: null,
   gamePageItems: [],
+  allGames: [],
+  gamesError: false,
+  gamesLoading: false,
+  gamePageError: false,
+  gamePageLoading: false,
 };
 
-const gamesReducer = (state = initialState, action) => {
-  switch (action.type) {
+const gamesReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case loadInitialGames.type: {
       return {
         ...state,
-        gamesShown: action.payload.slice(0, 12),
+        allGames: payload,
+        gamesShown: payload.slice(0, 12),
         gamesOnPage: 12,
-        gamesTotal: action.payload.length,
+        gamesTotal: payload.length,
+        gamesError: false,
+        gamesLoading: false,
       };
     }
     case loadMoreGames.type: {
@@ -22,15 +38,45 @@ const gamesReducer = (state = initialState, action) => {
         ...state,
         gamesShown: [
           ...state.gamesShown,
-          ...action.payload.slice(state.gamesOnPage, state.gamesOnPage + 6),
+          ...state.allGames.slice(state.gamesOnPage, state.gamesOnPage + 6),
         ],
-        gamesOnPage: action.payload.slice(0, state.gamesOnPage + 6).length,
+        gamesOnPage: state.allGames.slice(0, state.gamesOnPage + 6).length,
       };
     }
     case loadGamePageItems.type: {
       return {
         ...state,
-        gamePageItems: action.payload,
+        gamePageItems: payload,
+        gamePageError: false,
+        gamePageLoading: false,
+      };
+    }
+    case setGamesLoading.type: {
+      return {
+        ...state,
+        gamesError: false,
+        gamesLoading: true,
+      };
+    }
+    case setGamesError.type: {
+      return {
+        ...state,
+        gamesError: true,
+        gamesLoading: false,
+      };
+    }
+    case setGamePageLoading.type: {
+      return {
+        ...state,
+        gamePageError: false,
+        gamePageLoading: true,
+      };
+    }
+    case setGamePageError.type: {
+      return {
+        ...state,
+        gamePageError: true,
+        gamePageLoading: false,
       };
     }
     default:
