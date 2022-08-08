@@ -8,7 +8,7 @@ const styles = makeStyles(({ breakpoints }) => ({
     alignItems: "center",
     flexWrap: "wrap",
     gap: "8px",
-    minHeight: 48,
+    minHeight: 64,
     [breakpoints.up("sm")]: {
       marginLeft: 16,
       justifyContent: "flex-start",

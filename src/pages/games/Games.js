@@ -2,24 +2,30 @@ import React from "react";
 
 import { GeneralPage } from "components";
 
-import withGamesProps from "./withGamesProps";
+import withGames from "./withGames";
 
 const Games = ({
-  onLoadMoreGames,
   gamesShown,
   gamesOnPage,
   gamesTotal,
   currentPage,
+  loadMoreGames,
+  gamesError,
+  loadGames,
+  gamesLoading,
 }) => (
   <GeneralPage
     title="Games"
     itemsShown={gamesShown}
     itemsOnPage={gamesOnPage}
     itemsTotal={gamesTotal}
-    loadMoreItems={onLoadMoreGames}
     currentPage={currentPage}
+    loadMoreItems={loadMoreGames}
+    error={gamesError}
+    loadInitialItems={loadGames}
+    loading={gamesLoading}
   />
 );
 
 export { Games };
-export default withGamesProps(Games);
+export default withGames(Games);

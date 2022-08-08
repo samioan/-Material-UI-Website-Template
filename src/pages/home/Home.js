@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
@@ -10,10 +11,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { LoadingImage } from "components";
 
 import styles from "./styles";
-import withHomeProps from "./withHomeProps";
-import imageCarousel from "./constants/imageCarousel";
+import withHome from "./withHome";
 
-const Home = () => {
+const Home = ({ imagesCarousel }) => {
   const classes = styles();
 
   return (
@@ -22,8 +22,8 @@ const Home = () => {
         Selfish Dream
       </Typography>
       <Grid container justify="space-between" className={classes.content}>
-        {imageCarousel.map((section) => (
-          <Grid key={imageCarousel.indexOf(section)} item xs={12} md={4}>
+        {imagesCarousel?.map((section, index) => (
+          <Grid key={index} item xs={12} md={4}>
             <Carousel
               className={classes.carousel}
               showThumbs={false}
@@ -34,19 +34,16 @@ const Home = () => {
               swipeable={false}
               infiniteLoop
             >
-              {section.map((item) => (
-                <a
-                  key={item.key}
-                  href={item.link && `${item.name.split("-")[0]}/${item.link}`}
-                >
+              {section?.map((item, index) => (
+                <Link key={item?.name || index} to={item?.link}>
                   <div>
                     <LoadingImage
-                      image={item.img}
+                      image={item?.img}
                       customLoaderClass={classes.loading}
-                      alt={item.name}
+                      alt={item?.name}
                     />
                   </div>
-                </a>
+                </Link>
               ))}
             </Carousel>
           </Grid>
@@ -57,4 +54,4 @@ const Home = () => {
 };
 
 export { Home };
-export default withHomeProps(Home);
+export default withHome(Home);

@@ -3,15 +3,16 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
-import { MediaCard, ShowMoreButton } from "components";
+import { MediaCard, ShowMoreButton, ErrorMessage } from "components";
 
 import styles from "./styles";
-import withVideosProps from "./withVideosProps";
+import withVideos from "./withVideos";
 
 const Videos = ({
-  onLoadMoreGameVideos,
-  onLoadMoreMusicVideos,
+  loadMoreGameVideos,
+  loadMoreMusicVideos,
   gameVideosShown,
   gameVideosOnPage,
   gameVideosTotal,
@@ -19,6 +20,9 @@ const Videos = ({
   musicVideosOnPage,
   musicVideosTotal,
   currentPage,
+  videosError,
+  videosLoading,
+  loadVideos,
 }) => {
   const classes = styles();
 
@@ -28,62 +32,81 @@ const Videos = ({
         <Typography className={classes.title} variant="h3" align="center">
           Videos
         </Typography>
-
-        <Typography className={classes.subtitle} variant="h5" align="center">
-          My Games
-        </Typography>
-
-        <Grid className={classes.content} container justify="center">
-          {gameVideosShown.map((videoItem) => (
-            <Grid
-              key={videoItem.title}
-              className={classes.content}
-              item
-              xs={12}
-              md={6}
-              lg={4}
+        {!!videosLoading && (
+          <div className={classes.loading}>
+            <CircularProgress className={classes.loadingIcon} />
+          </div>
+        )}
+        {!videosLoading && !!videosError && (
+          <ErrorMessage onClick={loadVideos} />
+        )}
+        {!videosLoading && !videosError && (
+          <>
+            <Typography
+              className={classes.subtitle}
+              variant="h5"
+              align="center"
             >
-              <MediaCard
-                currentPage={currentPage}
-                link={videoItem.link}
-                title={videoItem.title}
-              />
+              My Games
+            </Typography>
+
+            <Grid className={classes.content} container justify="center">
+              {gameVideosShown.map((videoItem) => (
+                <Grid
+                  key={videoItem.title}
+                  className={classes.content}
+                  item
+                  xs={12}
+                  md={6}
+                  lg={4}
+                >
+                  <MediaCard
+                    currentPage={currentPage}
+                    link={videoItem.link}
+                    title={videoItem.title}
+                  />
+                </Grid>
+              ))}
+              {gameVideosOnPage < gameVideosTotal && (
+                <ShowMoreButton onClick={loadMoreGameVideos} />
+              )}
             </Grid>
-          ))}
-          {gameVideosOnPage < gameVideosTotal && (
-            <ShowMoreButton onClick={onLoadMoreGameVideos} />
-          )}
-        </Grid>
 
-        <Typography className={classes.subtitle} variant="h5" align="center">
-          My Music
-        </Typography>
-
-        <Grid className={classes.content} container justify="center">
-          {musicVideosShown.map((videoItem) => (
-            <Grid
-              key={videoItem.title}
-              className={classes.content}
-              item
-              xs={12}
-              md={6}
-              lg={4}
+            <Typography
+              className={classes.subtitle}
+              variant="h5"
+              align="center"
             >
-              <MediaCard
-                currentPage={currentPage}
-                link={videoItem.link}
-                title={videoItem.title}
-              />
+              My Music
+            </Typography>
+
+            <Grid className={classes.content} container justify="center">
+              {musicVideosShown.map((videoItem) => (
+                <Grid
+                  key={videoItem.title}
+                  className={classes.content}
+                  item
+                  xs={12}
+                  md={6}
+                  lg={4}
+                >
+                  <MediaCard
+                    currentPage={currentPage}
+                    link={videoItem.link}
+                    title={videoItem.title}
+                  />
+                </Grid>
+              ))}
+              {musicVideosOnPage < musicVideosTotal && (
+                <ShowMoreButton onClick={loadMoreMusicVideos} />
+              )}
             </Grid>
-          ))}
-          {musicVideosOnPage < musicVideosTotal && (
-            <ShowMoreButton onClick={onLoadMoreMusicVideos} />
-          )}
-        </Grid>
+          </>
+        )}
       </Container>
     </>
   );
 };
 
 export { Videos };
-export default withVideosProps(Videos);
+export default withVideos(Videos);

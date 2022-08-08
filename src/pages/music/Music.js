@@ -2,24 +2,30 @@ import React from "react";
 
 import { GeneralPage } from "components";
 
-import withMusicProps from "./withMusicProps";
+import withMusic from "./withMusic";
 
 const Music = ({
-  onLoadMoreAlbums,
   albumsShown,
   albumsOnPage,
   albumsTotal,
   currentPage,
+  loadMoreAlbums,
+  musicError,
+  loadAlbums,
+  musicLoading,
 }) => (
   <GeneralPage
     title="Music"
     itemsShown={albumsShown}
     itemsOnPage={albumsOnPage}
     itemsTotal={albumsTotal}
-    loadMoreItems={onLoadMoreAlbums}
     currentPage={currentPage}
+    loadMoreItems={loadMoreAlbums}
+    error={musicError}
+    loadInitialItems={loadAlbums}
+    loading={musicLoading}
   />
 );
 
 export { Music };
-export default withMusicProps(Music);
+export default withMusic(Music);
