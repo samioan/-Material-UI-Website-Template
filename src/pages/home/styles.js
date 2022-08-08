@@ -4,7 +4,7 @@ const styles = makeStyles(({ breakpoints }) => ({
   page: {
     padding: 0,
     backgroundColor: "#000000",
-    minHeight: "calc(100vh - 48px)",
+    minHeight: "calc(100vh - 64px)",
   },
   title: {
     color: "#FFFFFF",

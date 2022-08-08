@@ -7,6 +7,7 @@ import MediaCard from "./media-card";
 import MediaPage from "./media-page";
 import ScrollToTopButton from "./scroll-to-top-button";
 import ShowMoreButton from "./show-more-button";
+import ErrorMessage from "./error-message";
 
 export {
   ContactFormModal,
@@ -18,4 +19,5 @@ export {
   MediaPage,
   ScrollToTopButton,
   ShowMoreButton,
+  ErrorMessage,
 };

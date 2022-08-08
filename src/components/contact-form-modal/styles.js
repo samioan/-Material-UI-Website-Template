@@ -9,6 +9,7 @@ const styles = () => ({
     backgroundColor: "#000000",
     borderRadius: 8,
     maxWidth: 600,
+    border: "1px solid #FFF",
   },
 });
 

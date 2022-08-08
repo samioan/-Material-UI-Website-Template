@@ -4,12 +4,13 @@ const styles = makeStyles(() => ({
   page: {
     padding: 0,
     backgroundColor: "#000",
-    minHeight: "calc(100vh - 48px)",
+    minHeight: "calc(100vh - 64px)",
     maxWidth: "1280px",
     width: "100%",
     display: "block",
     boxSizing: "border-box",
     margin: "auto",
+    position: "relative",
   },
   title: {
     paddingTop: 80,
@@ -17,6 +18,15 @@ const styles = makeStyles(() => ({
   },
   content: {
     padding: 16,
+  },
+  loading: {
+    position: "absolute",
+    top: " 50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  },
+  loadingIcon: {
+    color: "#FFF",
   },
 }));
 
