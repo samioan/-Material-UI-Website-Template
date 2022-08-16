@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
@@ -15,13 +15,9 @@ import {
   musicVideosOnPage,
   musicVideosTotal,
   allGameVideos,
-  videosError,
-  videosLoading,
-  setVideosError,
-  setVideosLoading,
 } from "models/videos";
-import { db } from "backend";
-import { ref, child, get } from "firebase/database";
+
+import { useFetch } from "hooks";
 
 const withVideos = (Component) => (props) => {
   const {
@@ -36,58 +32,22 @@ const withVideos = (Component) => (props) => {
     musicVideosOnPage,
     musicVideosTotal,
     allGameVideos,
-    videosError,
-    videosLoading,
-    setVideosError,
-    setVideosLoading,
   } = props;
 
-  const loadVideos = useCallback(() => {
-    if (allGameVideos.length === 0) {
-      setVideosLoading();
-      get(child(ref(db), `videos`))
-        .then((snapshot) => {
-          if (snapshot.exists()) {
-            loadInitialGameVideos(
-              Object.values(snapshot.val().games).sort((a, b) => {
-                const dateA = new Date(
-                  a?.released?.split("-").reverse().join("-")
-                );
-                const dateB = new Date(
-                  b?.released?.split("-").reverse().join("-")
-                );
-                return dateB - dateA;
-              })
-            );
-            loadInitialMusicVideos(
-              Object.values(snapshot.val().music).sort((a, b) => {
-                const dateA = new Date(
-                  a?.released?.split("-").reverse().join("-")
-                );
-                const dateB = new Date(
-                  b?.released?.split("-").reverse().join("-")
-                );
-                return dateB - dateA;
-              })
-            );
-          } else setVideosError();
-        })
-        .catch((error) => {
-          setVideosError();
-        });
-    }
-  }, [
-    allGameVideos.length,
-    loadInitialGameVideos,
-    loadInitialMusicVideos,
-    setVideosError,
-    setVideosLoading,
-  ]);
+  const { isLoading, hasError, fetchData } = useFetch();
 
   useEffect(() => {
-    loadVideos();
+    if (allGameVideos.length === 0) {
+      fetchData("videos/games", (data) => loadInitialGameVideos(data));
+      fetchData("videos/music", (data) => loadInitialMusicVideos(data));
+    }
     document.title = "Videos";
-  }, [loadVideos]);
+  }, [
+    allGameVideos.length,
+    fetchData,
+    loadInitialGameVideos,
+    loadInitialMusicVideos,
+  ]);
 
   const currentPage = useLocation().pathname.split("/")[1];
 
@@ -102,9 +62,11 @@ const withVideos = (Component) => (props) => {
     musicVideosOnPage,
     musicVideosTotal,
     currentPage,
-    loadVideos,
-    videosError,
-    videosLoading,
+    isLoading,
+    hasError,
+    fetchData,
+    loadInitialGameVideos,
+    loadInitialMusicVideos,
   };
 
   return <Component {...newProps} />;
@@ -118,8 +80,6 @@ const mapStateToProps = (state) => ({
   musicVideosOnPage: musicVideosOnPage(state),
   musicVideosTotal: musicVideosTotal(state),
   allGameVideos: allGameVideos(state),
-  videosError: videosError(state),
-  videosLoading: videosLoading(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -127,8 +87,6 @@ const mapDispatchToProps = (dispatch) => ({
   loadMoreGameVideos: (data) => dispatch(loadMoreGameVideos(data)),
   loadInitialMusicVideos: (data) => dispatch(loadInitialMusicVideos(data)),
   loadMoreMusicVideos: (data) => dispatch(loadMoreMusicVideos(data)),
-  setVideosError: (data) => dispatch(setVideosError(data)),
-  setVideosLoading: (data) => dispatch(setVideosLoading(data)),
 });
 
 export { withVideos };

@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
@@ -10,57 +10,28 @@ import {
   gamesShown,
   gamesOnPage,
   gamesTotal,
-  setGamesError,
-  gamesError,
-  setGamesLoading,
-  gamesLoading,
 } from "models/games";
-import { db } from "backend";
-import { ref, child, get } from "firebase/database";
+
+import { useFetch } from "hooks";
 
 const withGames = (Component) => (props) => {
   const {
-    loadInitialGames,
     loadMoreGames,
-    allGames,
     gamesShown,
     gamesOnPage,
     gamesTotal,
-    setGamesError,
-    gamesError,
-    setGamesLoading,
-    gamesLoading,
+    loadInitialGames,
+    allGames,
   } = props;
 
-  const loadGames = useCallback(() => {
-    if (allGames.length === 0) {
-      setGamesLoading();
-      get(child(ref(db), `games`))
-        .then((snapshot) => {
-          if (snapshot.exists()) {
-            loadInitialGames(
-              Object.values(snapshot.val()).sort((a, b) => {
-                const dateA = new Date(
-                  a?.released?.split("-").reverse().join("-")
-                );
-                const dateB = new Date(
-                  b?.released?.split("-").reverse().join("-")
-                );
-                return dateB - dateA;
-              })
-            );
-          } else setGamesError();
-        })
-        .catch((error) => {
-          setGamesError();
-        });
-    }
-  }, [allGames.length, loadInitialGames, setGamesError, setGamesLoading]);
+  const { isLoading, hasError, fetchData } = useFetch();
 
   useEffect(() => {
-    loadGames();
+    if (allGames.length === 0) {
+      fetchData("games", (data) => loadInitialGames(data));
+    }
     document.title = "Games";
-  }, [loadGames]);
+  }, [fetchData, loadInitialGames, allGames.length]);
 
   const currentPage = useLocation().pathname.split("/")[1];
 
@@ -71,9 +42,10 @@ const withGames = (Component) => (props) => {
     gamesOnPage,
     gamesTotal,
     currentPage,
-    gamesError,
-    loadGames,
-    gamesLoading,
+    isLoading,
+    hasError,
+    fetchData,
+    loadInitialGames,
   };
 
   return <Component {...newProps} />;
@@ -84,15 +56,11 @@ const mapStateToProps = (state) => ({
   gamesOnPage: gamesOnPage(state),
   gamesTotal: gamesTotal(state),
   allGames: allGames(state),
-  gamesError: gamesError(state),
-  gamesLoading: gamesLoading(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   loadInitialGames: (data) => dispatch(loadInitialGames(data)),
   loadMoreGames: () => dispatch(loadMoreGames()),
-  setGamesError: (data) => dispatch(setGamesError(data)),
-  setGamesLoading: () => dispatch(setGamesLoading()),
 });
 
 export { withGames };

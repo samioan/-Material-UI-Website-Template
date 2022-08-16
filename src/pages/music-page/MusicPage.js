@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { MediaPage } from "components";
 
@@ -8,16 +8,24 @@ import withMusicPage from "./withMusicPage";
 const MusicPage = ({
   musicPageItems,
   currentPage,
-  musicPageLoading,
-  musicPageError,
-  loadMusicItems,
+  isLoading,
+  hasError,
+  fetchData,
+  loadMusicPageItems,
+  paramsTitle,
 }) => (
   <MediaPage
     mediaPageItems={musicPageItems}
     currentPage={currentPage}
-    loading={musicPageLoading}
-    error={musicPageError}
-    loadPageItems={loadMusicItems}
+    loading={isLoading}
+    error={hasError}
+    loadPageItems={useCallback(
+      () =>
+        fetchData("music", (data) =>
+          loadMusicPageItems(data.find(({ links }) => links[0] === paramsTitle))
+        ),
+      [fetchData, loadMusicPageItems, paramsTitle]
+    )}
     mainComponent={<MusicSongs pageItem={musicPageItems} />}
   />
 );

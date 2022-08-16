@@ -4,7 +4,6 @@ import carefully from "./carefully.jpg";
 import clay from "./clay.jpg";
 import days from "./days.jpg";
 import dont from "./dont.jpg";
-import entropy from "./entropy.jpg";
 import faraway from "./faraway.jpg";
 import first from "./first.jpg";
 import flesh from "./flesh.jpg";
@@ -38,7 +37,6 @@ const games = {
   clay,
   days,
   dont,
-  entropy,
   faraway,
   first,
   flesh,
