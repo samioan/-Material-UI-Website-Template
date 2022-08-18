@@ -27,11 +27,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1TMmfAkvsSpq6nCBuOfKGOemiAR9SwyiX/view?usp=sharing",
   },
   {
-    img: games.entropy,
-    title: "Entropy",
-    link: "https://drive.google.com/file/d/1Yz-FTLP1DkFO9da1ytqZLB04F9psVdiF/view?usp=sharing",
-  },
-  {
     img: games.neurosynthesis,
     title: "Cybernetic Neurosynthesis",
     link: "https://drive.google.com/file/d/1qeD4S9kEblWbANL99mlxZNKv5xhqVqof/view?usp=sharing",

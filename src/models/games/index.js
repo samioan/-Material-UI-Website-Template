@@ -1,12 +1,4 @@
-import {
-  loadInitialGames,
-  loadMoreGames,
-  loadGamePageItems,
-  setGamesError,
-  setGamesLoading,
-  setGamePageLoading,
-  setGamePageError,
-} from "./actions";
+import { loadInitialGames, loadMoreGames, loadGamePageItems } from "./actions";
 
 import {
   allGames,
@@ -14,27 +6,15 @@ import {
   gamesOnPage,
   gamesTotal,
   gamePageItems,
-  gamesError,
-  gamesLoading,
-  gamePageError,
-  gamePageLoading,
 } from "./selectors";
 
 export {
   loadInitialGames,
   loadMoreGames,
   loadGamePageItems,
-  setGamesError,
-  setGamesLoading,
-  setGamePageLoading,
-  setGamePageError,
   allGames,
   gamesShown,
   gamesOnPage,
   gamesTotal,
   gamePageItems,
-  gamesError,
-  gamesLoading,
-  gamePageError,
-  gamePageLoading,
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { MediaPage } from "components";
 
@@ -8,16 +8,24 @@ import withGamePage from "./withGamePage";
 const GamePage = ({
   gamePageItems,
   currentPage,
-  loadGameItems,
-  gamePageError,
-  gamePageLoading,
+  isLoading,
+  hasError,
+  fetchData,
+  loadGamePageItems,
+  paramsTitle,
 }) => (
   <MediaPage
     mediaPageItems={gamePageItems}
     currentPage={currentPage}
-    loading={gamePageLoading}
-    error={gamePageError}
-    loadPageItems={loadGameItems}
+    loading={isLoading}
+    error={hasError}
+    loadPageItems={useCallback(
+      () =>
+        fetchData("games", (data) =>
+          loadGamePageItems(data.find(({ links }) => links[0] === paramsTitle))
+        ),
+      [fetchData, loadGamePageItems, paramsTitle]
+    )}
     mainComponent={<GameImageGallery pageItem={gamePageItems} />}
   />
 );

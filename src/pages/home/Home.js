@@ -35,7 +35,7 @@ const Home = ({ imagesCarousel }) => {
               infiniteLoop
             >
               {section?.map((item, index) => (
-                <Link key={item?.name || index} to={item?.link}>
+                <Link key={index} to={item?.link}>
                   <div>
                     <LoadingImage
                       image={item?.img}
