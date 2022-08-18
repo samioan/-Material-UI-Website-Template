@@ -1,48 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { db } from "backend";
-import { ref, child, get } from "firebase/database";
+
 import artDetails from "pages/art/util/artDetails";
+import { useFetch } from "hooks";
 
 const withHome = (Component) => (props) => {
   const [gameData, setGameData] = useState([{}]);
   const [musicData, setMusicData] = useState([{}]);
 
+  const { fetchData } = useFetch();
+
   useEffect(() => {
-    get(child(ref(db), `games`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          return setGameData(Object.values(snapshot.val()));
-        } else setGameData([]);
-      })
-      .catch((error) => {
-        setGameData([]);
-      });
-    get(child(ref(db), `music`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          return setMusicData(Object.values(snapshot.val()));
-        } else setMusicData([]);
-      })
-      .catch((error) => {
-        setMusicData([]);
-      });
+    fetchData("games", (data) => setGameData(data));
+    fetchData("music", (data) => setMusicData(data));
 
     document.title = "Selfish Dream";
-  }, []);
-
-  const sortFn = (a, b) => {
-    const dateA = new Date(a?.released?.split("-").reverse().join("-"));
-    const dateB = new Date(b?.released?.split("-").reverse().join("-"));
-    return dateB - dateA;
-  };
+  }, [fetchData]);
 
   const imagesCarousel = [
-    gameData.sort(sortFn).map((item) => ({
+    gameData.map((item) => ({
       name: item?.title,
       img: item?.carouselImage,
       link: `games/${item?.links?.[0]}`,
     })),
-    musicData.sort(sortFn).map((item) => ({
+    musicData.map((item) => ({
       name: item?.title,
       img: item?.cardImage,
       link: `music/${item?.links?.[0]}`,

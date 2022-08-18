@@ -39,6 +39,9 @@ const styles = makeStyles(() => ({
     resize: "none",
     padding: "18.5px 14px",
     boxSizing: "border-box",
+    "&:hover": {
+      borderColor: "#888888",
+    },
     "&:focus-visible": {
       outline: "none",
       borderColor: "#888888",

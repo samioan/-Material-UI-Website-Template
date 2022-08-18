@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { GeneralPage } from "components";
 
@@ -10,9 +10,10 @@ const Music = ({
   albumsTotal,
   currentPage,
   loadMoreAlbums,
-  musicError,
-  loadAlbums,
-  musicLoading,
+  isLoading,
+  hasError,
+  fetchData,
+  loadInitialAlbums,
 }) => (
   <GeneralPage
     title="Music"
@@ -21,9 +22,12 @@ const Music = ({
     itemsTotal={albumsTotal}
     currentPage={currentPage}
     loadMoreItems={loadMoreAlbums}
-    error={musicError}
-    loadInitialItems={loadAlbums}
-    loading={musicLoading}
+    error={hasError}
+    loadInitialItems={useCallback(
+      () => fetchData("music", (data) => loadInitialAlbums(data)),
+      [fetchData, loadInitialAlbums]
+    )}
+    loading={isLoading}
   />
 );
 

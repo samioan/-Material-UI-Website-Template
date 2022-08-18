@@ -2,10 +2,6 @@ import {
   loadInitialAlbums,
   loadMoreAlbums,
   loadMusicPageItems,
-  setMusicLoading,
-  setMusicError,
-  setMusicPageLoading,
-  setMusicPageError,
 } from "./actions";
 
 const initialState = {
@@ -14,10 +10,6 @@ const initialState = {
   albumsOnPage: null,
   albumsTotal: null,
   musicPageItems: [],
-  musicError: false,
-  musicLoading: false,
-  musicPageError: false,
-  musicPageLoading: false,
 };
 
 const musicReducer = (state = initialState, { type, payload }) => {
@@ -29,8 +21,6 @@ const musicReducer = (state = initialState, { type, payload }) => {
         albumsShown: payload.slice(0, 12),
         albumsOnPage: 12,
         albumsTotal: payload.length,
-        musicError: false,
-        musicLoading: false,
       };
     }
     case loadMoreAlbums.type: {
@@ -47,36 +37,6 @@ const musicReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         musicPageItems: payload,
-        musicPageError: false,
-        musicPageLoading: false,
-      };
-    }
-    case setMusicLoading.type: {
-      return {
-        ...state,
-        musicError: false,
-        musicLoading: true,
-      };
-    }
-    case setMusicError.type: {
-      return {
-        ...state,
-        musicError: true,
-        musicLoading: false,
-      };
-    }
-    case setMusicPageLoading.type: {
-      return {
-        ...state,
-        musicPageError: false,
-        musicPageLoading: true,
-      };
-    }
-    case setMusicPageError.type: {
-      return {
-        ...state,
-        musicPageError: true,
-        musicPageLoading: false,
       };
     }
     default:

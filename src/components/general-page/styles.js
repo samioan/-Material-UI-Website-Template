@@ -28,6 +28,11 @@ const styles = makeStyles(() => ({
   loadingIcon: {
     color: "#FFF",
   },
+  videoTitle: {
+    paddingTop: 40,
+    paddingBottom: 40,
+    color: "#FFFFFF",
+  },
 }));
 
 export { styles };

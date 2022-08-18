@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { GeneralPage } from "components";
 
@@ -10,9 +10,10 @@ const Games = ({
   gamesTotal,
   currentPage,
   loadMoreGames,
-  gamesError,
-  loadGames,
-  gamesLoading,
+  isLoading,
+  hasError,
+  fetchData,
+  loadInitialGames,
 }) => (
   <GeneralPage
     title="Games"
@@ -21,9 +22,12 @@ const Games = ({
     itemsTotal={gamesTotal}
     currentPage={currentPage}
     loadMoreItems={loadMoreGames}
-    error={gamesError}
-    loadInitialItems={loadGames}
-    loading={gamesLoading}
+    error={hasError}
+    loading={isLoading}
+    loadInitialItems={useCallback(
+      () => fetchData("games", (data) => loadInitialGames(data)),
+      [fetchData, loadInitialGames]
+    )}
   />
 );
 

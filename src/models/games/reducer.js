@@ -1,12 +1,4 @@
-import {
-  loadInitialGames,
-  loadMoreGames,
-  loadGamePageItems,
-  setGamesError,
-  setGamesLoading,
-  setGamePageLoading,
-  setGamePageError,
-} from "./actions";
+import { loadInitialGames, loadMoreGames, loadGamePageItems } from "./actions";
 
 const initialState = {
   gamesShown: [],
@@ -14,10 +6,6 @@ const initialState = {
   gamesTotal: null,
   gamePageItems: [],
   allGames: [],
-  gamesError: false,
-  gamesLoading: false,
-  gamePageError: false,
-  gamePageLoading: false,
 };
 
 const gamesReducer = (state = initialState, { type, payload }) => {
@@ -29,8 +17,6 @@ const gamesReducer = (state = initialState, { type, payload }) => {
         gamesShown: payload.slice(0, 12),
         gamesOnPage: 12,
         gamesTotal: payload.length,
-        gamesError: false,
-        gamesLoading: false,
       };
     }
     case loadMoreGames.type: {
@@ -47,36 +33,6 @@ const gamesReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         gamePageItems: payload,
-        gamePageError: false,
-        gamePageLoading: false,
-      };
-    }
-    case setGamesLoading.type: {
-      return {
-        ...state,
-        gamesError: false,
-        gamesLoading: true,
-      };
-    }
-    case setGamesError.type: {
-      return {
-        ...state,
-        gamesError: true,
-        gamesLoading: false,
-      };
-    }
-    case setGamePageLoading.type: {
-      return {
-        ...state,
-        gamePageError: false,
-        gamePageLoading: true,
-      };
-    }
-    case setGamePageError.type: {
-      return {
-        ...state,
-        gamePageError: true,
-        gamePageLoading: false,
       };
     }
     default:
