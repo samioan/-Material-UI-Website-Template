@@ -21,7 +21,11 @@ const Home = ({ imagesCarousel }) => {
       <Typography className={classes.title} variant="h3" align="center">
         Selfish Dream
       </Typography>
-      <Grid container justify="space-between" className={classes.content}>
+      <Grid
+        container
+        justifyContent="space-between"
+        className={classes.content}
+      >
         {imagesCarousel?.map((section, index) => (
           <Grid key={index} item xs={12} md={4}>
             <Carousel

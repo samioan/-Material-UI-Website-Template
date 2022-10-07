@@ -10,7 +10,11 @@ const PageButtons = ({ pageItem, type }) => {
   const classes = styles();
 
   return (
-    <Grid className={classes.buttonsContainer} container justify="center">
+    <Grid
+      className={classes.buttonsContainer}
+      container
+      justifyContent="center"
+    >
       <Button
         className={classes.button}
         target="_blank"

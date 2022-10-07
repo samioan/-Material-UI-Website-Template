@@ -22,7 +22,7 @@ const ArtModal = ({ classes, image, title, open, handleClose }) => (
       />
       <Grid
         container
-        justify="space-between"
+        justifyContent="space-between"
         alignItems="center"
         className={classes.container}
       >
