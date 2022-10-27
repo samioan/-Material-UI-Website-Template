@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import ImageList from "@material-ui/core/ImageList";
 import Typography from "@material-ui/core/Typography";
@@ -42,23 +41,16 @@ const ArchiveList = ({
       <div className={classes.gridList}>
         <ImageList cols={12}>
           {archiveDetailsArray.map((item) => (
-            <ImageListItem
-              cols={getGridListCols}
-              key={item.title}
-              component={Link}
-              to={{
-                pathname: item.link,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LoadingImage
-                image={item.img}
-                customLoaderClass={classes.loading}
-                customImageClass={classes.image}
-                alt={item.title}
-              />
-              <ImageListItemBar title={item.title} />
+            <ImageListItem cols={getGridListCols} key={item.title}>
+              <a href={item.link} target="_blank" rel="noreferrer">
+                <LoadingImage
+                  image={item.img}
+                  customLoaderClass={classes.loading}
+                  customImageClass={classes.image}
+                  alt={item.title}
+                />
+                <ImageListItemBar title={item.title} />
+              </a>
             </ImageListItem>
           ))}
         </ImageList>

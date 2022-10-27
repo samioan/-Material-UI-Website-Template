@@ -16,7 +16,6 @@ import imperfections from "./imperfections.jpg";
 import incandescence from "./incandescence.jpg";
 import layers from "./layers.jpg";
 import cant from "./cant.jpg";
-import litany from "./litany.jpg";
 import looking from "./looking.jpg";
 import neurosynthesis from "./neurosynthesis.jpg";
 import perfidious from "./perfidious.jpg";
@@ -49,7 +48,6 @@ const games = {
   incandescence,
   layers,
   cant,
-  litany,
   looking,
   neurosynthesis,
   perfidious,

@@ -77,11 +77,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1wgAS-O1UowS1SAi3Xwwm5xGZBbpoTNPj/view?usp=sharing",
   },
   {
-    img: games.litany,
-    title: "The Litany of the Empty Ones",
-    link: "https://drive.google.com/file/d/1Rdo5voNzPAF8NAiSaCzfH5VidKtxEvGt/view?usp=sharing",
-  },
-  {
     img: games.hell,
     title: "01101000 01100101 01101100 01101100",
     link: "https://drive.google.com/file/d/1s3TQLN9jNJIUwPfRbPk9Q090euay93dp/view?usp=sharing",
