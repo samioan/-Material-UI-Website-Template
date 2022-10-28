@@ -40,7 +40,7 @@ const GeneralPage = ({
       )}
       {!loading && !!error && <ErrorMessage onClick={loadInitialItems} />}
       {!loading && !error && (
-        <Grid className={classes.content} container justify="center">
+        <Grid className={classes.content} container justifyContent="center">
           {itemsShown.map(
             ({ cardImage, title, subtitle, genre, links, link }) => (
               <Grid

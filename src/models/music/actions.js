@@ -1,12 +1,6 @@
-const Action = (type) => {
-  const actionCreator = (payload) => ({
-    type,
-    payload,
-  });
-  actionCreator.type = type;
-  return actionCreator;
-};
+import { musicSlice } from "./slice";
 
-export const loadInitialAlbums = Action("LOAD_INITIAL_ALBUMS");
-export const loadMoreAlbums = Action("LOAD_MORE_ALBUMS");
-export const loadMusicPageItems = Action("LOAD_MUSIC_PAGE_ITEMS");
+const { loadInitialAlbums, loadMoreAlbums, loadMusicPageItems } =
+  musicSlice.actions;
+
+export { loadInitialAlbums, loadMoreAlbums, loadMusicPageItems };
