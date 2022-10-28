@@ -16,13 +16,13 @@ const OverlayButtons = ({ width, pageLink, currentPage, overlayButtons }) => {
         <>
           {overlayButtons
             .filter(({ show }) => show)
-            .map(({ title, link, target, icon }) => (
+            .map(({ title, link, icon, internal }) => (
               <CardButton
                 key={title}
                 title={title}
                 link={link}
-                target={target}
                 icon={icon}
+                internal={internal}
               />
             ))}
         </>

@@ -20,28 +20,24 @@ const withMediaCardProps = (Component) => (props) => {
   const overlayButtons = [
     {
       title: "Download",
-      link: {
-        pathname: downloadLink,
-      },
-      target: "_blank",
+      link: downloadLink,
       icon: <GetAppIcon />,
       show: true,
+      internal: false,
     },
     {
       title: "Itch.io Page",
-      link: {
-        pathname: itchioLink,
-      },
-      target: "_blank",
+      link: itchioLink,
       icon: <StorefrontIcon />,
       show: currentPage === "games",
+      internal: false,
     },
     {
       title: "More Info",
       link: `/${currentPage}/${pageLink}`,
-      target: "",
       icon: <InfoIcon />,
       show: true,
+      internal: true,
     },
   ];
 
