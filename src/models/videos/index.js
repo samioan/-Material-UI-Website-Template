@@ -3,8 +3,6 @@ import {
   loadInitialMusicVideos,
   loadMoreGameVideos,
   loadMoreMusicVideos,
-  setVideosLoading,
-  setVideosError,
 } from "./actions";
 
 import {
@@ -16,8 +14,6 @@ import {
   musicVideosTotal,
   allGameVideos,
   allMusicVideos,
-  videosError,
-  videosLoading,
 } from "./selectors";
 
 export {
@@ -25,8 +21,6 @@ export {
   loadInitialMusicVideos,
   loadMoreGameVideos,
   loadMoreMusicVideos,
-  setVideosLoading,
-  setVideosError,
   gameVideosShown,
   gameVideosOnPage,
   gameVideosTotal,
@@ -35,6 +29,4 @@ export {
   musicVideosTotal,
   allGameVideos,
   allMusicVideos,
-  videosError,
-  videosLoading,
 };

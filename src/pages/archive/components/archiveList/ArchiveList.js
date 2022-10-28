@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import GridList from "@material-ui/core/GridList";
+import ImageList from "@material-ui/core/ImageList";
 import Typography from "@material-ui/core/Typography";
-import GridListTile from "@material-ui/core/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar";
+import ImageListItem from "@material-ui/core/ImageListItem";
+import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 import { LoadingImage, ShowMoreButton } from "components";
@@ -40,31 +39,24 @@ const ArchiveList = ({
         {label}
       </Typography>
       <div className={classes.gridList}>
-        <GridList cols={12}>
+        <ImageList cols={12}>
           {archiveDetailsArray.map((item) => (
-            <GridListTile
-              cols={getGridListCols}
-              key={item.title}
-              component={Link}
-              to={{
-                pathname: item.link,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LoadingImage
-                image={item.img}
-                customLoaderClass={classes.loading}
-                customImageClass={classes.image}
-                alt={item.title}
-              />
-              <GridListTileBar title={item.title} />
-            </GridListTile>
+            <ImageListItem cols={getGridListCols} key={item.title}>
+              <a href={item.link} target="_blank" rel="noreferrer">
+                <LoadingImage
+                  image={item.img}
+                  customLoaderClass={classes.loading}
+                  customImageClass={classes.image}
+                  alt={item.title}
+                />
+                <ImageListItemBar title={item.title} />
+              </a>
+            </ImageListItem>
           ))}
-        </GridList>
+        </ImageList>
         <Grid
           container
-          justify="center"
+          justifyContent="center"
           className={classes.showMoreButtonContainer}
         >
           {itemsOnPage < itemsTotal && (

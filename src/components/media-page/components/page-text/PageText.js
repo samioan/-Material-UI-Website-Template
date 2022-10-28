@@ -52,7 +52,7 @@ const PageText = ({ pageItem, type }) => {
       <Grid
         className={classes.contentContainer}
         container
-        justify="space-between"
+        justifyContent="space-between"
       >
         <Grid item xs={12} sm={5} className={classes.textContainer}>
           {pageItem?.description?.map((item) => (

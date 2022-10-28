@@ -8,7 +8,7 @@ import { LoadingImage } from "components";
 import styles from "./styles";
 
 const GameImageGallery = ({ pageItem, classes }) => (
-  <Grid className={classes.gallery} container justify="center">
+  <Grid className={classes.gallery} container justifyContent="center">
     {pageItem?.screenshots?.map((item) => (
       <Grid
         item
