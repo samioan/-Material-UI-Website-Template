@@ -7,7 +7,7 @@ import withStyles from "@material-ui/styles/withStyles";
 
 import styles from "./styles";
 
-const CardButton = ({ classes, title, link, target, icon }) => (
+const CardButton = ({ classes, title, link, icon, internal }) => (
   <Tooltip
     title={title}
     arrow
@@ -16,9 +16,10 @@ const CardButton = ({ classes, title, link, target, icon }) => (
     classes={{ tooltip: classes.tooltip, arrow: classes.arrow }}
   >
     <IconButton
-      component={Link}
+      component={internal ? Link : "a"}
+      href={link}
       to={link}
-      target={target}
+      target={internal ? "" : "_blank"}
       className={classes.iconButton}
     >
       {icon}
