@@ -14,7 +14,7 @@ const styles = makeStyles(({ breakpoints }) => ({
     margin: "auto",
     paddingLeft: 16,
     paddingRight: 16,
-    "& .MuiGridList-root": {
+    "& ul": {
       justifyContent: "center",
     },
   },
