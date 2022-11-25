@@ -82,11 +82,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1s3TQLN9jNJIUwPfRbPk9Q090euay93dp/view?usp=sharing",
   },
   {
-    img: games.sincerity,
-    title: "Emotional Sincerity",
-    link: "https://drive.google.com/file/d/15naeo2RLu77qk_XrpH0-lXXzxGCHIiLB/view?usp=sharing",
-  },
-  {
     img: games.perfidious,
     title: "Perfidious",
     link: "https://drive.google.com/file/d/1vO98d8mM5j-K2r9y7WHvD9nJfqPAeW0t/view?usp=sharing",

@@ -11,16 +11,12 @@ import withArchiveProps from "./withArchiveProps";
 const Archive = ({
   onLoadMoreArchivedGames,
   onLoadMoreArchivedMusic,
-  onLoadMoreArchivedArt,
   archivedGamesShown,
   archivedMusicShown,
-  archivedArtShown,
   archivedGamesOnPage,
   archivedGamesTotal,
   archivedMusicOnPage,
   archivedMusicTotal,
-  archivedArtOnPage,
-  archivedArtTotal,
 }) => {
   const classes = styles();
 
@@ -39,23 +35,14 @@ const Archive = ({
           loadMoreItems={onLoadMoreArchivedGames}
         />
 
-        <ArchiveList
-          label="Music"
-          isInnerList
-          archiveDetailsArray={archivedMusicShown}
-          itemsOnPage={archivedMusicOnPage}
-          itemsTotal={archivedMusicTotal}
-          loadMoreItems={onLoadMoreArchivedMusic}
-        />
-
         <div className={classes.bottomContainer}>
           <ArchiveList
-            label="Art"
+            label="Music"
             isInnerList
-            archiveDetailsArray={archivedArtShown}
-            itemsOnPage={archivedArtOnPage}
-            itemsTotal={archivedArtTotal}
-            loadMoreItems={onLoadMoreArchivedArt}
+            archiveDetailsArray={archivedMusicShown}
+            itemsOnPage={archivedMusicOnPage}
+            itemsTotal={archivedMusicTotal}
+            loadMoreItems={onLoadMoreArchivedMusic}
           />
         </div>
       </Container>

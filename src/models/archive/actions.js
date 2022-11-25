@@ -5,8 +5,6 @@ const {
   loadMoreArchivedGames,
   loadInitialArchivedMusic,
   loadMoreArchivedMusic,
-  loadInitialArchivedArt,
-  loadMoreArchivedArt,
 } = archiveSlice.actions;
 
 export {
@@ -14,6 +12,4 @@ export {
   loadMoreArchivedGames,
   loadInitialArchivedMusic,
   loadMoreArchivedMusic,
-  loadInitialArchivedArt,
-  loadMoreArchivedArt,
 };
