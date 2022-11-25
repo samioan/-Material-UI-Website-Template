@@ -23,7 +23,6 @@ import prism from "./prism.jpg";
 import radiance from "./radiance.jpg";
 import screams from "./screams.jpg";
 import sequence from "./sequence.jpg";
-import sincerity from "./sincerity.jpg";
 import tired from "./tired.jpg";
 import transcendence from "./transcendence.jpg";
 import unkindled from "./unkindled.jpg";
@@ -55,7 +54,6 @@ const games = {
   radiance,
   screams,
   sequence,
-  sincerity,
   tired,
   transcendence,
   unkindled,

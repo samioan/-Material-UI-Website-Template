@@ -7,9 +7,6 @@ const initialState = {
   archivedMusicShown: [],
   archivedMusicOnPage: null,
   archivedMusicTotal: null,
-  archivedArtShown: [],
-  archivedArtOnPage: null,
-  archivedArtTotal: null,
 };
 
 const reducers = {
@@ -48,21 +45,6 @@ const reducers = {
     state.archivedMusicOnPage = payload.slice(
       0,
       state.archivedMusicOnPage + 6
-    ).length;
-  },
-  loadInitialArchivedArt: (state, { payload }) => {
-    state.archivedArtShown = payload.slice(0, 12);
-    state.archivedArtOnPage = payload.slice(0, 12).length;
-    state.archivedArtTotal = payload.length;
-  },
-  loadMoreArchivedArt: (state, { payload }) => {
-    state.archivedArtShown = [
-      ...state.archivedArtShown,
-      ...payload.slice(state.archivedArtOnPage, state.archivedArtOnPage + 6),
-    ];
-    state.archivedArtOnPage = payload.slice(
-      0,
-      state.archivedArtOnPage + 6
     ).length;
   },
 };
