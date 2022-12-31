@@ -10,7 +10,6 @@ import flesh from "./flesh.jpg";
 import follow from "./follow.jpg";
 import fragments from "./fragments.jpg";
 import futile from "./futile.jpg";
-import hell from "./hell.jpg";
 import hunter from "./hunter.jpg";
 import imperfections from "./imperfections.jpg";
 import incandescence from "./incandescence.jpg";
@@ -41,7 +40,6 @@ const games = {
   follow,
   fragments,
   futile,
-  hell,
   hunter,
   imperfections,
   incandescence,

@@ -4,9 +4,6 @@ const initialState = {
   archivedGamesShown: [],
   archivedGamesOnPage: null,
   archivedGamesTotal: null,
-  archivedMusicShown: [],
-  archivedMusicOnPage: null,
-  archivedMusicTotal: null,
 };
 
 const reducers = {
@@ -26,25 +23,6 @@ const reducers = {
     state.archivedGamesOnPage = payload.slice(
       0,
       state.archivedGamesOnPage + 6
-    ).length;
-  },
-  loadInitialArchivedMusic: (state, { payload }) => {
-    state.archivedMusicShown = payload.slice(0, 12);
-    state.archivedMusicOnPage = payload.slice(0, 12).length;
-    state.archivedMusicTotal = payload.length;
-  },
-
-  loadMoreArchivedMusic: (state, { payload }) => {
-    state.archivedMusicShown = [
-      ...state.archivedMusicShown,
-      ...payload.slice(
-        state.archivedMusicOnPage,
-        state.archivedMusicOnPage + 6
-      ),
-    ];
-    state.archivedMusicOnPage = payload.slice(
-      0,
-      state.archivedMusicOnPage + 6
     ).length;
   },
 };

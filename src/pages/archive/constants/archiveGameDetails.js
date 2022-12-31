@@ -77,11 +77,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1wgAS-O1UowS1SAi3Xwwm5xGZBbpoTNPj/view?usp=sharing",
   },
   {
-    img: games.hell,
-    title: "01101000 01100101 01101100 01101100",
-    link: "https://drive.google.com/file/d/1s3TQLN9jNJIUwPfRbPk9Q090euay93dp/view?usp=sharing",
-  },
-  {
     img: games.perfidious,
     title: "Perfidious",
     link: "https://drive.google.com/file/d/1vO98d8mM5j-K2r9y7WHvD9nJfqPAeW0t/view?usp=sharing",

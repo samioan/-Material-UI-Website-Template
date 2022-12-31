@@ -1,15 +1,6 @@
 import { archiveSlice } from "./slice";
 
-const {
-  loadInitialArchivedGames,
-  loadMoreArchivedGames,
-  loadInitialArchivedMusic,
-  loadMoreArchivedMusic,
-} = archiveSlice.actions;
+const { loadInitialArchivedGames, loadMoreArchivedGames } =
+  archiveSlice.actions;
 
-export {
-  loadInitialArchivedGames,
-  loadMoreArchivedGames,
-  loadInitialArchivedMusic,
-  loadMoreArchivedMusic,
-};
+export { loadInitialArchivedGames, loadMoreArchivedGames };
