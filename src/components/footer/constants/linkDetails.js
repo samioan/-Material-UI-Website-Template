@@ -6,12 +6,12 @@ import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 const linkDetails = [
   {
     label: "Twitter",
-    site: "https://linktr.ee/selfishdream",
+    site: "https://twitter.com/theselfishdream",
     icon: <TwitterIcon />,
   },
   {
     label: "Instagram",
-    site: "https://www.instagram.com/theselfishdream/",
+    site: "https://www.instagram.com/theselfishdream",
     icon: <InstagramIcon />,
   },
   {
