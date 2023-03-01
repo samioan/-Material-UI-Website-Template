@@ -57,11 +57,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1AKIE7_vRiF5EU1rbKvocnyUIEPfHGzdZ/view?usp=sharing",
   },
   {
-    img: games.sequence,
-    title: "Sequence",
-    link: "https://drive.google.com/file/d/1_RV_oI03_eOMFbLvBEOK6xW4vFC51XM_/view?usp=sharing",
-  },
-  {
     img: games.clay,
     title: "My Dreams Are Made of Clay",
     link: "https://drive.google.com/file/d/1G1Itd_PIpBPo79BrSV7lB96l3ybsavfJ/view?usp=sharing",
