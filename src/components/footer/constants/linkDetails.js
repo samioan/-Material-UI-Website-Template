@@ -1,7 +1,7 @@
 import TwitterIcon from "@material-ui/icons/Twitter";
 import ArchiveIcon from "@material-ui/icons/Archive";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const linkDetails = [
   {
@@ -20,9 +20,9 @@ const linkDetails = [
     icon: <ArchiveIcon />,
   },
   {
-    label: "Support me on Ko-fi",
-    site: "https://ko-fi.com/selfishdream",
-    icon: <MonetizationOnIcon />,
+    label: "Donate",
+    site: "https://paypal.me/SelfishDream?country.x=GR&locale.x=en_US",
+    icon: <FavoriteIcon />,
   },
 ];
 
