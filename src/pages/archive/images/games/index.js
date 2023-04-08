@@ -2,7 +2,6 @@ import abstractions from "./abstractions.jpg";
 import autoerotic from "./autoerotic.jpg";
 import carefully from "./carefully.jpg";
 import clay from "./clay.jpg";
-import days from "./days.jpg";
 import dont from "./dont.jpg";
 import faraway from "./faraway.jpg";
 import first from "./first.jpg";
@@ -31,7 +30,6 @@ const games = {
   autoerotic,
   carefully,
   clay,
-  days,
   dont,
   faraway,
   first,

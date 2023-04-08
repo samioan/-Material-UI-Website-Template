@@ -1,6 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const styles = makeStyles(({ breakpoints }) => ({
+const styles = () => ({
   container: {
     backgroundColor: "#000",
     display: "flex",
@@ -9,10 +7,6 @@ const styles = makeStyles(({ breakpoints }) => ({
     flexWrap: "wrap",
     gap: "8px",
     minHeight: 64,
-    [breakpoints.up("sm")]: {
-      marginLeft: 16,
-      justifyContent: "flex-start",
-    },
   },
   tooltip: {
     backgroundColor: "#333333",
@@ -32,7 +26,7 @@ const styles = makeStyles(({ breakpoints }) => ({
       height: 24,
     },
   },
-}));
+});
 
 export { styles };
 export default styles;
