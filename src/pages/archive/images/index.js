@@ -1,7 +1,6 @@
 import games from "./games";
-import music from "./music";
 
-const images = { games, music };
+const images = { games };
 
 export { images };
 export default images;

@@ -7,11 +7,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1k1RxZP2iZdB3lSulClFlVGcAFja45Prz/view?usp=sharing",
   },
   {
-    img: games.days,
-    title: "IT'S BEEN ONE OF THOSE DAYS",
-    link: "https://drive.google.com/file/d/1xPj64vESYvvFPIZ3ctkBK3Cu9uv7xBVB/view?usp=sharing",
-  },
-  {
     img: games.abstractions,
     title: "Abstractions",
     link: "https://drive.google.com/file/d/1oMHvE0aC83g_FDE_ZEqHw0To2woxQhN_/view?usp=sharing",
