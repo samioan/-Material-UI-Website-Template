@@ -27,7 +27,7 @@ const withGames = (Component) => (props) => {
   const { isLoading, hasError, fetchData } = useFetch();
 
   useEffect(() => {
-    if (allGames.length === 0) {
+    if (!allGames.length) {
       fetchData("games", (data) => loadInitialGames(data));
     }
     document.title = "Games";

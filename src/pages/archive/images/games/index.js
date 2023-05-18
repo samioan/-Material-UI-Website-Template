@@ -1,4 +1,3 @@
-import abstractions from "./abstractions.jpg";
 import autoerotic from "./autoerotic.jpg";
 import carefully from "./carefully.jpg";
 import clay from "./clay.jpg";
@@ -26,7 +25,6 @@ import unkindled from "./unkindled.jpg";
 import womb from "./womb.jpg";
 
 const games = {
-  abstractions,
   autoerotic,
   carefully,
   clay,

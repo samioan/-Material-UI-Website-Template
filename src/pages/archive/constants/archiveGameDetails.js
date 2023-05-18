@@ -7,11 +7,6 @@ const archiveGameDetails = [
     link: "https://drive.google.com/file/d/1k1RxZP2iZdB3lSulClFlVGcAFja45Prz/view?usp=sharing",
   },
   {
-    img: games.abstractions,
-    title: "Abstractions",
-    link: "https://drive.google.com/file/d/1oMHvE0aC83g_FDE_ZEqHw0To2woxQhN_/view?usp=sharing",
-  },
-  {
     img: games.autoerotic,
     title: "Autoerotic Coagulation",
     link: "https://drive.google.com/file/d/1NFTILYXAqDRg4yar2b3kvk2PUfx4U18a/view?usp=sharing",

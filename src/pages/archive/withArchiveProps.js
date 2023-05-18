@@ -21,7 +21,7 @@ const withArchiveProps = (Component) => (props) => {
   } = props;
 
   useEffect(() => {
-    if (archivedGamesShown.length === 0) {
+    if (!archivedGamesShown.length) {
       loadInitialArchivedGames(archiveGameDetails);
     }
     document.title = "Archive";

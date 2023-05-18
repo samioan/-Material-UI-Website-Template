@@ -37,7 +37,7 @@ const withVideos = (Component) => (props) => {
   const { isLoading, hasError, fetchData } = useFetch();
 
   useEffect(() => {
-    if (allGameVideos.length === 0) {
+    if (!allGameVideos.length) {
       fetchData("videos/games", (data) => loadInitialGameVideos(data));
       fetchData("videos/music", (data) => loadInitialMusicVideos(data));
     }

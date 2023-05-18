@@ -27,7 +27,7 @@ const withMusic = (Component) => (props) => {
   const { isLoading, hasError, fetchData } = useFetch();
 
   useEffect(() => {
-    if (allAlbums.length === 0) {
+    if (!allAlbums.length) {
       fetchData("music", (data) => loadInitialAlbums(data));
     }
     document.title = "Music";
