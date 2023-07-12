@@ -2,11 +2,6 @@ import games from "../images/games";
 
 const archiveGameDetails = [
   {
-    img: games.futile,
-    title: "Futile Effort",
-    link: "https://drive.google.com/file/d/1k1RxZP2iZdB3lSulClFlVGcAFja45Prz/view?usp=sharing",
-  },
-  {
     img: games.autoerotic,
     title: "Autoerotic Coagulation",
     link: "https://drive.google.com/file/d/1NFTILYXAqDRg4yar2b3kvk2PUfx4U18a/view?usp=sharing",

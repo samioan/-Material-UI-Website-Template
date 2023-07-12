@@ -1,5 +1,4 @@
 import autoerotic from "./autoerotic.jpg";
-import carefully from "./carefully.jpg";
 import clay from "./clay.jpg";
 import dont from "./dont.jpg";
 import faraway from "./faraway.jpg";
@@ -7,7 +6,6 @@ import first from "./first.jpg";
 import flesh from "./flesh.jpg";
 import follow from "./follow.jpg";
 import fragments from "./fragments.jpg";
-import futile from "./futile.jpg";
 import hunter from "./hunter.jpg";
 import imperfections from "./imperfections.jpg";
 import incandescence from "./incandescence.jpg";
@@ -22,11 +20,9 @@ import screams from "./screams.jpg";
 import tired from "./tired.jpg";
 import transcendence from "./transcendence.jpg";
 import unkindled from "./unkindled.jpg";
-import womb from "./womb.jpg";
 
 const games = {
   autoerotic,
-  carefully,
   clay,
   dont,
   faraway,
@@ -34,7 +30,6 @@ const games = {
   flesh,
   follow,
   fragments,
-  futile,
   hunter,
   imperfections,
   incandescence,
@@ -49,7 +44,6 @@ const games = {
   tired,
   transcendence,
   unkindled,
-  womb,
 };
 
 export { games };
